@@ -1,0 +1,68 @@
+{
+  "name": "awtk-regression-test",
+  "version": "1.0.0",
+  "date": "2021-03-15",
+  "team": "AWTK Develop Team",
+  "author": "Li XianJing <xianjimli@hotmail.com>",
+  "desc": "awtk-regression-test",
+  "copyright": "Guangzhou ZHIYUAN Electronics Co.,Ltd.",
+  "type": "PROJECT_CUSTOM_WIDGET",
+  "appType": "APP_MOBILE",
+  "hardware": "RT1050",
+  "entry": "main",
+  "assets": {
+    "activedTheme": "default",
+    "outputDir": "res",
+    "loadFrom": "any",
+    "const": "resource_data",
+    "screenDPR": "x1",
+    "defaultLanguage": "zh",
+    "defaultCountry": "CN",
+    "themes": {
+      "default": {
+        "activedSystemBar": "system_bar",
+        "activedBottomSystemBar": "system_bar_b",
+        "packaged": true,
+        "fonts": {
+          "default": {
+            "text": " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~，。？！确定取消"
+          },
+          "bold": {
+            "text": " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~"
+          },
+          "default.mini": {
+            "text": " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~"
+          },
+          "default_full": {
+            "text": " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~"
+          },
+          "italic": {
+            "text": " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~"
+          },
+          "led": {
+            "text": " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~"
+          },
+          "light": {
+            "text": " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~"
+          },
+          "mono": {
+            "text": " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~"
+          },
+          "thin": {
+            "text": " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~"
+          }
+        },
+        "lcd": {
+          "width": "480",
+          "height": "320",
+          "colorDepth": "16bit",
+          "colorFormat": "BGR(A)"
+        }
+      }
+    }
+  },
+  "creator": {
+    "name": "AWTK Designer",
+    "version": "0.1.5"
+  }
+}

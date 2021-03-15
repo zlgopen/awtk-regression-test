@@ -1,0 +1,6 @@
+<window text="Auto Adjust Size">
+  <label name="label1" x="10" y="10" w="40" h="30" text="hello awtk" auto_adjust_size="true"/>
+  <label name="label2" x="10" y="50" w="40" h="30" text="hello awtk\nhello awtk" 
+    wrap_word="true" wrap_line="true" auto_adjust_size="true"/>
+  <button name="close" x="center" y="bottom:10" w="50%" h="30" text="Back" on:click="back()"/>
+</window>
