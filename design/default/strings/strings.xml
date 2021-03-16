@@ -7,3 +7,8 @@
 <language name="en_US">Cancel</language>
 <language name="zh_CN">取消</language>
 </string>
+
+<string name="hello awtk">
+<language name="en_US">Hello AWTK</language>
+<language name="zh_CN">AWTK，你好！</language>
+</string>

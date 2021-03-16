@@ -119,3 +119,7 @@ npm run test
 
 * [如何添加回归测试](docs/how_to_add_new_test.md)
 
+
+* [集成 AWTK 自动测试引擎](docs/how_to_integrate_awtktk_ui_automation.md)
+
+* [安装支持 AWTK 自动测试的 Appium Desktop](docs/how_to_install_appium_for_awtk.md)
