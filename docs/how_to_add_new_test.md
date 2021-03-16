@@ -79,9 +79,9 @@ widget_child_on(win, "auto_adjust_size", EVT_CLICK, on_open_auto_adjust_size,
 
 exports.testChinese= function(driver) {
     return driver
-          .elementById('current_window').text().should.become("Regression Test")
+          .title().should.become("Regression Test")
           .elementById('auto_adjust_size').click().sleep(100)
-          .elementById('current_window').text().should.become("Auto Adjust Size")
+          .title().should.become("Auto Adjust Size")
           .elementById('chinese').click().sleep(100)
           .elementById('label1').getAttribute('x').should.become(10)
           .elementById('label1').getAttribute('w').should.become(81)
@@ -93,14 +93,14 @@ exports.testChinese= function(driver) {
           .elementById('label4').getAttribute('w').should.become(81)
           .elementById('label4').getAttribute('h').should.become(20)
           .back().sleep(100)
-          .elementById('current_window').text().should.become("Regression Test")
+          .title().should.become("Regression Test")
 }
 
 exports.testEnglish = function(driver) {
     return driver
-          .elementById('current_window').text().should.become("Regression Test")
+          .title().should.become("Regression Test")
           .elementById('auto_adjust_size').click().sleep(100)
-          .elementById('current_window').text().should.become("Auto Adjust Size")
+          .title().should.become("Auto Adjust Size")
           .elementById('english').click().sleep(100)
           .elementById('label1').getAttribute('x').should.become(10)
           .elementById('label1').getAttribute('w').should.become(81)
@@ -112,7 +112,7 @@ exports.testEnglish = function(driver) {
           .elementById('label4').getAttribute('w').should.become(81)
           .elementById('label4').getAttribute('h').should.become(20)
           .back().sleep(100)
-          .elementById('current_window').text().should.become("Regression Test")
+          .title().should.become("Regression Test")
 }
 ```
 
@@ -141,16 +141,16 @@ let auto_adjust_size = require('./auto_adjust_size')
 ```js
 exports.testEnglish = function(driver) {
     return driver
-          .elementById('current_window').text().should.become("Regression Test")
+          .title().should.become("Regression Test")
           //打开测试窗口，窗口名换成实际窗口名
           .elementById('auto_adjust_size').click().sleep(100)
           //确认测试窗口成功打开，窗口标题换成实际的标题
-          .elementById('current_window').text().should.become("Auto Adjust Size")
+          .title().should.become("Auto Adjust Size")
           //测试代码
           ...
           //确认成功返回主窗口
           .back().sleep(100)
-          .elementById('current_window').text().should.become("Regression Test")
+          .title().should.become("Regression Test")
 }
 ```
 

@@ -1,9 +1,9 @@
 
 exports.testChinese= function(driver) {
     return driver
-          .elementById('current_window').text().should.become("Regression Test")
+          .title().should.become("Regression Test")
           .elementById('auto_adjust_size').click().sleep(100)
-          .elementById('current_window').text().should.become("Auto Adjust Size")
+          .title().should.become("Auto Adjust Size")
           //test chinese
           .elementById('chinese').click().sleep(100)
           .elementById('label1').getAttribute('x').should.become(10)
@@ -16,14 +16,14 @@ exports.testChinese= function(driver) {
           .elementById('label4').getAttribute('w').should.become(81)
           .elementById('label4').getAttribute('h').should.become(20)
           .back().sleep(100)
-          .elementById('current_window').text().should.become("Regression Test")
+          .title().should.become("Regression Test")
 }
 
 exports.testEnglish = function(driver) {
     return driver
-          .elementById('current_window').text().should.become("Regression Test")
+          .title().should.become("Regression Test")
           .elementById('auto_adjust_size').click().sleep(100)
-          .elementById('current_window').text().should.become("Auto Adjust Size")
+          .title().should.become("Auto Adjust Size")
           .elementById('english').click().sleep(100)
           .elementById('label1').getAttribute('x').should.become(10)
           .elementById('label1').getAttribute('w').should.become(81)
@@ -35,5 +35,5 @@ exports.testEnglish = function(driver) {
           .elementById('label4').getAttribute('w').should.become(81)
           .elementById('label4').getAttribute('h').should.become(20)
           .back().sleep(100)
-          .elementById('current_window').text().should.become("Regression Test")
+          .title().should.become("Regression Test")
 }
