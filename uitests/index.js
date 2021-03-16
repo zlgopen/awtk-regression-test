@@ -8,6 +8,7 @@ let serverConfigs = require('awtk-appium-js-helpers/appium-servers');
 let startApp = require("awtk-appium-js-helpers/start-app").startApp;
 
 let auto_adjust_size = require('./auto_adjust_size')
+let rotation = require('./rotation')
 
 const appName = '../bin/demo'
 
@@ -41,6 +42,16 @@ describe("awtk simple", function () {
 
       it("auto_adjust_size_chinese", function () {
         return auto_adjust_size.testChinese(driver);
+      });
+      
+      it("rotation_0", function () {
+        return rotation.testRotation0(driver);
+      });
+      it("rotation_180", function () {
+        return rotation.testRotation180(driver);
+      });
+      it("rotation_270", function () {
+        return rotation.testRotation270(driver);
       });
 });
 

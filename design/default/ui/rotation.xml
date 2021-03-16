@@ -1,0 +1,7 @@
+<window text="Rotation" children_layout="default(r=5,c=1,s=20,m=20)">
+  <button name="0" text="0"/>
+  <button name="90" text="90"/>
+  <button name="180" text="180"/>
+  <button name="270" text="270"/>
+  <button name="back" text="Back" on:click="back()"/>
+</window>

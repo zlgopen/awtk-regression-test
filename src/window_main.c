@@ -27,10 +27,20 @@ static ret_t on_open_auto_adjust_size(void *ctx, event_t *e) {
   return RET_OK;
 }
 
+#include "window_rotation.h"
+
+static ret_t on_open_rotation(void *ctx, event_t *e) {
+  window_rotation_open();
+  return RET_OK;
+}
+
 ret_t window_main_open(void) {
   widget_t *win = window_open("main");
 
   widget_child_on(win, "auto_adjust_size", EVT_CLICK, on_open_auto_adjust_size,
+                  win);
+  
+  widget_child_on(win, "rotation", EVT_CLICK, on_open_rotation,
                   win);
 
   return RET_OK;
