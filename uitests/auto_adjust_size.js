@@ -1,6 +1,7 @@
 
 exports.testChinese= function(driver) {
     return driver
+          .back().sleep(100)
           .title().should.become("Regression Test")
           .elementById('auto_adjust_size').click().sleep(100)
           .title().should.become("Auto Adjust Size")
@@ -21,6 +22,7 @@ exports.testChinese= function(driver) {
 
 exports.testEnglish = function(driver) {
     return driver
+          .back().sleep(100)
           .title().should.become("Regression Test")
           .elementById('auto_adjust_size').click().sleep(100)
           .title().should.become("Auto Adjust Size")
