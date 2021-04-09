@@ -87,11 +87,11 @@ npm run test
 ```
 
 > 1. 先启动 Appium。
-> 2. 如果无法联网的话，可参考[离线配置回归测试]()来配置环境。
+> 2. 如果无法联网的话，可参考[离线配置回归测试](docs/how_to_offline_configure.md)来配置环境。
 
 > 本文以 Linux/MacOS 为例，Windows 可能会微妙差异，请酌情处理。
 
-## 4. 关系图
+## 4. 工作原理
 
 ![diagram](./docs/images/diagram.png)
 
@@ -105,8 +105,10 @@ npm run test
 
 * [如何添加回归测试](docs/how_to_add_new_test.md)
 * [测试脚本API](https://github.com/zlgopen/awtk-ui-automation/blob/master/docs/api.md)
+* [编写测试用例](https://github.com/zlgopen/awtk-ui-automation/blob/master/docs/how_to_write_javascript_test)
 * [集成 AWTK 自动测试引擎](docs/how_to_integrate_awtktk_ui_automation.md)
 * [在线安装支持 AWTK 自动测试的 Appium Desktop](docs/how_to_install_appium_for_awtk.md)
 * [离线安装支持 AWTK 自动测试的 Appium Desktop](https://github.com/zlgopen/awtk-ui-automation/blob/master/docs/how_to_offline_install_appium_for_awtk.md)
 * [离线配置回归测试](docs/how_to_offline_configure.md)
+* [Appium + AWTK 的工作原理](https://github.com/zlgopen/awtk-ui-automation/blob/master/docs/how_appium_awtk_works.md)
 
