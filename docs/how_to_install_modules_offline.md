@@ -14,7 +14,7 @@
 
 ### 3.1 启动 Appium-desktop
 
-> 1. 如果没有安装 appium 的话，请参考[离线安装支持 AWTK 自动测试的 appium](https://github.com/zlgopen/awtk-ui-automation/blob/master/docs/how_to_offline_install_appium_for_awtk.md)。
+> 1. 如果没有安装 appium 的话，请参考[离线安装支持 AWTK 自动测试的 appium](https://github.com/zlgopen/awtk-ui-automation/blob/master/docs/how_to_install_appium_for_awtk_offline.md)。
 >
 > 2. 启动 Appium-desktop，具体操作可以查看 离线安装支持 AWTK 自动测试的 appium。
 

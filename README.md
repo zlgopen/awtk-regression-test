@@ -15,7 +15,7 @@ AWTK 回归测试。
 > 请参考
 >
 > 1. [在线安装支持 AWTK 自动测试的 appium](https://github.com/zlgopen/awtk-ui-automation/blob/master/docs/how_to_install_appium_for_awtk.md)
-> 2. [离线安装支持 AWTK 自动测试的 appium](https://github.com/zlgopen/awtk-ui-automation/blob/master/docs/how_to_offline_install_appium_for_awtk.md)
+> 2. [离线安装支持 AWTK 自动测试的 appium](https://github.com/zlgopen/awtk-ui-automation/blob/master/docs/how_to_install_appium_for_awtk_offline.md)
 
 1. 获取 awtk 并编译
 
@@ -65,8 +65,9 @@ scons LINUX_FB=true
 
 > 完整编译选项请参考[编译选项](https://github.com/zlgopen/awtk-widget-generator/blob/master/docs/build_options.md)
 
-
 ## 3. 运行
+
+先启动 Appium。
 
 > 手工运行(方便添加测试时验证)
 
@@ -86,8 +87,7 @@ npm install
 npm run test
 ```
 
-> 1. 先启动 Appium。
-> 2. 如果无法联网的话，可参考[离线配置回归测试](docs/how_to_offline_configure.md)来配置环境。
+> 如果无法联网的话，可参考[离线配置回归测试](docs/how_to_install_modules_offline.md)来配置环境。
 
 > 本文以 Linux/MacOS 为例，Windows 可能会微妙差异，请酌情处理。
 
@@ -97,18 +97,18 @@ npm run test
 
 > 备注：
 >
-> 1. 回归测试程序是指在 uitests 文件中的 test 程序调用 indexjs 文件（是一个 js 脚本来的），需要用户在该脚本上面编写程序用例。
-> 2. 需要测试程序，就是一开始在 awtk-regression-test 项目中编译的程序，后续需要添加各种需要测试的界面和逻辑。
-> 3. Appium 是一个第三方的自动化测试工具，是通过 http 协议和需要测试程序通讯，实现自动化测试。
+> 1. **回归测试程序：**是指在 uitests 文件中的 test 程序调用 indexjs 文件（是一个 js 脚本来的），需要用户在该脚本上面编写程序用例。
+> 2. **需要测试程序：**就是一开始在 awtk-regression-test 项目中编译的被测试程序，后续需要添加各种需要测试的界面和逻辑。
+> 3. **Appium：**是一个第三方的自动化测试工具，是通过 http 协议和需要测试程序通讯，实现自动化测试。
 
 ## 5. 文档
 
-* [如何添加回归测试](docs/how_to_add_new_test.md)
-* [测试脚本API](https://github.com/zlgopen/awtk-ui-automation/blob/master/docs/api.md)
-* [编写测试用例](https://github.com/zlgopen/awtk-ui-automation/blob/master/docs/how_to_write_javascript_test)
-* [集成 AWTK 自动测试引擎](docs/how_to_integrate_awtktk_ui_automation.md)
-* [在线安装支持 AWTK 自动测试的 Appium Desktop](docs/how_to_install_appium_for_awtk.md)
-* [离线安装支持 AWTK 自动测试的 Appium Desktop](https://github.com/zlgopen/awtk-ui-automation/blob/master/docs/how_to_offline_install_appium_for_awtk.md)
-* [离线配置回归测试](docs/how_to_offline_configure.md)
 * [Appium + AWTK 的工作原理](https://github.com/zlgopen/awtk-ui-automation/blob/master/docs/how_appium_awtk_works.md)
+* [在 AWTK 应用中集成自动测试引擎](https://github.com/zlgopen/awtk-ui-automation/blob/master/docs/how_to_integrate_awtktk_ui_automation.md)
+* [如何添加回归测试](docs/how_to_add_new_test.md)
+* [如何编写测试用例](https://github.com/zlgopen/awtk-ui-automation/blob/master/docs/how_to_write_javascript_test)
+* [测试脚本API](https://github.com/zlgopen/awtk-ui-automation/blob/master/docs/api.md)
+* [在线安装支持 AWTK 自动测试的 Appium Desktop](docs/how_to_install_appium_for_awtk.md)
+* [离线安装支持 AWTK 自动测试的 Appium Desktop](https://github.com/zlgopen/awtk-ui-automation/blob/master/docs/how_to_install_appium_for_awtk_offline.md)
+* [离线配置回归测试](docs/how_to_install_modules_offline.md)
 
