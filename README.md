@@ -67,13 +67,7 @@ scons LINUX_FB=true
 
 ## 3. 运行
 
-先启动 Appium。
-
-> 手工运行(方便添加测试时验证)
-
-```
-./bin/demo
-```
+先运行 Appium，点击“Start Server”启动服务。
 
 > 运行自动测试
 
@@ -83,7 +77,7 @@ cd uitests
 #第一次运行时，先安装依赖的软件包，如果通过离线配置了回归测试的话，就不需要执行这个命令。
 npm install
 
-#运行测试
+#运行测试，该处会自动运行bin/demo程序
 npm run test
 ```
 
