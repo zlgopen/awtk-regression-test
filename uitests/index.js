@@ -35,7 +35,6 @@ describe("awtk simple", function () {
       afterEach(function () {
             allPassed = allPassed && this.currentTest.state === 'passed';
       });
-
       it("auto_adjust_size_english", function () {
         return auto_adjust_size.testEnglish(driver);
       });
@@ -52,6 +51,9 @@ describe("awtk simple", function () {
       });
       it("rotation_270", function () {
         return rotation.testRotation270(driver);
+      });
+      it("auto_adjust_size_max_w", function () {
+        return auto_adjust_size.testMaxW(driver);
       });
 });
 

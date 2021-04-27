@@ -1,0 +1,25 @@
+<window anim_hint="htranslate" text="Regression Test">
+  <label name="l1" style="left" x="10" y="10" w="50" h="30" text="close" auto_adjust_size="true" max_w="100"/>
+  <label name="l2" style="left" x="10" y="50" w="50" h="30" text="it is a auto adjust size sample" 
+    auto_adjust_size="true" 
+    line_wrap="true"
+    max_w="100"/>
+  
+  <label name="l3" style="left" x="10" y="140" w="50" h="30" text="it is a auto adjust size sample" 
+    auto_adjust_size="true" 
+    line_wrap="true"
+    max_w="200"/>
+  
+  <label name="r1" style="left" x="r:10" y="10" w="50" h="30" text="close" auto_adjust_size="true" max_w="100"/>
+  <label name="r2" style="left" x="r:10" y="50" w="50" h="30" text="it is a auto adjust size sample" 
+    auto_adjust_size="true" 
+    line_wrap="true"
+    max_w="100"/>
+  
+  <label name="r3" style="left" x="r:10" y="240" w="50" h="30" text="it is a auto adjust size sample" 
+    auto_adjust_size="true" 
+    line_wrap="true"
+    max_w="200"/>
+
+  <button name="close" x="center" y="bottom:10" w="50%" h="30" text="close" on:click="quit()"/>
+</window>

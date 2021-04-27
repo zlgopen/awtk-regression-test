@@ -21,9 +21,15 @@
 
 #include "window_main.h"
 #include "window_auto_adjust_size.h"
+#include "window_auto_adjust_size_max_w.h"
 
 static ret_t on_open_auto_adjust_size(void *ctx, event_t *e) {
   window_auto_adjust_size_open();
+  return RET_OK;
+}
+
+static ret_t on_open_auto_adjust_size_max_w(void *ctx, event_t *e) {
+  window_auto_adjust_size_max_w_open();
   return RET_OK;
 }
 
@@ -39,9 +45,11 @@ ret_t window_main_open(void) {
 
   widget_child_on(win, "auto_adjust_size", EVT_CLICK, on_open_auto_adjust_size,
                   win);
-  
-  widget_child_on(win, "rotation", EVT_CLICK, on_open_rotation,
-                  win);
+
+  widget_child_on(win, "auto_adjust_size_max_w", EVT_CLICK,
+                  on_open_auto_adjust_size_max_w, win);
+
+  widget_child_on(win, "rotation", EVT_CLICK, on_open_rotation, win);
 
   return RET_OK;
 }

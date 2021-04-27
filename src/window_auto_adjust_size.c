@@ -32,7 +32,7 @@ static ret_t on_change_to_chinese(void *ctx, event_t *e) {
 }
 
 ret_t window_auto_adjust_size_open(void) {
-  widget_t* win = window_open("auto_adjust_size");
+  widget_t *win = window_open("auto_adjust_size");
   widget_child_on(win, "english", EVT_CLICK, on_change_to_english, NULL);
   widget_child_on(win, "chinese", EVT_CLICK, on_change_to_chinese, NULL);
 
