@@ -100,9 +100,9 @@ npm run test
 * [Appium + AWTK 的工作原理](https://github.com/zlgopen/awtk-ui-automation/blob/master/docs/how_appium_awtk_works.md)
 * [在 AWTK 应用中集成自动测试引擎](https://github.com/zlgopen/awtk-ui-automation/blob/master/docs/how_to_integrate_awtktk_ui_automation.md)
 * [如何添加回归测试](docs/how_to_add_new_test.md)
-* [如何编写测试用例](https://github.com/zlgopen/awtk-ui-automation/blob/master/docs/how_to_write_javascript_test)
+* [如何编写测试用例](https://github.com/zlgopen/awtk-ui-automation/blob/master/docs/how_to_write_javascript_test.md)
 * [测试脚本API](https://github.com/zlgopen/awtk-ui-automation/blob/master/docs/api.md)
-* [在线安装支持 AWTK 自动测试的 Appium Desktop](docs/how_to_install_appium_for_awtk.md)
+* [在线安装支持 AWTK 自动测试的 Appium Desktop](https://github.com/zlgopen/awtk-ui-automation/blob/master/docs/how_to_write_javascript_test.md)
 * [离线安装支持 AWTK 自动测试的 Appium Desktop](https://github.com/zlgopen/awtk-ui-automation/blob/master/docs/how_to_install_appium_for_awtk_offline.md)
 * [离线配置回归测试](docs/how_to_install_modules_offline.md)
 
