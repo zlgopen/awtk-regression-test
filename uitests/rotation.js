@@ -1,6 +1,7 @@
 
 exports.testRotation0 = function(driver) {
     return driver
+          .back().sleep(100)
           .title().should.become("Regression Test")
           .elementById('rotation').click().sleep(100)
           .title().should.become("Rotation")
@@ -17,6 +18,7 @@ exports.testRotation0 = function(driver) {
 
 exports.testRotation180 = function(driver) {
     return driver
+          .back().sleep(100)
           .title().should.become("Regression Test")
           .elementById('rotation').click().sleep(100)
           .title().should.become("Rotation")
@@ -33,6 +35,7 @@ exports.testRotation180 = function(driver) {
 
 exports.testRotation90 = function(driver) {
     return driver
+          .back().sleep(100)
           .title().should.become("Regression Test")
           .elementById('rotation').click().sleep(100)
           .title().should.become("Rotation")
@@ -49,6 +52,7 @@ exports.testRotation90 = function(driver) {
 
 exports.testRotation270 = function(driver) {
     return driver
+          .back().sleep(100)
           .title().should.become("Regression Test")
           .elementById('rotation').click().sleep(100)
           .title().should.become("Rotation")

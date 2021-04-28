@@ -38,6 +38,12 @@ describe("awtk simple", function () {
       it("auto_adjust_size_english", function () {
         return auto_adjust_size.testEnglish(driver);
       });
+      it("auto_adjust_size_max_w", function () {
+        return auto_adjust_size.testMaxW(driver);
+      });
+      it("auto_adjust_size_margin", function () {
+        return auto_adjust_size.testChineseMargin(driver);
+      });
 
       it("auto_adjust_size_chinese", function () {
         return auto_adjust_size.testChinese(driver);
@@ -51,9 +57,6 @@ describe("awtk simple", function () {
       });
       it("rotation_270", function () {
         return rotation.testRotation270(driver);
-      });
-      it("auto_adjust_size_max_w", function () {
-        return auto_adjust_size.testMaxW(driver);
       });
 });
 

@@ -1,6 +1,7 @@
 
 exports.testChinese= function(driver) {
     return driver
+          .back().sleep(100)
           .title().should.become("Regression Test")
           .elementById('auto_adjust_size').click().sleep(100)
           .title().should.become("Auto Adjust Size")
@@ -21,6 +22,7 @@ exports.testChinese= function(driver) {
 
 exports.testEnglish = function(driver) {
     return driver
+          .back().sleep(100)
           .title().should.become("Regression Test")
           .elementById('auto_adjust_size').click().sleep(100)
           .title().should.become("Auto Adjust Size")
@@ -41,6 +43,7 @@ exports.testEnglish = function(driver) {
 
 exports.testMaxW= function(driver) {
     return driver
+          .back().sleep(100)
           .title().should.become("Regression Test")
           .elementById('auto_adjust_size_max_w').click().sleep(100)
           //test max_w
@@ -76,3 +79,24 @@ exports.testMaxW= function(driver) {
           .back().sleep(100)
           .title().should.become("Regression Test")
 }
+
+exports.testChineseMargin = function(driver) {
+    return driver
+          .back().sleep(100)
+          .title().should.become("Regression Test")
+          .elementById('auto_adjust_size_margin').click().sleep(100)
+          .title().should.become("Label Margin Test Margin")
+          //test chinese
+          .elementById('chinese').click().sleep(100)
+          .elementById('label1').getAttribute('x').should.become(10)
+          .elementById('label1').getAttribute('w').should.become(117)
+          .elementById('label1').getAttribute('h').should.become(55)
+          .elementById('label2').getAttribute('w').should.become(132)
+          .elementById('label2').getAttribute('h').should.become(75)
+          .elementById('label3').getAttribute('w').should.become(144)
+          .elementById('label3').getAttribute('h').should.become(55)
+          .elementById('label4').getAttribute('w').should.become(117)
+          .elementById('label4').getAttribute('h').should.become(55)
+          .back().sleep(100)
+          .title().should.become("Regression Test")
+}          
