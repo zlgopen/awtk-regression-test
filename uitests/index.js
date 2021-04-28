@@ -52,6 +52,9 @@ describe("awtk simple", function () {
       it("rotation_0", function () {
         return rotation.testRotation0(driver);
       });
+      it("rotation_90", function () {
+        return rotation.testRotation90(driver);
+      });
       it("rotation_180", function () {
         return rotation.testRotation180(driver);
       });

@@ -26,20 +26,13 @@
 #endif /*AWTK_WEB*/
 
 #include "assets.inc"
-#include "slidable_row_register.h"
-#include "table_client_custom_binder.h"
-#include "table_view_register.h"
 #include "window_main.h"
 
 ret_t application_init() {
   socket_init();
   automation_agent_start(8000);
-
-  table_view_register();
-  slidable_row_register();
-  table_client_custom_binder_register();
-
   window_main_open();
+  return RET_OK;
 }
 
 ret_t application_exit() {
