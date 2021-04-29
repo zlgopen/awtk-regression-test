@@ -35,7 +35,7 @@ exports.testInfo = function (driver) {
 
         .elementById('chinese').click().sleep(100)
         .elementById('info').click().sleep(100)
-        .getWindowSize().should.become({ width: 296, height: 120 })
+        .getWindowSize().should.become({ width: 296, height: 234})
         .elementById('ok').click().sleep(100)
         .title().should.become("Dialogs")
 
@@ -58,7 +58,7 @@ exports.testWarn = function (driver) {
 
         .elementById('chinese').click().sleep(100)
         .elementById('warn').click().sleep(100)
-        .getWindowSize().should.become({ width: 296, height: 120 })
+        .getWindowSize().should.become({ width: 296, height: 234})
         .elementById('ok').click().sleep(100)
         .title().should.become("Dialogs")
 
@@ -81,13 +81,13 @@ exports.testConfirm = function (driver) {
 
         .elementById('chinese').click().sleep(100)
         .elementById('confirm').click().sleep(100)
-        .getWindowSize().should.become({ width: 296, height: 120 })
+        .getWindowSize().should.become({ width: 296, height: 234})
         .elementById('ok').click().sleep(100)
         .title().should.become("Dialogs")
 
         .elementById('chinese').click().sleep(100)
         .elementById('confirm').click().sleep(100)
-        .getWindowSize().should.become({ width: 296, height: 120 })
+        .getWindowSize().should.become({ width: 296, height: 234})
         .elementById('cancel').click().sleep(100)
         .title().should.become("Dialogs")
 
