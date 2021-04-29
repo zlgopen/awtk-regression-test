@@ -8,7 +8,12 @@
 <language name="zh_CN">取消</language>
 </string>
 
+<string name="hello full awtk">
+<language name="en_US">Hello AWTK</language>
+<language name="zh_CN">AWTK，你好！AWTK 全称 Toolkit AnyWhere，是 ZLG 开发的开源 GUI 引擎，旨在为嵌入式系统、WEB、各种小程序、手机和 PC 打造的通用 GUI 引擎，为用户提供一个功能强大、高效可靠、简单易用、可轻松做出炫酷效果的 GUI 引擎。</language>
+</string>
+
 <string name="hello awtk">
 <language name="en_US">Hello AWTK</language>
-<language name="zh_CN">AWTK，你好！</language>
+<language name="zh_CN">AWTK，你好！<language>
 </string>

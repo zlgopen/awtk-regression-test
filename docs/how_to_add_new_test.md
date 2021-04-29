@@ -79,6 +79,7 @@ widget_child_on(win, "auto_adjust_size", EVT_CLICK, on_open_auto_adjust_size,
 
 exports.testChinese= function(driver) {
     return driver
+          .back().sleep(100)
           .title().should.become("Regression Test")
           .elementById('auto_adjust_size').click().sleep(100)
           .title().should.become("Auto Adjust Size")
@@ -98,6 +99,7 @@ exports.testChinese= function(driver) {
 
 exports.testEnglish = function(driver) {
     return driver
+          .back().sleep(100)
           .title().should.become("Regression Test")
           .elementById('auto_adjust_size').click().sleep(100)
           .title().should.become("Auto Adjust Size")
@@ -141,6 +143,8 @@ let auto_adjust_size = require('./auto_adjust_size')
 ```js
 exports.testEnglish = function(driver) {
     return driver
+          //确保从主窗口开始
+          .back().sleep(100)
           .title().should.become("Regression Test")
           //打开测试窗口，窗口名换成实际窗口名
           .elementById('auto_adjust_size').click().sleep(100)
@@ -159,5 +163,7 @@ exports.testEnglish = function(driver) {
 * 预期的参数可以通过 appium-inspector 查看。
 
 > 请参考：https://github.com/zlgopen/awtk-ui-automation/blob/master/docs/how_to_install_appium_for_awtk.md
+
+* Webdriver 提供的 API 没有设置属性的通用方法，可以把设置属性的代码封装到按钮的 click 事件中，通过 click 来触发。
 
 * 测试时至少保证 OpenGL 版本正常。

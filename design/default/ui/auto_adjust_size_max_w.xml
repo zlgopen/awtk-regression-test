@@ -21,5 +21,5 @@
     line_wrap="true"
     max_w="200"/>
 
-  <button name="close" x="center" y="bottom:10" w="50%" h="30" text="close" on:click="quit()"/>
+  <button name="back" x="center" y="bottom:10" w="50%" h="30" text="Back" on:click="back()"/>
 </window>

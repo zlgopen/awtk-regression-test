@@ -1,0 +1,13 @@
+<window text="Dialogs" children_layout="default(c=2,r=8,m=5,s=5)">>
+  <button name="toast" text="Toast"/>
+  <button name="confirm" text="Confirm"/>
+  <button name="info" text="Information"/>
+  <button name="warn" text="Warning"/>
+  <button name="toast_long" text="Toast Long"/>
+  <button name="confirm_long" text="Confirm Long"/>
+  <button name="info_long" text="Information Long"/>
+  <button name="warn_long" text="Warning Long"/>
+  <button name="english" text="English"/>
+  <button name="chinese" text="Chinese"/>
+  <button name="back" text="Back" on:click="back()"/>
+</window>
