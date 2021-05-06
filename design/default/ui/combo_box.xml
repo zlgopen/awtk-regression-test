@@ -1,0 +1,19 @@
+<window text="ComboBox">
+  <combo_box name="editable" x="10" y="5" w="200" h="30" text="left" 
+    open_im_when_focused="false"
+    options="left;center;right;">
+    <button name="editable_dropdown" style="combobox_down" x="right:5" y="middle" w="20" h="20"/>
+  </combo_box>
+  <combo_box name="readonly_open_window" open_window="color" readonly="true" x="10" y="50" w="200" h="30" text="red"/>
+  <combo_box_ex name="combo_box_ex" readonly="true" x="10" y="100" w="200" h="30" options="1;2;3;4;5;6;7;8;9;0;11;22;33;44;55"/>
+
+  <combo_box name="bottom" readonly="true" x="5" y="bottom:5" w="45%" h="30" options="1:ok;2:cancel;"/>
+  <combo_box name="bottom_right" readonly="true" x="right:5" y="bottom:5" w="45%" h="30" text="ok" 
+    localize_options="false"
+    options="1:ok;2:cancel;"/>
+
+  <label name="old_value" x="center" y="middle:-20" w="50%" h="30" text=""/>
+  <label name="value" x="center" y="middle:20" w="50%" h="30" text=""/>
+  <button name="close" self_layout="default(x=center,y=m:50,w=50%,h=30)" 
+    floating="true" text="Close" on:click="back()"/>
+</window>

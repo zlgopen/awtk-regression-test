@@ -10,6 +10,7 @@ let startApp = require("awtk-appium-js-helpers/start-app").startApp;
 let auto_adjust_size = require('./auto_adjust_size')
 let rotation = require('./rotation')
 let dialogs = require('./dialogs')
+let combo_box = require('./combo_box')
 
 const appName = '../bin/demo'
 
@@ -35,6 +36,24 @@ describe("awtk simple", function () {
 
   afterEach(function () {
     allPassed = allPassed && this.currentTest.state === 'passed';
+  });
+
+  it("text_bottom_right_and_no_tr", function () {
+    return combo_box.testBottomRightAndNoTr(driver);
+  });
+  return;
+  it("text_combo_box_ex", function () {
+    return combo_box.testComboBoxEx(driver);
+  });
+
+  it("text_bottom", function () {
+    return combo_box.testBottom(driver);
+  });
+  it("text_readonly_open", function () {
+    return combo_box.testReadonlyOpen(driver);
+  });
+  it("text_editable", function () {
+    return combo_box.testEditable(driver);
   });
 
   it("test_confirm", function () {

@@ -22,6 +22,7 @@
 #include "window_main.h"
 #include "window_dialogs.h"
 #include "window_rotation.h"
+#include "window_combo_box.h"
 #include "window_auto_adjust_size.h"
 #include "window_auto_adjust_size_max_w.h"
 
@@ -45,6 +46,11 @@ static ret_t on_open_rotation(void *ctx, event_t *e) {
   return RET_OK;
 }
 
+static ret_t on_open_combo_box(void *ctx, event_t *e) {
+  window_combo_box_open();
+  return RET_OK;
+}
+
 static ret_t on_open_dialogs(void *ctx, event_t *e) {
   window_dialogs_open();
   return RET_OK;
@@ -62,6 +68,7 @@ ret_t window_main_open(void) {
                   on_open_auto_adjust_size_margin, win);
 
   widget_child_on(win, "rotation", EVT_CLICK, on_open_rotation, win);
+  widget_child_on(win, "combo_box", EVT_CLICK, on_open_combo_box, win);
   widget_child_on(win, "dialogs", EVT_CLICK, on_open_dialogs, win);
 
   return RET_OK;

@@ -32,6 +32,9 @@
   <style name="dark">
     <normal bg_color="#808080"/>
   </style>
+  <style name="combobox_popup">
+    <normal bg_color="#808080"/>
+  </style>
 </popup>
 
 <button>
@@ -86,12 +89,14 @@
   <style name="scroll_down" border_color="#a0a0a0">
     <normal     bg_color="#f0f0f0" icon="arrow_down_n"/>
     <pressed    bg_color="#c0c0c0" icon="arrow_down_p"/>
+    <disable    bg_color="gray" icon="arrow_down_p"/>
     <over       bg_color="#e0e0e0" icon="arrow_down_o"/>
   </style>
 
   <style name="scroll_up" border_color="#a0a0a0">
     <normal     bg_color="#f0f0f0" icon="arrow_up_n"/>
     <pressed    bg_color="#c0c0c0" icon="arrow_up_p"/>
+    <disable    bg_color="gray" icon="arrow_up_p"/>
     <over       bg_color="#e0e0e0" icon="arrow_up_o"/>
   </style>
   
@@ -113,6 +118,7 @@
     <normal     bg_color="#f0f0f0" />
     <focused    bg_color="#f0f0f0" border_color="black"/>
     <disable    bg_color="gray" text_color="#d0d0d0" />
+    <changed    bg_color="#f0f0f0" text_color="#ee0000" />
     <error      bg_color="#f0f0f0" text_color="red" />
     <empty      bg_color="#f0f0f0" text_color="#a0a0a0" />
     <empty_focus bg_color="#f0f0f0" text_color="#a0a0a0" border_color="black"/>
@@ -142,6 +148,7 @@
     <disable    bg_color="gray" text_color="#d0d0d0" />
     <error      bg_color="#f0f0f0" text_color="red" />
     <empty      bg_color="#f0f0f0" text_color="#a0a0a0" />
+    <empty_focus bg_color="#f0f0f0" text_color="#a0a0a0" border_color="black"/>
   </style>
 </spin_box>
 
@@ -150,6 +157,12 @@
     <normal text_color="black" />
   </style>
 </digit_clock>
+
+<lang_indicator>
+  <style name="default">
+    <normal text_color="white" bg_color="#1296db"/>
+  </style>
+</lang_indicator>
 
 <label>
   <style name="default">
@@ -205,7 +218,7 @@
   </style>
 
   <style name="img_v"  bg_image="slider_v_bg" fg_image="slider_v_fg" text_color="black" 
-    bg_image_draw_type="patch3_y" fg_image_draw_type="patch3_y">
+    bg_image_draw_type="repeat3_y" fg_image_draw_type="repeat3_y">
     <normal/>
   </style>
 </progress_bar>
@@ -230,7 +243,7 @@
     <over icon="slider_drag_o"/>
   </style>
 
-  <style name="img_v"  bg_image="slider_v_bg" fg_image="slider_v_fg" bg_image_draw_type="patch3_y" fg_image_draw_type="patch3_y">
+  <style name="img_v"  bg_image="slider_v_bg" fg_image="slider_v_fg" bg_image_draw_type="repeat3_y" fg_image_draw_type="repeat3_y">
     <normal icon="slider_drag"/>
     <pressed icon="slider_drag_p"/>
     <over icon="slider_drag_o"/>
@@ -270,17 +283,21 @@
     <normal  />
     <pressed />
     <over    />
+    <focused text_color="green"/>
     <normal_of_checked icon="check" />
     <pressed_of_checked icon="check" />
     <over_of_checked icon="check" />
+    <focused_of_checked text_color="green" icon="check"/>
   </style>
   <style name="even_icon_right" icon_at="right" text_color="black" margin="4" bg_color="#eaeaea">
     <normal  />
     <pressed />
     <over    />
+    <focused text_color="green"/>
     <normal_of_checked icon="check" />
     <pressed_of_checked icon="check" />
     <over_of_checked icon="check" />
+    <focused_of_checked text_color="green" icon="check"/>
   </style>
 </check_button>
 
@@ -323,17 +340,21 @@
     <normal  />
     <pressed />
     <over    />
+    <focused text_color="green"/>
     <normal_of_checked icon="check" />
     <pressed_of_checked icon="check" />
     <over_of_checked icon="check" />
+    <focused_of_checked text_color="green" icon="check"/>
   </style>
   <style name="even_icon_right" text_color="black" margin="4" icon_at="right" bg_color="#eaeaea">
     <normal  />
     <pressed />
     <over    />
+    <focused text_color="green"/>
     <normal_of_checked icon="check" />
     <pressed_of_checked icon="check" />
     <over_of_checked icon="check" />
+    <focused_of_checked text_color="green" icon="check"/>
   </style>
 </radio_button>
 
@@ -385,6 +406,7 @@
   <style name="default" border_color="gray">
     <normal bg_color="#f0f0f0"/>
     <over bg_color="#f0f0f0" />
+    <disable bg_color="gray" />
     <pressed bg_color="#f0f0f0" />
   </style>
 </scroll_bar_d>
@@ -428,6 +450,11 @@
     <pressed />
     <over  />
   </style>
+  <style name="border" border_color="#a0a0a0">
+    <normal  />
+    <pressed />
+    <over  />
+  </style>
 </list_item>
 
 <tab_button>
@@ -452,7 +479,7 @@
 </tab_button_group>
 
 <combo_box>
-  <style name="default" border_color="#a0a0a0"  text_color="black" text_align_h="left">
+  <style name="default" border_color="#a0a0a0"  text_color="black" text_align_h="left" margin_left="4">
     <normal     bg_color="#f0f0f0" />
     <focused    bg_color="#f0f0f0" border_color="black"/>
     <disable    bg_color="gray" text_color="#d0d0d0" />
@@ -461,12 +488,24 @@
   </style>
 </combo_box>
 
+<combo_box_ex>
+  <style name="default" border_color="#a0a0a0"  text_color="black" text_align_h="left" margin_left="4">
+    <normal     bg_color="#f0f0f0" />
+    <focused    bg_color="#f0f0f0" border_color="black"/>
+    <disable    bg_color="gray" text_color="#d0d0d0" />
+    <error      bg_color="#f0f0f0" text_color="red" />
+    <empty      bg_color="#f0f0f0" text_color="#a0a0a0" />
+  </style>
+</combo_box_ex>
+
 <combo_box_item>
   <style name="default" icon_at="left" text_color="black" bg_color="#f0f0f0">
     <normal  icon="empty"/>
+    <focused icon="empty" bg_color="#1296db" text_color="gold" />
     <pressed icon="empty" bg_color="#1296db" text_color="white" />
     <over    icon="empty" bg_color="#1296db" text_color="white" />
     <normal_of_checked  icon="check"/>
+    <focused_of_checked  icon="check" bg_color="#1296db" text_color="gold"/>
     <pressed_of_checked icon="check" bg_color="#1296db" text_color="white" />
     <over_of_checked    icon="check" bg_color="#1296db" text_color="white" />
   </style>
@@ -476,8 +515,11 @@
   <style name="default" fg_color="#a0a0a0"  text_color="black" text_align_h="center">
     <normal     bg_color="#f0f0f0"/>
   </style>
-  <style name="dark" fg_color="#a0a0a0"  text_color="black" text_align_h="center">
-    <normal     bg_color="#ffffff" mask_color="#404040" border_color="#404040"/>
+  <style name="dark"  text_color="black" text_color="black" text_align_h="center">
+    <normal   highlight_font_size="30" highlight_text_color="#00ff00" bg_color="#ffffff" mask_color="#404040" border_color="#404040"/>
+  </style>
+ <style name="image" fg_image="text_selector_border" text_color="black" text_align_h="center">
+    <normal    highlight_font_size="30" highlight_text_color="#00ff00"  bg_color="#ffffff"  border_color="#404040"/>
   </style>
 </text_selector>
 
@@ -522,15 +564,15 @@
     <normal text_color="green" fg_color="black" />
   </style>
   <style name="image">
-    <normal text_color="gold" fg_image="progress_circle" />
+    <normal text_color="gold" bg_color="#00f6aa" fg_image="progress_circle" />
   </style>
 </progress_circle>
 
-<svg_image>
+<svg>
   <style name="default">
     <normal border_color="green" fg_color="red" />
   </style>
-</svg_image>
+</svg>
 
 <check_button>
   <style name="password_visible" >
@@ -575,9 +617,9 @@
     <focused  />
   </style>
 
-  <style name="green" text_color="green">
-    <normal   />
-    <focused  />
+  <style name="green">
+    <normal   text_color="black"/>
+    <focused  text_color="green"/>
   </style>
   
   <style name="right" text_color="green" text_align_h="right">
