@@ -41,7 +41,6 @@ describe("awtk simple", function () {
   it("text_bottom_right_and_no_tr", function () {
     return combo_box.testBottomRightAndNoTr(driver);
   });
-  return;
   it("text_combo_box_ex", function () {
     return combo_box.testComboBoxEx(driver);
   });
