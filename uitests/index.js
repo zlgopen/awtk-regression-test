@@ -37,14 +37,17 @@ describe("awtk simple", function () {
   afterEach(function () {
     allPassed = allPassed && this.currentTest.state === 'passed';
   });
-
+ 
+  //test combobox
+  it("text_send_key", function () {
+    return combo_box.testSendKey(driver);
+  });
   it("text_bottom_right_and_no_tr", function () {
     return combo_box.testBottomRightAndNoTr(driver);
   });
   it("text_combo_box_ex", function () {
     return combo_box.testComboBoxEx(driver);
   });
-
   it("text_bottom", function () {
     return combo_box.testBottom(driver);
   });
@@ -55,10 +58,10 @@ describe("awtk simple", function () {
     return combo_box.testEditable(driver);
   });
 
+  //test dialog
   it("test_confirm", function () {
     return dialogs.testConfirm(driver);
   });
-
   it("test_warn", function () {
     return dialogs.testWarn(driver);
   });
@@ -69,6 +72,7 @@ describe("awtk simple", function () {
     return dialogs.testToast(driver);
   });
 
+  //test auto adjust size
   it("auto_adjust_size_english", function () {
     return auto_adjust_size.testEnglish(driver);
   });
@@ -82,6 +86,7 @@ describe("awtk simple", function () {
     return auto_adjust_size.testChinese(driver);
   });
 
+  //test rotation
   it("rotation_0", function () {
     return rotation.testRotation0(driver);
   });

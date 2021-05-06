@@ -1,5 +1,34 @@
 let wd = require("wd");
 
+exports.testSendKey= function (driver) {
+    return driver
+        .back().sleep(200)
+        .title().should.become("Regression Test")
+        .elementById('combo_box').click().sleep(200)
+        .title().should.become("ComboBox")
+        .elementById('editable').text().should.become("left")
+        .elementById('editable').type(["aaaa"])
+        .elementById('editable').text().should.become("leftaaaa")
+        
+        .elementById('editable').type(["中文"])
+        .elementById('editable').text().should.become("leftaaaa中文")
+
+        .elementById('editable').sendKeys(wd.SPECIAL_KEYS["Up arrow"])
+        .elementById('editable').text().should.become("right")
+        .elementById('editable').sendKeys(wd.SPECIAL_KEYS["Up arrow"])
+        .elementById('editable').text().should.become("center")
+        
+        .elementById('editable').sendKeys(wd.SPECIAL_KEYS["Down arrow"])
+        .elementById('editable').text().should.become("right")
+        .elementById('editable').sendKeys(wd.SPECIAL_KEYS["Down arrow"])
+        .elementById('editable').text().should.become("left")
+
+        .elementById('old_value').text().should.become("right")
+        .elementById('value').text().should.become("left")
+        .back().sleep(200)
+        .title().should.become("Regression Test")
+}
+
 exports.testEditable = function (driver) {
     var tapPopup = new wd.TouchAction(driver);
     tapPopup.tap({ el: null, x: 20, y: 77 });
