@@ -4,9 +4,10 @@
       <list_item style="even_clickable" name="auto_adjust_size" text="Test Auto Adjust Resize" /> 
       <list_item style="odd_clickable" name="auto_adjust_size_max_w" text="Test Auto Adjust Resize Max W" /> 
       <list_item style="even_clickable" name="auto_adjust_size_margin" text="Test Auto Adjust Resize Margin" /> 
-      <list_item style="odd_clickable" name="rotation" text="Rotation" /> 
+      <list_item style="odd_clickable" name="rotation" text="Test Rotation" /> 
       <list_item style="even_clickable" name="dialogs" text="Test Dialogs" /> 
-      <list_item style="odd_clickable" name="combo_box" text="ComboBox" /> 
+      <list_item style="odd_clickable" name="combo_box" text="Test ComboBox" /> 
+      <list_item style="even_clickable" name="button" text="Test Buttons" /> 
     </scroll_view>
     <scroll_bar_d name="bar" x="right" y="0" w="12" h="100%" value="0"/>
   </list_view>

@@ -1,0 +1,9 @@
+<window text="Button">
+  <button name="repeat_button" focusable="true" focused="true" x="c" y="m:-50" w="128" h="30" text="repeat" repeat="1000"/>
+  <button name="normal_button" focusable="true" focused="true" x="c" y="m" w="128" h="30" text="button"/>
+  <button name="long_press" focusable="true" x="c" y="m:50" w="128" h="30" text="long_press" enable_long_press="true" long_press_time="1000"/>
+
+  <label name="status" x="c" y="b:50" w="128" h="30" text="none"/>
+
+  <button focusable="true" x="c" y="b:10" w="128" h="30" text="close" on:click="back()"/>
+</window>

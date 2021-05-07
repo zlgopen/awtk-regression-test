@@ -7,10 +7,11 @@ require("awtk-appium-js-helpers/setup.js");
 let serverConfigs = require('awtk-appium-js-helpers/appium-servers');
 let startApp = require("awtk-appium-js-helpers/start-app").startApp;
 
-let auto_adjust_size = require('./auto_adjust_size')
-let rotation = require('./rotation')
+let button = require('./button')
 let dialogs = require('./dialogs')
+let rotation = require('./rotation')
 let combo_box = require('./combo_box')
+let auto_adjust_size = require('./auto_adjust_size')
 
 const appName = '../bin/demo'
 
@@ -37,38 +38,58 @@ describe("awtk simple", function () {
   afterEach(function () {
     allPassed = allPassed && this.currentTest.state === 'passed';
   });
- 
+
+  //test button
+  it("button_test_long_press", function () {
+    return button.testLongPress(driver);
+  });
+  it("button_test_long_press_on_normal_button", function () {
+    return button.testLongPressOnNormalButton(driver);
+  });
+  it("button_test_press_release", function () {
+    return button.testPressRelease(driver);
+  });
+  it("button_test_tap", function () {
+    return button.testTap(driver);
+  });
+  it("button_test_activate_by_key", function () {
+    return button.testActivateByKey(driver);
+  });
+  it("button_test_click", function () {
+    return button.testClick(driver);
+  });
+
   //test combobox
-  it("text_send_key", function () {
+  it("combo_box_test_send_key", function () {
     return combo_box.testSendKey(driver);
   });
-  it("text_bottom_right_and_no_tr", function () {
+  it("bcombo_box_test_ottom_right_and_no_tr", function () {
     return combo_box.testBottomRightAndNoTr(driver);
   });
-  it("text_combo_box_ex", function () {
+  it("combo_box_test_combo_box_ex", function () {
     return combo_box.testComboBoxEx(driver);
   });
-  it("text_bottom", function () {
+  it("combo_box_test_bottom", function () {
     return combo_box.testBottom(driver);
   });
-  it("text_readonly_open", function () {
+  it("combo_box_test_readonly_open", function () {
     return combo_box.testReadonlyOpen(driver);
   });
-  it("text_editable", function () {
+  it("combo_box_test_editable", function () {
     return combo_box.testEditable(driver);
   });
 
   //test dialog
-  it("test_confirm", function () {
+  it("dialog_test_confirm", function () {
     return dialogs.testConfirm(driver);
   });
-  it("test_warn", function () {
+  it("dialog_test_warn", function () {
     return dialogs.testWarn(driver);
   });
-  it("test_info", function () {
+  it("dialog_test_info", function () {
     return dialogs.testInfo(driver);
   });
-  it("test_toast", function () {
+  it("dialog_test_toast", function () {
     return dialogs.testToast(driver);
   });
 
