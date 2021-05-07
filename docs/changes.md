@@ -2,6 +2,7 @@
 
 2020/05/07
  * 增加button的测试。
+ * 增加check\_button的测试。
 
 2020/05/06
  * 增加 combo\_box/combo\_box\_ex的测试。

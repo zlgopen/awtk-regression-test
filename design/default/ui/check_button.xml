@@ -1,0 +1,27 @@
+<window text="Check Button">
+  <row x="0" y="0" w="100%" h="128" children_layout="default(r=1,c=2,m=2)">
+    <column children_layout="default(r=4,c=1,ym=2,s=10)" >
+      <check_button name="book" text="Book" focusable="true"/>
+      <check_button name="food" text="Food" focusable="true"/>
+      <check_button name="pencil" text="Pencil" focusable="true"/>
+      <check_button name="disable_change" text="Disable Change" focusable="true"/>
+    </column>
+
+    <column children_layout="default(r=3,c=1,ym=2,s=10)" >
+      <radio_button name="font_small" text="Small Font" focusable="true"/>
+      <radio_button name="font_normal" text="Normal Font" focusable="true"/>
+      <radio_button name="font_big" text="Big Font" focusable="true"/>
+    </column>
+  </row>
+
+  <row x="20" y="160" w="100" h="30" children_layout="default(r=1,c=3)">
+    <radio_button style="left" name="left"/>
+    <radio_button style="middle" name="middle"/>
+    <radio_button style="right" name="right"/>
+  </row>
+  
+  <label name="value" x="c" y="b:100" w="128" h="30" text="value" />
+  <label name="old_value" x="c" y="b:50" w="128" h="30" text="old value" />
+  
+  <button focusable="true" x="c" y="b:10" w="128" h="30" text="close" on:click="back()"/>
+</window>

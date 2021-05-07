@@ -11,6 +11,7 @@ let button = require('./button')
 let dialogs = require('./dialogs')
 let rotation = require('./rotation')
 let combo_box = require('./combo_box')
+let check_button = require('./check_button')
 let auto_adjust_size = require('./auto_adjust_size')
 
 const appName = '../bin/demo'
@@ -37,6 +38,17 @@ describe("awtk simple", function () {
 
   afterEach(function () {
     allPassed = allPassed && this.currentTest.state === 'passed';
+  });
+
+  //test button
+  it("check_button_test_disable_change", function () {
+    return check_button.testDisableChange(driver);
+  });
+  it("check_button_test_radio_basic", function () {
+    return check_button.testRadioBasic(driver);
+  });
+  it("check_button_test_basic", function () {
+    return check_button.testBasic(driver);
   });
 
   //test button
