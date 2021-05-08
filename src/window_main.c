@@ -20,6 +20,7 @@
  */
 
 #include "window_main.h"
+#include "window_popup.h"
 #include "window_button.h"
 #include "window_dialogs.h"
 #include "window_rotation.h"
@@ -68,6 +69,11 @@ static ret_t on_open_button(void *ctx, event_t *e) {
   return RET_OK;
 }
 
+static ret_t on_open_popup(void *ctx, event_t *e) {
+  window_popup_open();
+  return RET_OK;
+}
+
 ret_t window_main_open(void) {
   widget_t *win = window_open("main");
   widget_child_on(win, "auto_adjust_size", EVT_CLICK, on_open_auto_adjust_size,
@@ -84,6 +90,8 @@ ret_t window_main_open(void) {
   widget_child_on(win, "check_button", EVT_CLICK, on_open_check_button, win);
   widget_child_on(win, "dialogs", EVT_CLICK, on_open_dialogs, win);
   widget_child_on(win, "button", EVT_CLICK, on_open_button, win);
+  widget_child_on(win, "popup", EVT_CLICK, on_open_popup, win);
 
   return RET_OK;
 }
+

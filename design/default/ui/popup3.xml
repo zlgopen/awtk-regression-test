@@ -1,0 +1,3 @@
+<popup text="Popup2" x="10" y="10" w="-20" h="100" anim_hint="center_scale(duration=300)">
+  <button focusable="true" x="c" y="b:10" w="80%" h="30" text="close" on:click="back()"/>
+</popup>

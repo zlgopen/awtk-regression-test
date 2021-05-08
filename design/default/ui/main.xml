@@ -9,6 +9,7 @@
       <list_item style="odd_clickable" name="combo_box" text="Test ComboBox" /> 
       <list_item style="even_clickable" name="button" text="Test Buttons" /> 
       <list_item style="odd_clickable" name="check_button" text="Test CheckButton" /> 
+      <list_item style="even_clickable" name="popup" text="Test Popup" /> 
     </scroll_view>
     <scroll_bar_d name="bar" x="right" y="0" w="12" h="100%" value="0"/>
   </list_view>

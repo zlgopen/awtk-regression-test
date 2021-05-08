@@ -1,0 +1,12 @@
+<popup text="Popup1" x="c" y="m" w="90%" h="80%" anim_hint="popup">
+  <button name="open_popup2" focusable="true" x="10" y="m:-100" w="40%" h="30" text="open_popup2" />
+  <button name="open_popup3" focusable="true" x="rignth:10" y="m:-100" w="40%" h="30" text="open_popup3" />
+  <button name="enable_close_by_timer" focusable="true" focused="true" x="c" y="m:-50" w="80%" h="30" text="enable_close_by_timer" />
+  <button name="enable_close_by_click" focusable="true" x="c" y="m" w="80%" h="30" text="enable_close_by_click"/>
+  <button name="enable_close_by_click_outside" focusable="true" x="c" y="m:50" w="80%" h="30" text="enable_close_by_click_outside" />
+
+  <label name="status1" x="c" y="20" w="80%" h="30" text="status1" />
+  <label name="status2" x="c" y="b:80" w="80%" h="30" text="status2" />
+  <label name="status3" x="c" y="b:40" w="80%" h="30" text="status3" />
+  <button focusable="true" x="c" y="b:10" w="80%" h="30" text="close" on:click="back()"/>
+</popup>

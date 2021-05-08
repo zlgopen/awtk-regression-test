@@ -7,6 +7,7 @@ require("awtk-appium-js-helpers/setup.js");
 let serverConfigs = require('awtk-appium-js-helpers/appium-servers');
 let startApp = require("awtk-appium-js-helpers/start-app").startApp;
 
+let popup = require('./popup')
 let button = require('./button')
 let dialogs = require('./dialogs')
 let rotation = require('./rotation')
@@ -38,6 +39,28 @@ describe("awtk simple", function () {
 
   afterEach(function () {
     allPassed = allPassed && this.currentTest.state === 'passed';
+  });
+  
+  //test popup
+  it("popup_test_popup_over_popup1", function () {
+    return popup.testPopupOverPopup1(driver);
+  });
+  
+  it("popup_test_popup_over_popup2", function () {
+    return popup.testPopupOverPopup2(driver);
+  });
+
+  it("popup_test_close_by_click_outside2", function () {
+    return popup.testCloseByClickOutside2(driver);
+  });
+  it("popup_test_close_by_click_outside1", function () {
+    return popup.testCloseByClickOutside1(driver);
+  });
+  it("popup_test_close_by_click", function () {
+    return popup.testCloseByClick(driver);
+  });
+  it("popup_test_close_by_timer", function () {
+    return popup.testCloseByTimer(driver);
   });
 
   //test button
