@@ -27,6 +27,7 @@
 #include "window_combo_box.h"
 #include "window_check_button.h"
 #include "window_auto_adjust_size.h"
+#include "window_auto_scale_children.h"
 #include "window_auto_adjust_size_max_w.h"
 
 static ret_t on_open_auto_adjust_size(void *ctx, event_t *e) {
@@ -69,6 +70,11 @@ static ret_t on_open_button(void *ctx, event_t *e) {
   return RET_OK;
 }
 
+static ret_t on_open_auto_scale_children(void *ctx, event_t *e) {
+  window_auto_scale_children_open();
+  return RET_OK;
+}
+
 static ret_t on_open_popup(void *ctx, event_t *e) {
   window_popup_open();
   return RET_OK;
@@ -91,6 +97,7 @@ ret_t window_main_open(void) {
   widget_child_on(win, "dialogs", EVT_CLICK, on_open_dialogs, win);
   widget_child_on(win, "button", EVT_CLICK, on_open_button, win);
   widget_child_on(win, "popup", EVT_CLICK, on_open_popup, win);
+  widget_child_on(win, "auto_scale_children", EVT_CLICK, on_open_auto_scale_children, win);
 
   return RET_OK;
 }

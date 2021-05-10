@@ -14,6 +14,7 @@ let rotation = require('./rotation')
 let combo_box = require('./combo_box')
 let check_button = require('./check_button')
 let auto_adjust_size = require('./auto_adjust_size')
+let auto_scale_children = require('./auto_scale_children')
 
 const appName = '../bin/demo'
 
@@ -39,6 +40,26 @@ describe("awtk simple", function () {
 
   afterEach(function () {
     allPassed = allPassed && this.currentTest.state === 'passed';
+  });
+  
+  //test auto_scale_children
+  it("auto_scale_children_test_scale_wh", function () {
+    return auto_scale_children.testScaleWH(driver);
+  });
+  it("auto_scale_children_test_scale_h", function () {
+    return auto_scale_children.testScaleH(driver);
+  });
+  it("auto_scale_children_test_scale_w", function () {
+    return auto_scale_children.testScaleW(driver);
+  });
+  it("auto_scale_children_test_scale_y", function () {
+    return auto_scale_children.testScaleY(driver);
+  });
+  it("auto_scale_children_test_scale_x", function () {
+    return auto_scale_children.testScaleX(driver);
+  });
+  it("auto_scale_children_test_basic", function () {
+    return auto_scale_children.testBasic(driver);
   });
   
   //test popup
