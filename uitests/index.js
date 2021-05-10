@@ -8,6 +8,7 @@ let serverConfigs = require('awtk-appium-js-helpers/appium-servers');
 let startApp = require("awtk-appium-js-helpers/start-app").startApp;
 
 let popup = require('./popup')
+let timer = require('./timer')
 let button = require('./button')
 let dialogs = require('./dialogs')
 let rotation = require('./rotation')
@@ -41,7 +42,34 @@ describe("awtk simple", function () {
   afterEach(function () {
     allPassed = allPassed && this.currentTest.state === 'passed';
   });
-  
+  //test timer
+  it("timer_test_timer", function () {
+    return timer.testTimer(driver);
+  });
+  it("timer_test_idle", function () {
+    return timer.testIdle(driver);
+  });
+
+  //test button
+  it("button_test_long_press", function () {
+    return button.testLongPress(driver);
+  });
+  it("button_test_long_press_on_normal_button", function () {
+    return button.testLongPressOnNormalButton(driver);
+  });
+  it("button_test_press_release", function () {
+    return button.testPressRelease(driver);
+  });
+  it("button_test_tap", function () {
+    return button.testTap(driver);
+  });
+  it("button_test_activate_by_key", function () {
+    return button.testActivateByKey(driver);
+  });
+  it("button_test_click", function () {
+    return button.testClick(driver);
+  });
+
   //test auto_scale_children
   it("auto_scale_children_test_scale_wh", function () {
     return auto_scale_children.testScaleWH(driver);
@@ -93,26 +121,6 @@ describe("awtk simple", function () {
   });
   it("check_button_test_basic", function () {
     return check_button.testBasic(driver);
-  });
-
-  //test button
-  it("button_test_long_press", function () {
-    return button.testLongPress(driver);
-  });
-  it("button_test_long_press_on_normal_button", function () {
-    return button.testLongPressOnNormalButton(driver);
-  });
-  it("button_test_press_release", function () {
-    return button.testPressRelease(driver);
-  });
-  it("button_test_tap", function () {
-    return button.testTap(driver);
-  });
-  it("button_test_activate_by_key", function () {
-    return button.testActivateByKey(driver);
-  });
-  it("button_test_click", function () {
-    return button.testClick(driver);
   });
 
   //test combobox

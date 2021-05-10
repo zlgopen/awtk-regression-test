@@ -1,0 +1,9 @@
+<window text="Timer">
+  <button name="start_timer" focusable="true" focused="true" x="c" y="m:-50" w="128" h="30" text="Start Timer"/>
+  <button name="stop_timer" focusable="true" focused="true" x="c" y="m" w="128" h="30" text="Stop Timer"/>
+  <button name="start_idle" focusable="true" x="c" y="m:50" w="128" h="30" text="Start Idle" />
+
+  <label name="status" x="c" y="b:50" w="128" h="30" text="0"/>
+
+  <button focusable="true" x="c" y="b:10" w="128" h="30" text="close" on:click="back()"/>
+</window>

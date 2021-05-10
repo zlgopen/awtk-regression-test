@@ -2,7 +2,8 @@
 
 2020/05/10
  * 增加auto scale children的测试。
- 1
+ * 增加timer/idle的测试。
+
 2020/05/08
  * 增加popup的测试。
 
