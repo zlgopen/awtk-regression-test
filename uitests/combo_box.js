@@ -31,7 +31,7 @@ exports.testSendKey= function (driver) {
 
 exports.testEditable = function (driver) {
     var tapPopup = new wd.TouchAction(driver);
-    tapPopup.tap({ el: null, x: 20, y: 77 });
+    tapPopup.tap({ el: null, x: 20, y: 107 });
 
     return driver
         .back().sleep(200)
@@ -39,7 +39,7 @@ exports.testEditable = function (driver) {
         .elementById('combo_box').click().sleep(200)
         .title().should.become("ComboBox")
         .elementById('editable_dropdown').click().sleep(200)
-        .getWindowPosition().should.become({ x: 10, y: 35 })
+        .getWindowPosition().should.become({ x: 10, y: 65 })
         .getWindowSize().should.become({ width: 200, height: 92 })
         .performTouchAction(tapPopup).sleep(200)
         .title().should.become("ComboBox")
@@ -52,10 +52,10 @@ exports.testEditable = function (driver) {
 
 exports.testReadonlyOpen = function (driver) {
     var tapPopup = new wd.TouchAction(driver);
-    tapPopup.tap({ el: null, x: 20, y: 123 });
+    tapPopup.tap({ el: null, x: 20, y: 153 });
 
     var tapComboBox = new wd.TouchAction(driver);
-    tapComboBox.tap({ el: null, x: 20, y: 66 });
+    tapComboBox.tap({ el: null, x: 20, y: 90 });
 
     return driver
         .back().sleep(200)
@@ -63,7 +63,7 @@ exports.testReadonlyOpen = function (driver) {
         .elementById('combo_box').click().sleep(200)
         .title().should.become("ComboBox")
         .performTouchAction(tapComboBox).sleep(200)
-        .getWindowPosition().should.become({ x: 10, y: 80 })
+        .getWindowPosition().should.become({ x: 10, y: 110 })
         .getWindowSize().should.become({ width: 200, height: 128 })
         .performTouchAction(tapPopup).sleep(200)
         .title().should.become("ComboBox")
@@ -76,10 +76,10 @@ exports.testReadonlyOpen = function (driver) {
 
 exports.testComboBoxEx = function (driver) {
     var tapPopup = new wd.TouchAction(driver);
-    tapPopup.tap({ el: null, x: 20, y: 170 });
+    tapPopup.tap({ el: null, x: 20, y: 208});
 
     var tapComboBox = new wd.TouchAction(driver);
-    tapComboBox.tap({ el: null, x: 190, y: 118 });
+    tapComboBox.tap({ el: null, x: 190, y: 150});
 
     return driver
         .back().sleep(200)
@@ -87,8 +87,8 @@ exports.testComboBoxEx = function (driver) {
         .elementById('combo_box').click().sleep(200)
         .title().should.become("ComboBox")
         .performTouchAction(tapComboBox).sleep(200)
-        .getWindowPosition().should.become({ x: 10, y: 130 })
-        .getWindowSize().should.become({ width: 200, height: 152 })
+        .getWindowPosition().should.become({ x: 10, y: 160 })
+        .getWindowSize().should.become({ width: 200, height: 152})
         .performTouchAction(tapPopup).sleep(200)
         .title().should.become("ComboBox")
         .elementById('combo_box_ex').text().should.become("2")

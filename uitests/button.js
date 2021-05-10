@@ -36,7 +36,7 @@ exports.testActivateByKey= function (driver) {
 
 exports.testTap = function (driver) {
     var tapButton = new wd.TouchAction(driver);
-    tapButton.tap({x: 166, y: 236 });
+    tapButton.tap({x: 166, y: 250 });
     
     return driver
         .back().sleep(200)
@@ -54,10 +54,10 @@ exports.testTap = function (driver) {
 
 exports.testPressRelease= function (driver) {
     var pressButton = new wd.TouchAction(driver);
-    pressButton.press({x: 166, y: 236 });
+    pressButton.press({x: 166, y: 250 });
     
     var releaseButton = new wd.TouchAction(driver);
-    releaseButton.release({x: 166, y: 236 });
+    releaseButton.release({x: 166, y: 250 });
     
     return driver
         .back().sleep(200)
@@ -76,10 +76,10 @@ exports.testPressRelease= function (driver) {
 
 exports.testLongPressOnNormalButton= function (driver) {
     var pressButton = new wd.TouchAction(driver);
-    pressButton.press({x: 166, y: 236 });
+    pressButton.press({x: 166, y: 256 });
     
     var releaseButton = new wd.TouchAction(driver);
-    releaseButton.release({x: 166, y: 236 });
+    releaseButton.release({x: 166, y: 256 });
     
     return driver
         .back().sleep(200)
@@ -99,10 +99,10 @@ exports.testLongPressOnNormalButton= function (driver) {
 
 exports.testLongPress= function (driver) {
     var pressButton = new wd.TouchAction(driver);
-    pressButton.press({x: 166, y: 286 });
+    pressButton.press({x: 166, y: 316 });
     
     var releaseButton = new wd.TouchAction(driver);
-    releaseButton.release({x: 166, y: 286 });
+    releaseButton.release({x: 166, y: 316 });
 
     return driver
         .back().sleep(200)
