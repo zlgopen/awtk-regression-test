@@ -1,4 +1,4 @@
-<window text="Auto Scale Children" design_w="160" design_h="240" 
+<window text="Auto Scale Children" design_w="160" design_h="225" 
   auto_scale_children_x="true" auto_scale_children_y="true" auto_scale_children_w="true" auto_scale_children_h="false">
 
   <button name="apply" focusable="true" focused="true"  text="Apply" x="10" y="20" w="60" h="30"/>

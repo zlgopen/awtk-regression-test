@@ -87,7 +87,9 @@ static ret_t on_open_popup(void *ctx, event_t *e) {
 }
 
 ret_t window_main_open(void) {
-  widget_t *win = window_open("main");
+  widget_t *win = window_open("system_bar");
+
+  win = window_open("main");
   widget_child_on(win, "auto_adjust_size", EVT_CLICK, on_open_auto_adjust_size,
                   win);
 
