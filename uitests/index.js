@@ -12,6 +12,7 @@ let timer = require('./timer')
 let button = require('./button')
 let dialogs = require('./dialogs')
 let closable = require('./closable')
+let fullscreen = require('./fullscreen')
 let rotation = require('./rotation')
 let combo_box = require('./combo_box')
 let check_button = require('./check_button')
@@ -43,7 +44,12 @@ describe("awtk simple", function () {
   afterEach(function () {
     allPassed = allPassed && this.currentTest.state === 'passed';
   });
-  
+
+  //test fullscreen
+  it("fullscreen_test_basic", function () {
+    return fullscreen.testBasic(driver);
+  });
+
   //test closable
   it("closable_test_confirm", function () {
     return closable.testConfirm(driver);

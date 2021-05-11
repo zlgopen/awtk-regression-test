@@ -1,6 +1,7 @@
 <window closable="no" anim_hint="htranslate" text="Regression Test">
   <list_view x="0"  y="0" w="100%" h="-50" item_height="36">
     <scroll_view name="view" x="0"  y="0" w="-12" h="100%" children_layout="list_view(x_margin=5,spacing=10)">
+      <list_item style="odd_clickable" name="fullscreen" text="Test Fullscreen" /> 
       <list_item style="even_clickable" name="auto_adjust_size" text="Test Auto Adjust Resize" /> 
       <list_item style="odd_clickable" name="auto_adjust_size_max_w" text="Test Auto Adjust Resize Max W" /> 
       <list_item style="even_clickable" name="auto_adjust_size_margin" text="Test Auto Adjust Resize Margin" /> 
