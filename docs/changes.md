@@ -3,6 +3,7 @@
 2020/05/11
   * 增加closable的测试。
   * 增加fullscreen的测试。
+  * 增加switch\_t/back\_to\_home的测试。
 
 2020/05/10
   * 增加auto scale children的测试。

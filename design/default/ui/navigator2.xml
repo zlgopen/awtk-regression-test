@@ -1,0 +1,8 @@
+<window text="Navigator2">
+  <button name="switch_to" focusable="true" focused="true" x="c" y="m:-50" w="228" h="30" text="Switch to" />
+  <button name="back_to_home" focusable="true" focused="true" x="c" y="m" w="228" h="30" text="Back to Home"/>
+
+  <label name="status" x="c" y="b:50" w="128" h="30" text="none"/>
+
+  <button focusable="true" x="c" y="b:10" w="128" h="30" text="close" on:click="back()"/>
+</window>

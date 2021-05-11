@@ -28,6 +28,7 @@
 #include "window_rotation.h"
 #include "window_combo_box.h"
 #include "window_fullscreen.h"
+#include "window_navigator1.h"
 #include "window_check_button.h"
 #include "window_auto_adjust_size.h"
 #include "window_auto_scale_children.h"
@@ -83,6 +84,11 @@ static ret_t on_open_fullscreen(void *ctx, event_t *e) {
   return RET_OK;
 }
 
+static ret_t on_open_navigator1(void *ctx, event_t *e) {
+  window_navigator1_open();
+  return RET_OK;
+}
+
 static ret_t on_open_timer(void *ctx, event_t *e) {
   window_timer_open();
   return RET_OK;
@@ -118,6 +124,7 @@ ret_t window_main_open(void) {
   widget_child_on(win, "button", EVT_CLICK, on_open_button, win);
   widget_child_on(win, "closable", EVT_CLICK, on_open_closable, win);
   widget_child_on(win, "fullscreen", EVT_CLICK, on_open_fullscreen, win);
+  widget_child_on(win, "navigator1", EVT_CLICK, on_open_navigator1, win);
   widget_child_on(win, "timer", EVT_CLICK, on_open_timer, win);
   widget_child_on(win, "popup", EVT_CLICK, on_open_popup, win);
   widget_child_on(win, "auto_scale_children", EVT_CLICK, on_open_auto_scale_children, win);

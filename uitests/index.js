@@ -13,6 +13,7 @@ let button = require('./button')
 let dialogs = require('./dialogs')
 let closable = require('./closable')
 let fullscreen = require('./fullscreen')
+let navigator = require('./navigator')
 let rotation = require('./rotation')
 let combo_box = require('./combo_box')
 let check_button = require('./check_button')
@@ -43,6 +44,16 @@ describe("awtk simple", function () {
 
   afterEach(function () {
     allPassed = allPassed && this.currentTest.state === 'passed';
+  });
+  //test navigator
+  it("navigator_test_back_to_home", function () {
+    return navigator.testBackToHome(driver);
+  });
+  it("navigator_test_back_to_home1", function () {
+    return navigator.testBackToHome1(driver);
+  });
+  it("navigator_test_switch", function () {
+    return navigator.testSwitchTo(driver);
   });
 
   //test fullscreen
