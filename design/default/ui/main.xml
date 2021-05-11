@@ -12,6 +12,7 @@
       <list_item style="even_clickable" name="popup" text="Test Popup" /> 
       <list_item style="odd_clickable" name="auto_scale_children" text="Test Auto Scale Children" /> 
       <list_item style="even_clickable" name="timer" text="Test Timer" /> 
+      <list_item style="odd_clickable" name="closable" text="Test Closable" /> 
     </scroll_view>
     <scroll_bar_d name="bar" x="right" y="0" w="12" h="100%" value="0"/>
   </list_view>

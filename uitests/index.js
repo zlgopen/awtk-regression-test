@@ -11,6 +11,7 @@ let popup = require('./popup')
 let timer = require('./timer')
 let button = require('./button')
 let dialogs = require('./dialogs')
+let closable = require('./closable')
 let rotation = require('./rotation')
 let combo_box = require('./combo_box')
 let check_button = require('./check_button')
@@ -42,6 +43,18 @@ describe("awtk simple", function () {
   afterEach(function () {
     allPassed = allPassed && this.currentTest.state === 'passed';
   });
+  
+  //test closable
+  it("closable_test_confirm", function () {
+    return closable.testConfirm(driver);
+  });
+  it("closable_test_no", function () {
+    return closable.testNo(driver);
+  });
+  it("closable_test_yes", function () {
+    return closable.testYes(driver);
+  });
+
   //test timer
   it("timer_test_timer", function () {
     return timer.testTimer(driver);

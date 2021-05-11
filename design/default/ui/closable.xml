@@ -1,0 +1,9 @@
+<window text="Closable">
+  <button name="yes" focusable="true" focused="true" x="c" y="m:-50" w="128" h="30" text="yes"/>
+  <button name="no" focusable="true" x="c" y="m" w="128" h="30" text="no"/>
+  <button name="confirm" focusable="true" x="c" y="m:50" w="128" h="30" text="confirm" />
+
+  <label name="status" x="c" y="b:50" w="128" h="30" text="none"/>
+
+  <button focusable="true" x="c" y="b:10" w="128" h="30" text="close" on:click="back()"/>
+</window>

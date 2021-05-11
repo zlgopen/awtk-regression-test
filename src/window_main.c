@@ -24,6 +24,7 @@
 #include "window_timer.h"
 #include "window_button.h"
 #include "window_dialogs.h"
+#include "window_closable.h"
 #include "window_rotation.h"
 #include "window_combo_box.h"
 #include "window_check_button.h"
@@ -71,6 +72,11 @@ static ret_t on_open_button(void *ctx, event_t *e) {
   return RET_OK;
 }
 
+static ret_t on_open_closable(void *ctx, event_t *e) {
+  window_closable_open();
+  return RET_OK;
+}
+
 static ret_t on_open_timer(void *ctx, event_t *e) {
   window_timer_open();
   return RET_OK;
@@ -104,6 +110,7 @@ ret_t window_main_open(void) {
   widget_child_on(win, "check_button", EVT_CLICK, on_open_check_button, win);
   widget_child_on(win, "dialogs", EVT_CLICK, on_open_dialogs, win);
   widget_child_on(win, "button", EVT_CLICK, on_open_button, win);
+  widget_child_on(win, "closable", EVT_CLICK, on_open_closable, win);
   widget_child_on(win, "timer", EVT_CLICK, on_open_timer, win);
   widget_child_on(win, "popup", EVT_CLICK, on_open_popup, win);
   widget_child_on(win, "auto_scale_children", EVT_CLICK, on_open_auto_scale_children, win);
