@@ -1,6 +1,7 @@
 # 最新动态
 
 2020/05/11
+  * 完善popup的测试。
   * 增加closable的测试。
   * 增加fullscreen的测试。
   * 增加switch\_t/back\_to\_home的测试。

@@ -45,6 +45,7 @@ describe("awtk simple", function () {
   afterEach(function () {
     allPassed = allPassed && this.currentTest.state === 'passed';
   });
+  
   //test navigator
   it("navigator_test_back_to_home", function () {
     return navigator.testBackToHome(driver);
@@ -121,6 +122,10 @@ describe("awtk simple", function () {
   });
   
   //test popup
+  it("popup_test_close_by_timer_with_user_action", function () {
+    return popup.testCloseByTimerWithUserAction(driver);
+  });
+
   it("popup_test_popup_over_popup1", function () {
     return popup.testPopupOverPopup1(driver);
   });

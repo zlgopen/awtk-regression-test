@@ -8,7 +8,28 @@ exports.testCloseByTimer= function (driver) {
         .title().should.become("Popup1")
         .elementById('status1').text().should.become("will_open")
         .elementById('status2').text().should.become("open")
-        .elementById('enable_close_by_timer').click().sleep(1800)
+        .elementById('enable_close_by_timer').click().sleep(1200)
+        .title().should.become("Regression Test")
+}
+
+exports.testCloseByTimerWithUserAction= function (driver) {
+    var press = new wd.TouchAction(driver);
+    press.press({x: 60, y: 60 });
+    var release = new wd.TouchAction(driver);
+    release.release({x: 60, y: 60 });
+
+    return driver
+        .back().sleep(200)
+        .title().should.become("Regression Test")
+        .elementById('popup').click().sleep(600)
+        .title().should.become("Popup1")
+        .elementById('status1').text().should.become("will_open")
+        .elementById('status2').text().should.become("open")
+        .elementById('enable_close_by_timer').click().sleep(300)
+        .performTouchAction(press).sleep(300)
+        .performTouchAction(release).sleep(300)
+        .title().should.become("Popup1")
+        .sleep(1200)
         .title().should.become("Regression Test")
 }
 
