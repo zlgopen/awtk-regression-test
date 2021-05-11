@@ -19,10 +19,10 @@
  *
  */
 
-#include "common.h"
 #include "window_auto_adjust_size.h"
+#include "common.h"
 
-ret_t window_auto_adjust_size_open(const char* name) {
+ret_t window_auto_adjust_size_open(const char *name) {
   widget_t *win = window_open(name);
   hook_locale_switch_events(win);
 

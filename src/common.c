@@ -31,7 +31,7 @@ static ret_t on_change_to_chinese(void *ctx, event_t *e) {
   return RET_OK;
 }
 
-ret_t hook_locale_switch_events(widget_t* win) {
+ret_t hook_locale_switch_events(widget_t *win) {
   widget_child_on(win, "english", EVT_CLICK, on_change_to_english, NULL);
   widget_child_on(win, "chinese", EVT_CLICK, on_change_to_chinese, NULL);
 

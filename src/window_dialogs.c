@@ -19,8 +19,8 @@
  *
  */
 
-#include "common.h"
 #include "window_dialogs.h"
+#include "common.h"
 
 static ret_t on_toast(void *ctx, event_t *e) {
   dialog_toast("hello full awtk", 1000);
@@ -28,7 +28,12 @@ static ret_t on_toast(void *ctx, event_t *e) {
 }
 
 static ret_t on_toast_long(void *ctx, event_t *e) {
-  dialog_toast("Next, we want to enable a request for a review of the post, and we want content to return an empty string while waiting for the review. When the post receives approval, it should get published, meaning the text of the post will be returned when content is called.", 1000);
+  dialog_toast(
+      "Next, we want to enable a request for a review of the post, and we want "
+      "content to return an empty string while waiting for the review. When "
+      "the post receives approval, it should get published, meaning the text "
+      "of the post will be returned when content is called.",
+      1000);
   return RET_OK;
 }
 
@@ -38,7 +43,10 @@ static ret_t on_info(void *ctx, event_t *e) {
 }
 
 static ret_t on_info_long(void *ctx, event_t *e) {
-  dialog_info("info_long", "A blog post starts as an empty draft.\nWhen the draft is done, a review of the post is requested.\nWhen the post is approved, it gets published.");
+  dialog_info("info_long",
+              "A blog post starts as an empty draft.\nWhen the draft is done, "
+              "a review of the post is requested.\nWhen the post is approved, "
+              "it gets published.");
   return RET_OK;
 }
 
@@ -48,7 +56,10 @@ static ret_t on_warn(void *ctx, event_t *e) {
 }
 
 static ret_t on_warn_long(void *ctx, event_t *e) {
-  dialog_warn("warn_long", "A blog post starts as an empty draft.\nWhen the draft is done, a review of the post is requested.\nWhen the post is approved, it gets published.");
+  dialog_warn("warn_long",
+              "A blog post starts as an empty draft.\nWhen the draft is done, "
+              "a review of the post is requested.\nWhen the post is approved, "
+              "it gets published.");
   return RET_OK;
 }
 
@@ -58,7 +69,10 @@ static ret_t on_confirm(void *ctx, event_t *e) {
 }
 
 static ret_t on_confirm_long(void *ctx, event_t *e) {
-  dialog_confirm("confirm_long", "Using the state pattern means when the business requirements of the program change, we won’t need to change the code of the value holding the state or the code that uses the value");
+  dialog_confirm("confirm_long",
+                 "Using the state pattern means when the business requirements "
+                 "of the program change, we won’t need to change the code of "
+                 "the value holding the state or the code that uses the value");
   return RET_OK;
 }
 
@@ -75,7 +89,7 @@ ret_t window_dialogs_open(void) {
 
   widget_child_on(win, "confirm", EVT_CLICK, on_confirm, NULL);
   widget_child_on(win, "confirm_long", EVT_CLICK, on_confirm_long, NULL);
-  
+
   hook_locale_switch_events(win);
 
   return RET_OK;

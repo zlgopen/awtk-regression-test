@@ -20,19 +20,19 @@
  */
 
 #include "window_main.h"
-#include "window_popup.h"
-#include "window_timer.h"
+#include "window_auto_adjust_size.h"
+#include "window_auto_adjust_size_max_w.h"
+#include "window_auto_scale_children.h"
 #include "window_button.h"
-#include "window_dialogs.h"
+#include "window_check_button.h"
 #include "window_closable.h"
-#include "window_rotation.h"
 #include "window_combo_box.h"
+#include "window_dialogs.h"
 #include "window_fullscreen.h"
 #include "window_navigator1.h"
-#include "window_check_button.h"
-#include "window_auto_adjust_size.h"
-#include "window_auto_scale_children.h"
-#include "window_auto_adjust_size_max_w.h"
+#include "window_popup.h"
+#include "window_rotation.h"
+#include "window_timer.h"
 
 static ret_t on_open_auto_adjust_size(void *ctx, event_t *e) {
   window_auto_adjust_size_open("auto_adjust_size");
@@ -127,8 +127,8 @@ ret_t window_main_open(void) {
   widget_child_on(win, "navigator1", EVT_CLICK, on_open_navigator1, win);
   widget_child_on(win, "timer", EVT_CLICK, on_open_timer, win);
   widget_child_on(win, "popup", EVT_CLICK, on_open_popup, win);
-  widget_child_on(win, "auto_scale_children", EVT_CLICK, on_open_auto_scale_children, win);
+  widget_child_on(win, "auto_scale_children", EVT_CLICK,
+                  on_open_auto_scale_children, win);
 
   return RET_OK;
 }
-

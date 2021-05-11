@@ -26,7 +26,7 @@
 
 BEGIN_C_DECLS
 
-ret_t window_navigator2_open(widget_t* to_close);
+ret_t window_navigator2_open(widget_t *to_close);
 
 END_C_DECLS
 

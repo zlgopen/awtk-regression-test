@@ -21,8 +21,8 @@
 
 #include "window_auto_scale_children.h"
 
-static ret_t on_apply(void* ctx, event_t* e) {
-  widget_t* win = WIDGET(ctx);
+static ret_t on_apply(void *ctx, event_t *e) {
+  widget_t *win = WIDGET(ctx);
   bool_t x = CHECK_BUTTON(widget_lookup(win, "x", TRUE))->value;
   bool_t y = CHECK_BUTTON(widget_lookup(win, "y", TRUE))->value;
   bool_t w = CHECK_BUTTON(widget_lookup(win, "w", TRUE))->value;
@@ -40,7 +40,7 @@ static ret_t on_apply(void* ctx, event_t* e) {
 
 ret_t window_auto_scale_children_open(void) {
   widget_t *win = window_open("auto_scale_children");
-  
+
   widget_child_on(win, "apply", EVT_CLICK, on_apply, win);
 
   return RET_OK;

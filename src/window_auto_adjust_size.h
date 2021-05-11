@@ -26,7 +26,7 @@
 
 BEGIN_C_DECLS
 
-ret_t window_auto_adjust_size_open(const char* name);
+ret_t window_auto_adjust_size_open(const char *name);
 
 END_C_DECLS
 
