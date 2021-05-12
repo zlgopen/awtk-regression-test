@@ -36,6 +36,12 @@ static ret_t on_enable_close_by_click_outside(void *ctx, event_t *e) {
   return RET_OK;
 }
 
+static ret_t on_click_outside_and_timer(void *ctx, event_t *e) {
+  popup_set_close_when_click_outside(WIDGET(ctx), TRUE);
+  popup_set_close_when_timeout(WIDGET(ctx), 1000);
+  return RET_OK;
+}
+
 static ret_t on_window_close(void *ctx, event_t *e) {
   widget_t *win = WIDGET(ctx);
   widget_set_text_utf8(widget_lookup(win, "status1", TRUE), "close");
@@ -107,6 +113,8 @@ ret_t window_popup_open(void) {
                   on_enable_close_by_click, win);
   widget_child_on(win, "enable_close_by_click_outside", EVT_CLICK,
                   on_enable_close_by_click_outside, win);
+  widget_child_on(win, "click_outside_and_timer", EVT_CLICK,
+                  on_click_outside_and_timer, win);
 
   return RET_OK;
 }

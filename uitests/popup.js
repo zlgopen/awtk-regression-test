@@ -1,6 +1,6 @@
 let wd = require("wd");
 
-exports.testCloseByTimer= function (driver) {
+exports.testCloseByTimer1= function (driver) {
     return driver
         .back().sleep(200)
         .title().should.become("Regression Test")
@@ -9,6 +9,18 @@ exports.testCloseByTimer= function (driver) {
         .elementById('status1').text().should.become("will_open")
         .elementById('status2').text().should.become("open")
         .elementById('enable_close_by_timer').click().sleep(1200)
+        .title().should.become("Regression Test")
+}
+
+exports.testCloseByTimer2= function (driver) {
+    return driver
+        .back().sleep(200)
+        .title().should.become("Regression Test")
+        .elementById('popup').click().sleep(600)
+        .title().should.become("Popup1")
+        .elementById('status1').text().should.become("will_open")
+        .elementById('status2').text().should.become("open")
+        .elementById('click_outside_and_timer').click().sleep(1200)
         .title().should.become("Regression Test")
 }
 
@@ -85,6 +97,27 @@ exports.testCloseByClickOutside2 = function (driver) {
         .elementById('status1').text().should.become("will_open")
         .elementById('status2').text().should.become("open")
         .elementById('enable_close_by_click_outside').click().sleep(100)
+        .performTouchAction(press)
+        .performTouchAction(release).sleep(200)
+        .title().should.become("Popup1")
+        .back().sleep(600)
+        .title().should.become("Regression Test")
+}
+
+exports.testCloseByClickOutside3 = function (driver) {
+    var press = new wd.TouchAction(driver);
+    press.press({x: 60, y: 60 });
+    var release = new wd.TouchAction(driver);
+    release.release({x: 60, y: 60 });
+
+    return driver
+        .back().sleep(200)
+        .title().should.become("Regression Test")
+        .elementById('popup').click().sleep(600)
+        .title().should.become("Popup1")
+        .elementById('status1').text().should.become("will_open")
+        .elementById('status2').text().should.become("open")
+        .elementById('click_outside_and_timer').click().sleep(100)
         .performTouchAction(press)
         .performTouchAction(release).sleep(200)
         .title().should.become("Popup1")

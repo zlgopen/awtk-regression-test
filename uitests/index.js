@@ -154,14 +154,20 @@ describe("awtk simple", function () {
   it("popup_test_close_by_click_outside2", function () {
     return popup.testCloseByClickOutside2(driver);
   });
+  it("popup_test_close_by_click_outside3", function () {
+    return popup.testCloseByClickOutside3(driver);
+  });
   it("popup_test_close_by_click_outside1", function () {
     return popup.testCloseByClickOutside1(driver);
   });
   it("popup_test_close_by_click", function () {
     return popup.testCloseByClick(driver);
   });
-  it("popup_test_close_by_timer", function () {
-    return popup.testCloseByTimer(driver);
+  it("popup_test_close_by_timer1", function () {
+    return popup.testCloseByTimer1(driver);
+  });
+  it("popup_test_close_by_timer2", function () {
+    return popup.testCloseByTimer2(driver);
   });
 
   //test button
