@@ -1,0 +1,44 @@
+<window text="Focus">
+  <app_bar x="0" y="0" w="100%" h="30" >
+    <label name="status" x="0" y="0" w="100%" h="100%" text="status"/>
+  </app_bar>
+
+  <row x="0" y="40" w="100%" h="30" children_layout="default(r=1,c=3,xm=2,s=10)">
+    <button name="dialog" text="Dialog" focusable="true" focused="true"/>
+    <button name="tab" text="Tab" focusable="true" />
+    <button name="prev_next" text="Prev Next" focusable="true"/>
+  </row>
+
+  <row x="0" y="80" w="100%" h="30" children_layout="default(r=1,c=2,xm=2,s=10)">
+    <button name="first" text="First" focusable="true"/>
+    <button name="left_right_up_down" text="Left Right Up Down" focusable="true"/>
+  </row>
+
+
+  <slider name="slider" x="10" y="116" w="-20" h="20" value="40" focusable="true"/>
+  <progress_bar name="bar1" x="10" y="142" w="-20" h="16" value="40" show_text="true"/>
+  <progress_bar name="bar2" x="right:10" y="160" w="20" h="118" value="20" vertical="true"/>
+
+  <row x="0" y="180" w="-50" h="90" children_layout="default(r=1,c=2,m=2)">
+    <column children_layout="default(r=3,c=1,ym=2,s=10)" >
+      <check_button name="book" text="Book" focusable="true"/>
+      <check_button name="food" text="Food" focusable="true"/>
+      <check_button name="pencil" text="Pencil" value="true" focusable="true"/>
+    </column>
+
+    <column children_layout="default(r=3,c=1,ym=2,s=10)" >
+      <radio_button name="font_small" text="Small Font" focusable="true"/>
+      <radio_button name="font_normal" text="Normal Font" focusable="true"/>
+      <radio_button name="font_big" text="Big Font" focusable="true"/>
+    </column>
+  </row>
+
+  <row x="20" y="bottom:60" w="100" h="30" children_layout="default(r=1,c=4)">
+    <radio_button name="left" style="left" focusable="true"/>
+    <radio_button name="center" style="center" focusable="true"/>
+    <radio_button name="right" style="right" focusable="true"/>
+    <check_button name="mute" style="mute" focusable="true"/>
+  </row>
+  
+  <button name="close" focusable="true" x="c" y="b:10" w="128" h="30" text="close" on:click="back()"/>
+</window>

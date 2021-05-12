@@ -7,15 +7,16 @@ require("awtk-appium-js-helpers/setup.js");
 let serverConfigs = require('awtk-appium-js-helpers/appium-servers');
 let startApp = require("awtk-appium-js-helpers/start-app").startApp;
 
+let focus = require('./focus')
 let popup = require('./popup')
 let timer = require('./timer')
 let button = require('./button')
 let dialogs = require('./dialogs')
 let closable = require('./closable')
-let fullscreen = require('./fullscreen')
-let navigator = require('./navigator')
 let rotation = require('./rotation')
+let navigator = require('./navigator')
 let combo_box = require('./combo_box')
+let fullscreen = require('./fullscreen')
 let check_button = require('./check_button')
 let auto_adjust_size = require('./auto_adjust_size')
 let auto_scale_children = require('./auto_scale_children')
@@ -45,7 +46,20 @@ describe("awtk simple", function () {
   afterEach(function () {
     allPassed = allPassed && this.currentTest.state === 'passed';
   });
-  
+  //test focus
+  it("focus_test_move_left_right_up_down", function () {
+    return focus.testLeftRightUpDown(driver);
+  });
+  it("focus_test_move_first", function () {
+    return focus.testMoveFirst(driver);
+  });
+  it("focus_test_prev_next", function () {
+    return focus.testPrevNext(driver);
+  });
+  it("focus_test_tab", function () {
+    return focus.testTab(driver);
+  });
+
   //test navigator
   it("navigator_test_back_to_home", function () {
     return navigator.testBackToHome(driver);
@@ -102,6 +116,9 @@ describe("awtk simple", function () {
   });
 
   //test auto_scale_children
+  it("auto_adjust_size_margin", function () {
+    return auto_adjust_size.testChineseMargin(driver);
+  });
   it("auto_scale_children_test_scale_wh", function () {
     return auto_scale_children.testScaleWH(driver);
   });
@@ -198,9 +215,6 @@ describe("awtk simple", function () {
   });
   it("auto_adjust_size_max_w", function () {
     return auto_adjust_size.testMaxW(driver);
-  });
-  it("auto_adjust_size_margin", function () {
-    return auto_adjust_size.testChineseMargin(driver);
   });
   it("auto_adjust_size_chinese", function () {
     return auto_adjust_size.testChinese(driver);

@@ -26,6 +26,7 @@
 #include "window_button.h"
 #include "window_check_button.h"
 #include "window_closable.h"
+#include "window_focus.h"
 #include "window_combo_box.h"
 #include "window_dialogs.h"
 #include "window_fullscreen.h"
@@ -79,6 +80,11 @@ static ret_t on_open_closable(void *ctx, event_t *e) {
   return RET_OK;
 }
 
+static ret_t on_open_focus(void *ctx, event_t *e) {
+  window_focus_open();
+  return RET_OK;
+}
+
 static ret_t on_open_fullscreen(void *ctx, event_t *e) {
   window_fullscreen_open();
   return RET_OK;
@@ -123,6 +129,7 @@ ret_t window_main_open(void) {
   widget_child_on(win, "dialogs", EVT_CLICK, on_open_dialogs, win);
   widget_child_on(win, "button", EVT_CLICK, on_open_button, win);
   widget_child_on(win, "closable", EVT_CLICK, on_open_closable, win);
+  widget_child_on(win, "focus", EVT_CLICK, on_open_focus, win);
   widget_child_on(win, "fullscreen", EVT_CLICK, on_open_fullscreen, win);
   widget_child_on(win, "navigator1", EVT_CLICK, on_open_navigator1, win);
   widget_child_on(win, "timer", EVT_CLICK, on_open_timer, win);
