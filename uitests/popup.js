@@ -8,7 +8,7 @@ exports.testCloseByTimer1= function (driver) {
         .title().should.become("Popup1")
         .elementById('status1').text().should.become("will_open")
         .elementById('status2').text().should.become("open")
-        .elementById('enable_close_by_timer').click().sleep(1800)
+        .elementById('enable_close_by_timer').click().sleep(1200)
         .title().should.become("Regression Test")
 }
 
@@ -20,7 +20,7 @@ exports.testCloseByTimer2= function (driver) {
         .title().should.become("Popup1")
         .elementById('status1').text().should.become("will_open")
         .elementById('status2').text().should.become("open")
-        .elementById('click_outside_and_timer').click().sleep(1200)
+        .elementById('click_outside_and_timer').click().sleep(1800)
         .title().should.become("Regression Test")
 }
 
