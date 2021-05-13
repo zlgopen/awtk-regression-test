@@ -21,8 +21,18 @@
 
 #include "window_auto_adjust_size_max_w.h"
 
+static ret_t on_set_text(void *ctx, event_t *e) {
+  widget_t* win = widget_get_window(WIDGET(e->target));
+  widget_set_text_utf8(widget_lookup(win, "l3", TRUE), (const char*)ctx);
+  widget_set_text_utf8(widget_lookup(win, "r3", TRUE), (const char*)ctx);
+
+  return RET_OK;
+}
+
 ret_t window_auto_adjust_size_max_w_open(void) {
   widget_t *win = window_open("auto_adjust_size_max_w");
+  widget_child_on(win, "short", EVT_CLICK, on_set_text, "it is short");
+  widget_child_on(win, "long", EVT_CLICK, on_set_text,  "Specifies whether widget will be treated as the default widget within its toplevel");
 
   return win != NULL ? RET_OK : RET_FAIL;
 }

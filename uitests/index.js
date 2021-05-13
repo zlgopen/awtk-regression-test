@@ -46,6 +46,7 @@ describe("awtk simple", function () {
   afterEach(function () {
     allPassed = allPassed && this.currentTest.state === 'passed';
   });
+
   //test focus
   it("focus_test_move_left_right_up_down", function () {
     return focus.testLeftRightUpDown(driver);
@@ -119,6 +120,20 @@ describe("awtk simple", function () {
   it("auto_adjust_size_margin", function () {
     return auto_adjust_size.testChineseMargin(driver);
   });
+  it("auto_adjust_size_max_w1", function () {
+    return auto_adjust_size.testMaxW1(driver);
+  });
+  it("auto_adjust_size_max_w2", function () {
+    return auto_adjust_size.testMaxW2(driver);
+  });
+  it("auto_adjust_size_max_w3", function () {
+    return auto_adjust_size.testMaxW3(driver);
+  });
+  it("auto_adjust_size_set_text", function () {
+    return auto_adjust_size.testSetText(driver);
+  });
+
+  //test auto_scale_children
   it("auto_scale_children_test_scale_wh", function () {
     return auto_scale_children.testScaleWH(driver);
   });
@@ -218,9 +233,6 @@ describe("awtk simple", function () {
   //test auto adjust size
   it("auto_adjust_size_english", function () {
     return auto_adjust_size.testEnglish(driver);
-  });
-  it("auto_adjust_size_max_w", function () {
-    return auto_adjust_size.testMaxW(driver);
   });
   it("auto_adjust_size_chinese", function () {
     return auto_adjust_size.testChinese(driver);

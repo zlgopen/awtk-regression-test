@@ -41,7 +41,7 @@ exports.testEnglish = function (driver) {
         .title().should.become("Regression Test")
 }
 
-exports.testMaxW = function (driver) {
+exports.testMaxW1 = function (driver) {
     return driver
         .back().sleep(200)
         .title().should.become("Regression Test")
@@ -62,7 +62,7 @@ exports.testMaxW = function (driver) {
         .elementById('l3').getAttribute('w').should.become(200)
         .elementById('l3').getAttribute('h').should.become(48)
 
-        .elementById('r1').getAttribute('x').should.become(267)
+        .elementById('r1').getAttribute('x').should.become(263)
         .elementById('r1').getAttribute('y').should.become(10)
         .elementById('r1').getAttribute('w').should.become(47)
         .elementById('r1').getAttribute('h').should.become(28)
@@ -76,6 +76,46 @@ exports.testMaxW = function (driver) {
         .elementById('r3').getAttribute('y').should.become(240)
         .elementById('r3').getAttribute('w').should.become(200)
         .elementById('r3').getAttribute('h').should.become(48)
+        .back().sleep(200)
+        .title().should.become("Regression Test")
+}
+
+exports.testMaxW2 = function (driver) {
+    return driver
+        .back().sleep(200)
+        .title().should.become("Regression Test")
+        .elementById('auto_adjust_size_max_w').click().sleep(200)
+        .elementById('short').click().sleep(200)
+        //test max_w
+        .elementById('l3').getAttribute('x').should.become(10)
+        .elementById('l3').getAttribute('y').should.become(140)
+        .elementById('l3').getAttribute('w').should.become(84)
+        .elementById('l3').getAttribute('h').should.become(28)
+
+        .elementById('r3').getAttribute('x').should.become(226)
+        .elementById('r3').getAttribute('y').should.become(240)
+        .elementById('r3').getAttribute('w').should.become(84)
+        .elementById('r3').getAttribute('h').should.become(28)
+        .back().sleep(200)
+        .title().should.become("Regression Test")
+}
+
+exports.testMaxW3 = function (driver) {
+    return driver
+        .back().sleep(200)
+        .title().should.become("Regression Test")
+        .elementById('auto_adjust_size_max_w').click().sleep(200)
+        .elementById('long').click().sleep(200)
+        //test max_w
+        .elementById('l3').getAttribute('x').should.become(10)
+        .elementById('l3').getAttribute('y').should.become(140)
+        .elementById('l3').getAttribute('w').should.become(200)
+        .elementById('l3').getAttribute('h').should.become(88)
+
+        .elementById('r3').getAttribute('x').should.become(110)
+        .elementById('r3').getAttribute('y').should.become(240)
+        .elementById('r3').getAttribute('w').should.become(200)
+        .elementById('r3').getAttribute('h').should.become(88)
         .back().sleep(200)
         .title().should.become("Regression Test")
 }
@@ -97,6 +137,27 @@ exports.testChineseMargin = function (driver) {
         .elementById('label3').getAttribute('h').should.become(55)
         .elementById('label4').getAttribute('w').should.become(117)
         .elementById('label4').getAttribute('h').should.become(55)
+        .back().sleep(200)
+        .title().should.become("Regression Test")
+}
+
+exports.testSetText = function (driver) {
+    return driver
+        .back().sleep(200)
+        .title().should.become("Regression Test")
+        .elementById('auto_adjust_size_max_w').click().sleep(200)
+        //test max_w
+        .elementById('l1').getAttribute('w').should.become(47)
+        .elementById('l1').getAttribute('h').should.become(28)
+
+        .elementById('l1').setText("opened this issue 6 hours ago · 2 comments")
+        .elementById('l1').getAttribute('w').should.become(100)
+        .elementById('l1').getAttribute('h').should.become(28)
+
+        .elementById('l1').setText("In interactive UI applications, state is continually changing in response to user actions and application events.")
+        .elementById('l1').getAttribute('w').should.become(100)
+        .elementById('l1').getAttribute('h').should.become(28)
+
         .back().sleep(200)
         .title().should.become("Regression Test")
 }

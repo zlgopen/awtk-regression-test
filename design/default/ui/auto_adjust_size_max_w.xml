@@ -1,4 +1,4 @@
-<window anim_hint="htranslate" text="Regression Test">
+<window text="Regression Test">
   <label name="l1" style="left" x="10" y="10" h="30" text="close" auto_adjust_size="true" max_w="100"/>
   <label name="l2" style="left" x="10" y="50" h="30" text="it is a auto adjust size sample" 
     auto_adjust_size="true" 
@@ -21,5 +21,7 @@
     line_wrap="true"
     max_w="200"/>
 
-  <button name="back" x="center" y="bottom:10" w="50%" h="30" text="Back" on:click="back()"/>
+  <button name="short" x="10" y="bottom:10" w="25%" h="30" text="Short"/>
+  <button name="back" x="center" y="bottom:10" w="25%" h="30" text="Back" on:click="back()"/>
+  <button name="long" x="right:10" y="bottom:10" w="25%" h="30" text="Long"/>
 </window>
