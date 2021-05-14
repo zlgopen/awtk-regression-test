@@ -20,9 +20,8 @@
  */
 
 #include "window_main.h"
-#include "window_auto_adjust_size.h"
-#include "window_auto_adjust_size_max_w.h"
-#include "window_auto_scale_children.h"
+#include "window_timer.h"
+#include "window_switch.h"
 #include "window_button.h"
 #include "window_check_button.h"
 #include "window_closable.h"
@@ -33,7 +32,9 @@
 #include "window_navigator1.h"
 #include "window_popup.h"
 #include "window_rotation.h"
-#include "window_timer.h"
+#include "window_auto_adjust_size.h"
+#include "window_auto_adjust_size_max_w.h"
+#include "window_auto_scale_children.h"
 
 static ret_t on_open_auto_adjust_size(void *ctx, event_t *e) {
   window_auto_adjust_size_open("auto_adjust_size");
@@ -72,6 +73,11 @@ static ret_t on_open_dialogs(void *ctx, event_t *e) {
 
 static ret_t on_open_button(void *ctx, event_t *e) {
   window_button_open();
+  return RET_OK;
+}
+
+static ret_t on_open_switch(void *ctx, event_t *e) {
+  window_switch_open();
   return RET_OK;
 }
 
@@ -128,6 +134,7 @@ ret_t window_main_open(void) {
   widget_child_on(win, "check_button", EVT_CLICK, on_open_check_button, win);
   widget_child_on(win, "dialogs", EVT_CLICK, on_open_dialogs, win);
   widget_child_on(win, "button", EVT_CLICK, on_open_button, win);
+  widget_child_on(win, "switch", EVT_CLICK, on_open_switch, win);
   widget_child_on(win, "closable", EVT_CLICK, on_open_closable, win);
   widget_child_on(win, "focus", EVT_CLICK, on_open_focus, win);
   widget_child_on(win, "fullscreen", EVT_CLICK, on_open_fullscreen, win);

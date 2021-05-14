@@ -1,0 +1,11 @@
+<window text="Switch">
+  <switch name="s1" x="10" y="128" w="60" h="22" focusable="true" focused="true"/>
+  <switch name="s2" x="c" y="128" w="60" h="22" style="rounded" focusable="true"/>
+  <switch name="s3" x="r:10" y="128" w="44" h="22" style="no_image" focusable="true"/>
+
+  <label name="old_value" x="center" y="middle:-20" w="50%" h="30" text="old_value"/>
+  <label name="value" x="center" y="middle:20" w="50%" h="30" text="value"/>
+  <label name="status" x="c" y="b:50" w="128" h="30" text="none"/>
+
+  <button focusable="true" x="c" y="b:10" w="128" h="30" text="close" on:click="back()"/>
+</window>

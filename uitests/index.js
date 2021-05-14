@@ -11,6 +11,7 @@ let focus = require('./focus')
 let popup = require('./popup')
 let timer = require('./timer')
 let button = require('./button')
+let aswitch= require('./switch')
 let dialogs = require('./dialogs')
 let closable = require('./closable')
 let rotation = require('./rotation')
@@ -46,7 +47,19 @@ describe("awtk simple", function () {
   afterEach(function () {
     allPassed = allPassed && this.currentTest.state === 'passed';
   });
-
+  //test switch
+  it("switch_test_slide_left", function () {
+    return aswitch.testSlideLeft(driver);
+  });
+  it("switch_test_return", function () {
+    return aswitch.testReturn(driver);
+  });
+  it("switch_test_space", function () {
+    return aswitch.testSpace(driver);
+  });
+  it("switch_test_click", function () {
+    return aswitch.testClick(driver);
+  });
   //test focus
   it("focus_test_move_left_right_up_down", function () {
     return focus.testLeftRightUpDown(driver);
