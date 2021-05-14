@@ -19,6 +19,7 @@ let navigator = require('./navigator')
 let combo_box = require('./combo_box')
 let fullscreen = require('./fullscreen')
 let check_button = require('./check_button')
+let multi_dialogs = require('./multi_dialogs')
 let auto_adjust_size = require('./auto_adjust_size')
 let auto_scale_children = require('./auto_scale_children')
 
@@ -47,6 +48,23 @@ describe("awtk simple", function () {
   afterEach(function () {
     allPassed = allPassed && this.currentTest.state === 'passed';
   });
+  
+  it("multi_dialogs_test_space", function () {
+    return multi_dialogs.testSpace(driver);
+  });
+  
+  it("multi_dialogs_test_return", function () {
+    return multi_dialogs.testReturn(driver);
+  });
+  
+  it("multi_dialogs_test_back", function () {
+    return multi_dialogs.testBack(driver);
+  });
+
+  it("multi_dialogs_test_click", function () {
+    return multi_dialogs.testClick(driver);
+  });
+
   //test switch
   it("switch_test_slide_left", function () {
     return aswitch.testSlideLeft(driver);

@@ -1,0 +1,113 @@
+let wd = require("wd");
+
+exports.testClick= function (driver) {
+    return driver
+        .back().sleep(200)
+        .title().should.become("Regression Test")
+        .elementById('multi_dialogs').click().sleep(200)
+        .title().should.become("Dialog")
+        .elementById('status').text().should.become("dialog 0")
+        .elementById('new').click().sleep(200)
+        .elementById('status').text().should.become("dialog 1")
+        .elementById('new').click().sleep(200)
+        .elementById('status').text().should.become("dialog 2")
+        .elementById('new').click().sleep(200)
+        .elementById('status').text().should.become("dialog 3")
+        .elementById('new').click().sleep(200)
+        .elementById('status').text().should.become("dialog 4")
+        
+        .elementById('close').click().sleep(200)
+        .elementById('status').text().should.become("dialog 3")
+        .elementById('close').click().sleep(200)
+        .elementById('status').text().should.become("dialog 2")
+        .elementById('close').click().sleep(200)
+        .elementById('status').text().should.become("dialog 1")
+        .elementById('close').click().sleep(200)
+        .elementById('status').text().should.become("dialog 0")
+        .elementById('close').click().sleep(200)
+        .title().should.become("Regression Test")
+}
+
+exports.testBack= function (driver) {
+    return driver
+        .back().sleep(200)
+        .title().should.become("Regression Test")
+        .elementById('multi_dialogs').click().sleep(200)
+        .title().should.become("Dialog")
+        .elementById('status').text().should.become("dialog 0")
+        .elementById('new').click().sleep(200)
+        .elementById('status').text().should.become("dialog 1")
+        .elementById('new').click().sleep(200)
+        .elementById('status').text().should.become("dialog 2")
+        .elementById('new').click().sleep(200)
+        .elementById('status').text().should.become("dialog 3")
+        .elementById('new').click().sleep(200)
+        .elementById('status').text().should.become("dialog 4")
+        
+        .back().sleep(200)
+        .elementById('status').text().should.become("dialog 3")
+        .back().sleep(200)
+        .elementById('status').text().should.become("dialog 2")
+        .back().sleep(200)
+        .elementById('status').text().should.become("dialog 1")
+        .back().sleep(200)
+        .elementById('status').text().should.become("dialog 0")
+        .back().sleep(200)
+        .title().should.become("Regression Test")
+}
+
+exports.testReturn= function (driver) {
+    return driver
+        .back().sleep(200)
+        .title().should.become("Regression Test")
+        .elementById('multi_dialogs').click().sleep(200)
+        .title().should.become("Dialog")
+        .elementById('status').text().should.become("dialog 0")
+        .elementById('new').sendKeys(wd.SPECIAL_KEYS.Return).sleep(200)
+        .elementById('status').text().should.become("dialog 1")
+        .elementById('new').sendKeys(wd.SPECIAL_KEYS.Return).sleep(200)
+        .elementById('status').text().should.become("dialog 2")
+        .elementById('new').sendKeys(wd.SPECIAL_KEYS.Return).sleep(200)
+        .elementById('status').text().should.become("dialog 3")
+        .elementById('new').sendKeys(wd.SPECIAL_KEYS.Return).sleep(200)
+        .elementById('status').text().should.become("dialog 4")
+        
+        .back().sleep(200)
+        .elementById('status').text().should.become("dialog 3")
+        .back().sleep(200)
+        .elementById('status').text().should.become("dialog 2")
+        .back().sleep(200)
+        .elementById('status').text().should.become("dialog 1")
+        .back().sleep(200)
+        .elementById('status').text().should.become("dialog 0")
+        .back().sleep(200)
+        .title().should.become("Regression Test")
+}
+
+exports.testSpace= function (driver) {
+    return driver
+        .back().sleep(200)
+        .title().should.become("Regression Test")
+        .elementById('multi_dialogs').click().sleep(200)
+        .title().should.become("Dialog")
+        .elementById('status').text().should.become("dialog 0")
+        .elementById('new').sendKeys(wd.SPECIAL_KEYS.Space).sleep(200)
+        .elementById('status').text().should.become("dialog 1")
+        .elementById('new').sendKeys(wd.SPECIAL_KEYS.Space).sleep(200)
+        .elementById('status').text().should.become("dialog 2")
+        .elementById('new').sendKeys(wd.SPECIAL_KEYS.Space).sleep(200)
+        .elementById('status').text().should.become("dialog 3")
+        .elementById('new').sendKeys(wd.SPECIAL_KEYS.Space).sleep(200)
+        .elementById('status').text().should.become("dialog 4")
+        
+        .back().sleep(200)
+        .elementById('status').text().should.become("dialog 3")
+        .back().sleep(200)
+        .elementById('status').text().should.become("dialog 2")
+        .back().sleep(200)
+        .elementById('status').text().should.become("dialog 1")
+        .back().sleep(200)
+        .elementById('status').text().should.become("dialog 0")
+        .back().sleep(200)
+        .title().should.become("Regression Test")
+}

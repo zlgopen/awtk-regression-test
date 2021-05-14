@@ -21,9 +21,9 @@
 
 #include "window_fullscreen.h"
 
-static ret_t on_fullscreen(void *ctx, event_t *e) {
-  widget_t *widget = WIDGET(e->target);
-  widget_t *win = widget_get_window(widget);
+static ret_t on_fullscreen(void* ctx, event_t* e) {
+  widget_t* widget = WIDGET(e->target);
+  widget_t* win = widget_get_window(widget);
 
   if (ctx == NULL) {
     window_set_fullscreen(win, FALSE);
@@ -34,9 +34,9 @@ static ret_t on_fullscreen(void *ctx, event_t *e) {
   return RET_OK;
 }
 
-static ret_t on_fullscreen_done(void *ctx, event_t *e) {
-  widget_t *win = WIDGET(ctx);
-  widget_t *status = widget_lookup(win, "status", TRUE);
+static ret_t on_fullscreen_done(void* ctx, event_t* e) {
+  widget_t* win = WIDGET(ctx);
+  widget_t* status = widget_lookup(win, "status", TRUE);
 
   if (win->y == 0) {
     widget_set_text_utf8(status, "fullscreen");
@@ -48,7 +48,7 @@ static ret_t on_fullscreen_done(void *ctx, event_t *e) {
 }
 
 ret_t window_fullscreen_open(void) {
-  widget_t *win = window_open("fullscreen");
+  widget_t* win = window_open("fullscreen");
 
   widget_child_on(win, "fullscreen", EVT_CLICK, on_fullscreen, win);
   widget_child_on(win, "unfullscreen", EVT_CLICK, on_fullscreen, NULL);

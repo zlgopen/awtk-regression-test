@@ -32,102 +32,105 @@
 #include "window_navigator1.h"
 #include "window_popup.h"
 #include "window_rotation.h"
+#include "window_multi_dialogs.h"
 #include "window_auto_adjust_size.h"
 #include "window_auto_adjust_size_max_w.h"
 #include "window_auto_scale_children.h"
 
-static ret_t on_open_auto_adjust_size(void *ctx, event_t *e) {
+static ret_t on_open_auto_adjust_size(void* ctx, event_t* e) {
   window_auto_adjust_size_open("auto_adjust_size");
   return RET_OK;
 }
 
-static ret_t on_open_auto_adjust_size_margin(void *ctx, event_t *e) {
+static ret_t on_open_auto_adjust_size_margin(void* ctx, event_t* e) {
   window_auto_adjust_size_open("auto_adjust_size_margin");
   return RET_OK;
 }
 
-static ret_t on_open_auto_adjust_size_max_w(void *ctx, event_t *e) {
+static ret_t on_open_auto_adjust_size_max_w(void* ctx, event_t* e) {
   window_auto_adjust_size_max_w_open();
   return RET_OK;
 }
 
-static ret_t on_open_rotation(void *ctx, event_t *e) {
+static ret_t on_open_rotation(void* ctx, event_t* e) {
   window_rotation_open();
   return RET_OK;
 }
 
-static ret_t on_open_combo_box(void *ctx, event_t *e) {
+static ret_t on_open_combo_box(void* ctx, event_t* e) {
   window_combo_box_open();
   return RET_OK;
 }
 
-static ret_t on_open_check_button(void *ctx, event_t *e) {
+static ret_t on_open_check_button(void* ctx, event_t* e) {
   window_check_button_open();
   return RET_OK;
 }
 
-static ret_t on_open_dialogs(void *ctx, event_t *e) {
+static ret_t on_open_dialogs(void* ctx, event_t* e) {
   window_dialogs_open();
   return RET_OK;
 }
 
-static ret_t on_open_button(void *ctx, event_t *e) {
+static ret_t on_open_button(void* ctx, event_t* e) {
   window_button_open();
   return RET_OK;
 }
 
-static ret_t on_open_switch(void *ctx, event_t *e) {
+static ret_t on_open_switch(void* ctx, event_t* e) {
   window_switch_open();
   return RET_OK;
 }
 
-static ret_t on_open_closable(void *ctx, event_t *e) {
+static ret_t on_open_closable(void* ctx, event_t* e) {
   window_closable_open();
   return RET_OK;
 }
 
-static ret_t on_open_focus(void *ctx, event_t *e) {
+static ret_t on_open_focus(void* ctx, event_t* e) {
   window_focus_open();
   return RET_OK;
 }
 
-static ret_t on_open_fullscreen(void *ctx, event_t *e) {
+static ret_t on_open_fullscreen(void* ctx, event_t* e) {
   window_fullscreen_open();
   return RET_OK;
 }
 
-static ret_t on_open_navigator1(void *ctx, event_t *e) {
+static ret_t on_open_navigator1(void* ctx, event_t* e) {
   window_navigator1_open();
   return RET_OK;
 }
 
-static ret_t on_open_timer(void *ctx, event_t *e) {
+static ret_t on_open_timer(void* ctx, event_t* e) {
   window_timer_open();
   return RET_OK;
 }
 
-static ret_t on_open_auto_scale_children(void *ctx, event_t *e) {
+static ret_t on_open_auto_scale_children(void* ctx, event_t* e) {
   window_auto_scale_children_open();
   return RET_OK;
 }
 
-static ret_t on_open_popup(void *ctx, event_t *e) {
+static ret_t on_open_popup(void* ctx, event_t* e) {
   window_popup_open();
   return RET_OK;
 }
 
+static ret_t on_open_multi_dialogs(void* ctx, event_t* e) {
+  window_multi_dialogs_open();
+  return RET_OK;
+}
+
 ret_t window_main_open(void) {
-  widget_t *win = window_open("system_bar");
+  widget_t* win = window_open("system_bar");
 
   win = window_open("main");
-  widget_child_on(win, "auto_adjust_size", EVT_CLICK, on_open_auto_adjust_size,
-                  win);
+  widget_child_on(win, "auto_adjust_size", EVT_CLICK, on_open_auto_adjust_size, win);
 
-  widget_child_on(win, "auto_adjust_size_max_w", EVT_CLICK,
-                  on_open_auto_adjust_size_max_w, win);
+  widget_child_on(win, "auto_adjust_size_max_w", EVT_CLICK, on_open_auto_adjust_size_max_w, win);
 
-  widget_child_on(win, "auto_adjust_size_margin", EVT_CLICK,
-                  on_open_auto_adjust_size_margin, win);
+  widget_child_on(win, "auto_adjust_size_margin", EVT_CLICK, on_open_auto_adjust_size_margin, win);
 
   widget_child_on(win, "rotation", EVT_CLICK, on_open_rotation, win);
   widget_child_on(win, "combo_box", EVT_CLICK, on_open_combo_box, win);
@@ -141,8 +144,8 @@ ret_t window_main_open(void) {
   widget_child_on(win, "navigator1", EVT_CLICK, on_open_navigator1, win);
   widget_child_on(win, "timer", EVT_CLICK, on_open_timer, win);
   widget_child_on(win, "popup", EVT_CLICK, on_open_popup, win);
-  widget_child_on(win, "auto_scale_children", EVT_CLICK,
-                  on_open_auto_scale_children, win);
+  widget_child_on(win, "auto_scale_children", EVT_CLICK, on_open_auto_scale_children, win);
+  widget_child_on(win, "multi_dialogs", EVT_CLICK, on_open_multi_dialogs, win);
 
   return RET_OK;
 }

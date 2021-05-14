@@ -21,9 +21,9 @@
 
 #include "window_closable.h"
 
-static ret_t on_closable_event(void *ctx, event_t *e) {
-  widget_t *widget = WIDGET(e->target);
-  widget_t *win = widget_get_window(widget);
+static ret_t on_closable_event(void* ctx, event_t* e) {
+  widget_t* widget = WIDGET(e->target);
+  widget_t* win = widget_get_window(widget);
 
   widget_set_prop_str(win, WIDGET_PROP_CLOSABLE, widget->name);
   log_debug("set closable to %s\n", widget->name);
@@ -31,8 +31,8 @@ static ret_t on_closable_event(void *ctx, event_t *e) {
   return RET_OK;
 }
 
-static ret_t on_request_close(void *ctx, event_t *e) {
-  widget_t *win = WIDGET(ctx);
+static ret_t on_request_close(void* ctx, event_t* e) {
+  widget_t* win = WIDGET(ctx);
   if (dialog_confirm("Confirm", "Are you sure to close?") == RET_OK) {
     widget_close_window(win);
   } else {
@@ -43,7 +43,7 @@ static ret_t on_request_close(void *ctx, event_t *e) {
 }
 
 ret_t window_closable_open(void) {
-  widget_t *win = window_open("closable");
+  widget_t* win = window_open("closable");
 
   widget_child_on(win, "yes", EVT_CLICK, on_closable_event, NULL);
   widget_child_on(win, "no", EVT_CLICK, on_closable_event, NULL);

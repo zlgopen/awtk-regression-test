@@ -1,7 +1,7 @@
 /**
- * File:   window_navigator2.h
+ * File:   window_multi_dialogs.h
  * Author: AWTK Develop Team
- * Brief:  window_navigator2 source
+ * Brief:  window_multi_dialogs source
  *
  * Copyright (c) 2018 - 2021  Guangzhou ZHIYUAN Electronics Co.,Ltd.
  *
@@ -15,19 +15,19 @@
 /**
  * History:
  * ================================================================
- * 2021-05-11 Li XianJing <xianjimli@hotmail.com> created
+ * 2021-05-14 Li XianJing <xianjimli@hotmail.com> created
  *
  */
 
-#ifndef WINDOW_NAVIGATOR2_H
-#define WINDOW_NAVIGATOR2_H
+#ifndef WINDOW_MULTI_DIALOGS_H
+#define WINDOW_MULTI_DIALOGS_H
 
 #include "awtk.h"
 
 BEGIN_C_DECLS
 
-ret_t window_navigator2_open(widget_t* to_close);
+ret_t window_multi_dialogs_open(void);
 
 END_C_DECLS
 
-#endif /*WINDOW_NAVIGATOR2_H*/
+#endif /*WINDOW_MULTI_DIALOGS_H*/
