@@ -1,13 +1,15 @@
 <window text="Button">
   <view x="0" y="0" w="100%" h="85%" children_layout="default(c=2,h=30,m=2,s=2)" >
     <edit name="default" />
-    <edit name="default" input_type="ascii"/>
+    <edit name="ascii" input_type="ascii"/>
     <edit name="int" input_type="int" />
     <edit name="uint" input_type="uint" />
     <edit name="float" input_type="float" />
     <edit name="ufloat" input_type="ufloat" />
   </view>
   
-  <label name="status" x="c" y="b:50" w="128" h="30" text="none"/>
+  <label name="changing" x="c" y="b:50" w="100%" h="30" text="none"/>
+  <label name="changed" x="c" y="b:50" w="100%" h="30" text="none"/>
+
   <button focusable="true" x="c" y="b:10" w="128" h="30" text="close" on:click="back()"/>
 </window>

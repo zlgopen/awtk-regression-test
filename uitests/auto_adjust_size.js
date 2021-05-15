@@ -161,3 +161,57 @@ exports.testSetText = function (driver) {
         .back().sleep(200)
         .title().should.become("Regression Test")
 }
+
+exports.testListView1 = function (driver) {
+    return driver
+        .back().sleep(200)
+        .title().should.become("Regression Test")
+        .elementById('auto_adjust_size_list_view').click().sleep(200)
+
+        .elementById('l1').getAttribute('w').should.become(308)
+        .elementById('l1').getAttribute('h').should.become(24)
+        .elementById('l2').getAttribute('h').should.become(24)
+        .elementById('l3').getAttribute('h').should.become(24)
+
+        .elementById('l1').setText("In interactive UI applications, state is continually changing in response to user actions and application events.")
+        .elementById('l2').setText("In interactive UI applications, state is continually changing in response to user actions and application events.")
+        .elementById('l3').setText("In interactive UI applications, state is continually changing in response to user actions and application events.")
+        .elementById('l1').getAttribute('h').should.become(64)
+        .elementById('l2').getAttribute('h').should.become(64)
+        .elementById('l3').getAttribute('h').should.become(64)
+
+        .back().sleep(200)
+        .title().should.become("Regression Test")
+}
+
+exports.testListView2 = function (driver) {
+    return driver
+        .back().sleep(200)
+        .title().should.become("Regression Test")
+        .elementById('auto_adjust_size_list_view').click().sleep(200)
+
+        .elementById('short').click().sleep(200)
+        .elementById('l1').getAttribute('w').should.become(308)
+        .elementById('l1').getAttribute('h').should.become(24)
+        .elementById('l2').getAttribute('h').should.become(24)
+        .elementById('l3').getAttribute('h').should.become(24)
+
+        .back().sleep(200)
+        .title().should.become("Regression Test")
+}
+
+exports.testListView3 = function (driver) {
+    return driver
+        .back().sleep(200)
+        .title().should.become("Regression Test")
+        .elementById('auto_adjust_size_list_view').click().sleep(200)
+
+        .elementById('long').click().sleep(200)
+        .elementById('l1').getAttribute('w').should.become(308)
+        .elementById('l1').getAttribute('h').should.become(64)
+        .elementById('l2').getAttribute('h').should.become(64)
+        .elementById('l3').getAttribute('h').should.become(64)
+
+        .back().sleep(200)
+        .title().should.become("Regression Test")
+}

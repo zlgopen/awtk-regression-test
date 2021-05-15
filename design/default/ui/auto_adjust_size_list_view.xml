@@ -1,0 +1,20 @@
+<window text="List View Auto Adjust Size">
+  <list_view x="0"  y="0" w="100%" h="-50" default_item_height="60">
+    <scroll_view name="view" x="0"  y="0" w="-12" h="100%">
+      <list_item w="100%" auto_adjust_size="true">
+        <label name="l1" w="100%" auto_adjust_size="true" text="1" line_wrap="true"/>
+      </list_item>
+      <list_item w="100%" auto_adjust_size="true">
+        <label name="l2" w="100%" auto_adjust_size="true" text="2" line_wrap="true"/>
+      </list_item>
+      <list_item w="100%" auto_adjust_size="true">
+        <label name="l3" w="100%" auto_adjust_size="true" text="3" line_wrap="true"/>
+      </list_item>
+    </scroll_view>
+    <scroll_bar_d name="bar" x="right" y="0" w="12" h="100%" value="0"/>
+  </list_view>
+
+  <button name="short" x="10" y="bottom:10" w="25%" h="30" text="short"/>
+  <button name="close" x="center" y="bottom:10" w="25%" h="30" text="close" on:click="back()"/>
+  <button name="long" x="right:10" y="bottom:10" w="25%" h="30" text="long"/>
+</window>

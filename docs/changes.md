@@ -1,5 +1,8 @@
 # 最新动态
 
+2020/05/15
+  * 增加list view中auto adjust size的测试。
+
 2020/05/14
   * 增加switch的测试。
   * 增加多层模态dialog测试。

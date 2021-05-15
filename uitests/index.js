@@ -48,7 +48,17 @@ describe("awtk simple", function () {
   afterEach(function () {
     allPassed = allPassed && this.currentTest.state === 'passed';
   });
-  
+
+  it("auto_adjust_size_list_view1", function () {
+    return auto_adjust_size.testListView1(driver);
+  });
+  it("auto_adjust_size_list_view2", function () {
+    return auto_adjust_size.testListView2(driver);
+  });
+  it("auto_adjust_size_list_view3", function () {
+    return auto_adjust_size.testListView3(driver);
+  });
+
   it("multi_dialogs_test_space", function () {
     return multi_dialogs.testSpace(driver);
   });

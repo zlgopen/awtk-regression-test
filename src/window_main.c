@@ -25,6 +25,7 @@
 #include "window_button.h"
 #include "window_check_button.h"
 #include "window_closable.h"
+#include "window_edit.h"
 #include "window_focus.h"
 #include "window_combo_box.h"
 #include "window_dialogs.h"
@@ -36,6 +37,7 @@
 #include "window_auto_adjust_size.h"
 #include "window_auto_adjust_size_max_w.h"
 #include "window_auto_scale_children.h"
+#include "window_auto_adjust_size_list_view.h"
 
 static ret_t on_open_auto_adjust_size(void* ctx, event_t* e) {
   window_auto_adjust_size_open("auto_adjust_size");
@@ -49,6 +51,11 @@ static ret_t on_open_auto_adjust_size_margin(void* ctx, event_t* e) {
 
 static ret_t on_open_auto_adjust_size_max_w(void* ctx, event_t* e) {
   window_auto_adjust_size_max_w_open();
+  return RET_OK;
+}
+
+static ret_t on_open_auto_adjust_size_list_view(void* ctx, event_t* e) {
+  window_auto_adjust_size_list_view_open();
   return RET_OK;
 }
 
@@ -84,6 +91,11 @@ static ret_t on_open_switch(void* ctx, event_t* e) {
 
 static ret_t on_open_closable(void* ctx, event_t* e) {
   window_closable_open();
+  return RET_OK;
+}
+
+static ret_t on_open_edit(void* ctx, event_t* e) {
+  window_edit_open();
   return RET_OK;
 }
 
@@ -129,6 +141,7 @@ ret_t window_main_open(void) {
   widget_child_on(win, "auto_adjust_size", EVT_CLICK, on_open_auto_adjust_size, win);
 
   widget_child_on(win, "auto_adjust_size_max_w", EVT_CLICK, on_open_auto_adjust_size_max_w, win);
+  widget_child_on(win, "auto_adjust_size_list_view", EVT_CLICK, on_open_auto_adjust_size_list_view, win);
 
   widget_child_on(win, "auto_adjust_size_margin", EVT_CLICK, on_open_auto_adjust_size_margin, win);
 
@@ -139,6 +152,7 @@ ret_t window_main_open(void) {
   widget_child_on(win, "button", EVT_CLICK, on_open_button, win);
   widget_child_on(win, "switch", EVT_CLICK, on_open_switch, win);
   widget_child_on(win, "closable", EVT_CLICK, on_open_closable, win);
+  widget_child_on(win, "edit", EVT_CLICK, on_open_edit, win);
   widget_child_on(win, "focus", EVT_CLICK, on_open_focus, win);
   widget_child_on(win, "fullscreen", EVT_CLICK, on_open_fullscreen, win);
   widget_child_on(win, "navigator1", EVT_CLICK, on_open_navigator1, win);
