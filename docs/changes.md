@@ -2,6 +2,7 @@
 
 2020/05/16
   * 增加list view中focus的测试。
+  * 增加default children layout测试。
 
 2020/05/15
   * 增加list view中auto adjust size的测试。

@@ -22,6 +22,7 @@ let check_button = require('./check_button')
 let multi_dialogs = require('./multi_dialogs')
 let auto_adjust_size = require('./auto_adjust_size')
 let auto_scale_children = require('./auto_scale_children')
+let children_layout= require('./children_layout')
 
 const appName = '../bin/demo'
 
@@ -47,6 +48,10 @@ describe("awtk simple", function () {
 
   afterEach(function () {
     allPassed = allPassed && this.currentTest.state === 'passed';
+  });
+
+  it("children_layout_test_basic", function () {
+    return children_layout.testBasic(driver);
   });
 
   it("auto_adjust_size_list_view1", function () {

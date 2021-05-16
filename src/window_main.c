@@ -39,6 +39,7 @@
 #include "window_auto_adjust_size_max_w.h"
 #include "window_auto_scale_children.h"
 #include "window_auto_adjust_size_list_view.h"
+#include "window_children_layout.h"
 
 static ret_t on_open_auto_adjust_size(void* ctx, event_t* e) {
   window_auto_adjust_size_open("auto_adjust_size");
@@ -82,6 +83,11 @@ static ret_t on_open_dialogs(void* ctx, event_t* e) {
 
 static ret_t on_open_button(void* ctx, event_t* e) {
   window_button_open();
+  return RET_OK;
+}
+
+static ret_t on_open_children_layout(void* ctx, event_t* e) {
+  window_children_layout_open();
   return RET_OK;
 }
 
@@ -156,6 +162,7 @@ ret_t window_main_open(void) {
   widget_child_on(win, "check_button", EVT_CLICK, on_open_check_button, win);
   widget_child_on(win, "dialogs", EVT_CLICK, on_open_dialogs, win);
   widget_child_on(win, "button", EVT_CLICK, on_open_button, win);
+  widget_child_on(win, "children_layout", EVT_CLICK, on_open_children_layout, win);
   widget_child_on(win, "switch", EVT_CLICK, on_open_switch, win);
   widget_child_on(win, "closable", EVT_CLICK, on_open_closable, win);
   widget_child_on(win, "edit", EVT_CLICK, on_open_edit, win);
