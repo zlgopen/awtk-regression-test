@@ -1,8 +1,8 @@
 <window text="Children Layout">
   <view name="view" w="100%" h="50%" children_layout="default(r=3,c=3,xm=2,ym=3,s=5)">
-    <button name="1row" focusable="true" focused="true" text="1row" w="50%" h="40" x="10" y="20"/>
+    <button name="1row" focusable="true" focused="true" text="1row" w="50%" h="40" x="10" y="5"/>
     <button name="1col" focusable="true" focused="true" text="1col" w="50%" h="40" x="r:10" y="b:5"/>
-    <button name="2x2" focusable="true" focused="true" text="2x2"/>
+    <button name="3x3" focusable="true" focused="true" text="3x3"/>
     <button name="2x3" focusable="true" focused="true" text="2x3" h="30" y="m"/>
     <button name="3x2" focusable="true" focused="true" text="3x2" w="80%" x="c"/>
   </view>

@@ -49,11 +49,30 @@ describe("awtk simple", function () {
   afterEach(function () {
     allPassed = allPassed && this.currentTest.state === 'passed';
   });
+  //test children layout
+  it("children_layout_test_3x2", function () {
+    return children_layout.test3x2(driver);
+  });
+  it("children_layout_test_3x3", function () {
+    return children_layout.test3x3(driver);
+  });
+  it("children_layout_test_2x3", function () {
+    return children_layout.test2x3(driver);
+  });
+  
+  it("children_layout_test_1col", function () {
+    return children_layout.test1Col(driver);
+  });
+ 
+  it("children_layout_test_1row", function () {
+    return children_layout.test1Row(driver);
+  });
 
   it("children_layout_test_basic", function () {
     return children_layout.testBasic(driver);
   });
 
+  //test list view auto adjust size
   it("auto_adjust_size_list_view1", function () {
     return auto_adjust_size.testListView1(driver);
   });
@@ -64,6 +83,7 @@ describe("awtk simple", function () {
     return auto_adjust_size.testListView3(driver);
   });
 
+  //test mutli dialog
   it("multi_dialogs_test_space", function () {
     return multi_dialogs.testSpace(driver);
   });
