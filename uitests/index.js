@@ -101,6 +101,22 @@ describe("awtk simple", function () {
   it("focus_test_tab", function () {
     return focus.testTab(driver);
   });
+  
+  it("focus_test_list_view_up", function () {
+    return focus.testListViewUp(driver);
+  });
+  it("focus_test_list_view_down", function () {
+    return focus.testListViewDown(driver);
+  });
+  it("focus_test_list_view_last", function () {
+    return focus.testListViewLast(driver);
+  });
+  it("focus_test_list_view_first", function () {
+    return focus.testListViewFirst(driver);
+  });
+  it("focus_test_list_view_basic", function () {
+    return focus.testListViewBasic(driver);
+  });
 
   //test navigator
   it("navigator_test_back_to_home", function () {

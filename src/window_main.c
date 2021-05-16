@@ -33,6 +33,7 @@
 #include "window_navigator1.h"
 #include "window_popup.h"
 #include "window_rotation.h"
+#include "window_focus_list_view.h"
 #include "window_multi_dialogs.h"
 #include "window_auto_adjust_size.h"
 #include "window_auto_adjust_size_max_w.h"
@@ -104,6 +105,11 @@ static ret_t on_open_focus(void* ctx, event_t* e) {
   return RET_OK;
 }
 
+static ret_t on_open_focus_list_view(void* ctx, event_t* e) {
+  window_focus_list_view_open();
+  return RET_OK;
+}
+
 static ret_t on_open_fullscreen(void* ctx, event_t* e) {
   window_fullscreen_open();
   return RET_OK;
@@ -160,6 +166,7 @@ ret_t window_main_open(void) {
   widget_child_on(win, "popup", EVT_CLICK, on_open_popup, win);
   widget_child_on(win, "auto_scale_children", EVT_CLICK, on_open_auto_scale_children, win);
   widget_child_on(win, "multi_dialogs", EVT_CLICK, on_open_multi_dialogs, win);
+  widget_child_on(win, "focus_list_view", EVT_CLICK, on_open_focus_list_view, win);
 
   return RET_OK;
 }

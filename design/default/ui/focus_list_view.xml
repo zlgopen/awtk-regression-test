@@ -1,0 +1,49 @@
+<window text="List View Focus" theme="focus_list_view" move_focus_prev_key="up" move_focus_next_key="down">
+  <list_view x="0"  y="0" w="100%" h="-80" item_height="60" >
+    <scroll_view name="view" x="0"  y="0" w="-12" h="100%">
+      <list_item name="l1" w="100%" focusable="true" children_layout="default(r=1,c=1)">
+        <label text="text 1" />
+      </list_item>
+      <list_item name="l2" w="100%" focusable="true" children_layout="default(r=1,c=1)">
+        <label text="text 2" />
+      </list_item>
+      <list_item name="l3" w="100%" focusable="true" children_layout="default(r=1,c=1)">
+        <label text="text 3" />
+      </list_item>
+      <list_item name="l4" w="100%" focusable="true" children_layout="default(r=1,c=1)">
+        <label text="text 4" />
+      </list_item>
+      <list_item name="l5" w="100%" focusable="true" children_layout="default(r=1,c=1)">
+        <label  text="text 5" />
+      </list_item>
+      <list_item name="l6" w="100%" focusable="true" children_layout="default(r=1,c=1)">
+        <label text="text 6" />
+      </list_item>
+      <list_item name="l7" w="100%" focusable="true" children_layout="default(r=1,c=1)">
+        <label text="text 7" />
+      </list_item>
+      <list_item name="l8" w="100%" focusable="true" children_layout="default(r=1,c=1)">
+        <label text="text 8" />
+      </list_item>
+      <list_item name="l9" w="100%" focusable="true" children_layout="default(r=1,c=1)">
+        <label  text="text 9" />
+      </list_item>
+      <list_item name="l10" w="100%" focusable="true" children_layout="default(r=1,c=1)">
+        <label text="text 10" />
+      </list_item>
+      <list_item name="l11" w="100%" focusable="true" children_layout="default(r=1,c=1)">
+        <label text="text 11" />
+      </list_item>
+      <list_item name="l12" w="100%" focusable="true" children_layout="default(r=1,c=1)">
+        <label text="text 12" />
+      </list_item>
+    </scroll_view>
+    <scroll_bar_d name="bar" x="right" y="0" w="12" h="100%" value="0"/>
+  </list_view>
+
+  <label name="status" x="0" y="bottom:40" w="100%" h="30" text="status"/>
+
+  <button name="first" x="10" y="bottom:10" w="25%" h="30" text="first"/>
+  <button name="close" x="center" y="bottom:10" w="25%" h="30" text="close" on:click="back()"/>
+  <button name="last" x="right:10" y="bottom:10" w="25%" h="30" text="last"/>
+</window>

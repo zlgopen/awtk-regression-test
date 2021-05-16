@@ -1,0 +1,9 @@
+
+<list_item>
+  <style name="default" border_color="#a0a0a0"  border="bottom" text_color="black">
+    <normal     bg_color="#f0f0f0" />
+    <pressed    bg_color="#c0c0c0" />
+    <over       bg_color="#f0f0f0" />
+    <focused    bg_color="#e0e0e0"/>
+  </style>
+</list_item>

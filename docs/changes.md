@@ -1,5 +1,8 @@
 # 最新动态
 
+2020/05/16
+  * 增加list view中focus的测试。
+
 2020/05/15
   * 增加list view中auto adjust size的测试。
 
