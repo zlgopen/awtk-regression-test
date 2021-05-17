@@ -1,0 +1,15 @@
+<window text="Self Layout">
+  <label name="l1" x="10" y="top" w="10%" h="5%" text="text"/>
+  <label name="l2" x="10" y="middle" w="100" h="30" text="text"/>
+  <label name="l3" x="10" y="bottom" w="100" h="30" text="text"/>
+  
+  <label name="l4" x="c:-10" y="top:10" w="100" h="30" text="text"/>
+  <label name="l5" x="c" y="middle:20" w="100" h="30" text="text"/>
+  <label name="l6" x="c:10" y="bottom:30" w="100" h="30" text="text"/>
+  
+  <label name="l7" x="r:10" y="top:10" w="100" h="30" text="text"/>
+  <label name="l8" x="r" y="middle:20" w="100" h="30" text="text"/>
+  <label name="l9" x="r" y="bottom:30" w="100" h="30" text="text"/>
+
+  <button focusable="true" x="c" y="b:10" w="128" h="30" text="close" on:click="back()"/>
+</window>

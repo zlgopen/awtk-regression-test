@@ -23,6 +23,7 @@ let multi_dialogs = require('./multi_dialogs')
 let auto_adjust_size = require('./auto_adjust_size')
 let auto_scale_children = require('./auto_scale_children')
 let children_layout= require('./children_layout')
+let self_layout= require('./self_layout')
 
 const appName = '../bin/demo'
 
@@ -49,6 +50,37 @@ describe("awtk simple", function () {
   afterEach(function () {
     allPassed = allPassed && this.currentTest.state === 'passed';
   });
+  //test self layout
+  it("self_layout_test_right_bottom", function () {
+    return self_layout.testRightBottom(driver);
+  });
+  it("self_layout_test_right_middle", function () {
+    return self_layout.testRightMiddle(driver);
+  });
+  it("self_layout_test_right_top", function () {
+    return self_layout.testRightTop(driver);
+  });
+
+  it("self_layout_test_center_bottom", function () {
+    return self_layout.testCenterBottom(driver);
+  });
+  it("self_layout_test_center_middle", function () {
+    return self_layout.testCenterMiddle(driver);
+  });
+  it("self_layout_test_center_top", function () {
+    return self_layout.testCenterTop(driver);
+  });
+
+  it("self_layout_test_left_bottom", function () {
+    return self_layout.testLeftBottom(driver);
+  });
+  it("self_layout_test_left_middle", function () {
+    return self_layout.testLeftMiddle(driver);
+  });
+  it("self_layout_test_left_top", function () {
+    return self_layout.testLeftTop(driver);
+  });
+
   //test children layout
   it("children_layout_test_3x2", function () {
     return children_layout.test3x2(driver);

@@ -1,5 +1,8 @@
 # 最新动态
 
+2020/05/17
+  * 增加default self layout测试。
+
 2020/05/16
   * 增加list view中focus的测试。
   * 增加default children layout测试。
