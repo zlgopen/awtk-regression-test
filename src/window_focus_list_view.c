@@ -35,6 +35,8 @@ static ret_t on_focus_list_viewed(void* ctx, event_t* e) {
   widget_t* target = WIDGET(e->target);
   widget_t* status = widget_lookup(win, "status", TRUE);
   widget_set_text_utf8(status, target->name);
+  
+  assert(widget_get_focused_widget(target) == target);
 
   return RET_OK;
 }

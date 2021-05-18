@@ -62,6 +62,8 @@ static ret_t on_focused(void* ctx, event_t* e) {
   widget_t* status = widget_lookup(win, "status", TRUE);
   widget_set_text_utf8(status, target->name);
 
+  assert(widget_get_focused_widget(target) == target);
+
   return RET_OK;
 }
 
