@@ -6,7 +6,7 @@ exports.testClick= function (driver) {
         .title().should.become("Regression Test")
         .elementById('button').click().sleep(200)
         .title().should.become("Button")
-        .elementById('normal_button').click().sleep(100)
+        .elementById('normal_button').click().sleep(200)
         .elementById('status').text().should.become("click")
         .elementById('status').setText("status")
         .elementById('status').text().should.become("status")

@@ -2,6 +2,7 @@
   <list_view x="0"  y="0" w="100%" h="-50" item_height="36">
     <scroll_view name="view" x="0"  y="0" w="-12" h="100%" children_layout="list_view(x_margin=5,spacing=10)">
 
+      <list_item style="odd_clickable" name="image" text="Test Image" /> 
       <list_item style="even_clickable" name="self_layout" text="Test Self Layout" /> 
       <list_item style="odd_clickable" name="children_layout" text="Test Children Layout" /> 
       <list_item style="even_clickable" name="focus_list_view" text="Test List View Focus" /> 

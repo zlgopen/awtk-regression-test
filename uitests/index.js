@@ -11,6 +11,7 @@ let focus = require('./focus')
 let popup = require('./popup')
 let timer = require('./timer')
 let button = require('./button')
+let image = require('./image')
 let aswitch= require('./switch')
 let dialogs = require('./dialogs')
 let closable = require('./closable')
@@ -50,6 +51,23 @@ describe("awtk simple", function () {
   afterEach(function () {
     allPassed = allPassed && this.currentTest.state === 'passed';
   });
+  //test image
+  it("image_test_unload_all", function () {
+    return image.testUnloadAll(driver);
+  });
+  it("image_test_unload_unused", function () {
+    return image.testUnloadUnused(driver);
+  });
+  it("image_test_other", function () {
+    return image.testOther(driver);
+  });
+  it("image_test_selectable", function () {
+    return image.testSelectable(driver);
+  });
+  it("image_test_clickable", function () {
+    return image.testClickable(driver);
+  });
+
   //test self layout
   it("self_layout_test_right_bottom", function () {
     return self_layout.testRightBottom(driver);
