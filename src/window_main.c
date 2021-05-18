@@ -24,6 +24,7 @@
 #include "window_switch.h"
 #include "window_button.h"
 #include "window_image.h"
+#include "window_gif.h"
 #include "window_check_button.h"
 #include "window_closable.h"
 #include "window_edit.h"
@@ -90,6 +91,11 @@ static ret_t on_open_button(void* ctx, event_t* e) {
 
 static ret_t on_open_image(void* ctx, event_t* e) {
   window_image_open();
+  return RET_OK;
+}
+
+static ret_t on_open_gif(void* ctx, event_t* e) {
+  window_gif_open();
   return RET_OK;
 }
 
@@ -165,7 +171,8 @@ ret_t window_main_open(void) {
   widget_child_on(win, "auto_adjust_size", EVT_CLICK, on_open_auto_adjust_size, win);
 
   widget_child_on(win, "auto_adjust_size_max_w", EVT_CLICK, on_open_auto_adjust_size_max_w, win);
-  widget_child_on(win, "auto_adjust_size_list_view", EVT_CLICK, on_open_auto_adjust_size_list_view, win);
+  widget_child_on(win, "auto_adjust_size_list_view", EVT_CLICK, on_open_auto_adjust_size_list_view,
+                  win);
 
   widget_child_on(win, "auto_adjust_size_margin", EVT_CLICK, on_open_auto_adjust_size_margin, win);
 
@@ -175,6 +182,7 @@ ret_t window_main_open(void) {
   widget_child_on(win, "dialogs", EVT_CLICK, on_open_dialogs, win);
   widget_child_on(win, "button", EVT_CLICK, on_open_button, win);
   widget_child_on(win, "image", EVT_CLICK, on_open_image, win);
+  widget_child_on(win, "gif", EVT_CLICK, on_open_gif, win);
   widget_child_on(win, "children_layout", EVT_CLICK, on_open_children_layout, win);
   widget_child_on(win, "self_layout", EVT_CLICK, on_open_self_layout, win);
   widget_child_on(win, "switch", EVT_CLICK, on_open_switch, win);

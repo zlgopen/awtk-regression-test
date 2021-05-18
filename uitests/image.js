@@ -15,6 +15,30 @@ exports.testClickable= function (driver) {
         .title().should.become("Regression Test")
 }
 
+exports.testClickableSpace= function (driver) {
+    return driver
+        .back().sleep(200)
+        .title().should.become("Regression Test")
+        .elementById('image').click().sleep(200)
+        .title().should.become("Image")
+        .elementById('image1').sendKeys(wd.SPECIAL_KEYS.Space).sleep(100)
+        .elementById('status').text().should.become("image1:0")
+        .back().sleep(200)
+        .title().should.become("Regression Test")
+}
+
+exports.testClickableReturn= function (driver) {
+    return driver
+        .back().sleep(200)
+        .title().should.become("Regression Test")
+        .elementById('image').click().sleep(200)
+        .title().should.become("Image")
+        .elementById('image1').sendKeys(wd.SPECIAL_KEYS.Return).sleep(100)
+        .elementById('status').text().should.become("image1:0")
+        .back().sleep(200)
+        .title().should.become("Regression Test")
+}
+
 exports.testSelectable= function (driver) {
     return driver
         .back().sleep(200)

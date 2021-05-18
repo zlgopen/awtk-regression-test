@@ -7,6 +7,7 @@ require("awtk-appium-js-helpers/setup.js");
 let serverConfigs = require('awtk-appium-js-helpers/appium-servers');
 let startApp = require("awtk-appium-js-helpers/start-app").startApp;
 
+let gif = require('./gif')
 let focus = require('./focus')
 let popup = require('./popup')
 let timer = require('./timer')
@@ -51,7 +52,32 @@ describe("awtk simple", function () {
   afterEach(function () {
     allPassed = allPassed && this.currentTest.state === 'passed';
   });
+
+  //test gif
+  it("gif_test_clickable_space", function () {
+    return gif.testClickableSpace(driver);
+  });
+  it("gif_test_clickable_return", function () {
+    return gif.testClickableReturn(driver);
+  });
+  it("gif_test_clickable", function () {
+    return gif.testClickable(driver);
+  });
+  it("gif_test_pause", function () {
+    return gif.testPause(driver);
+  });
+  it("gif_test_stop", function () {
+    return gif.testStop(driver);
+  });
+
   //test image
+  it("image_test_clickable_space", function () {
+    return image.testClickableSpace(driver);
+  });
+  it("image_test_clickable_return", function () {
+    return image.testClickableReturn(driver);
+  });
+
   it("image_test_unload_all", function () {
     return image.testUnloadAll(driver);
   });
@@ -63,9 +89,6 @@ describe("awtk simple", function () {
   });
   it("image_test_selectable", function () {
     return image.testSelectable(driver);
-  });
-  it("image_test_clickable", function () {
-    return image.testClickable(driver);
   });
 
   //test self layout

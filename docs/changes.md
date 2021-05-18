@@ -2,6 +2,7 @@
 
 2020/05/18
   * 增加image测试。
+  * 增加gif测试。
 
 2020/05/17
   * 增加default self layout测试。

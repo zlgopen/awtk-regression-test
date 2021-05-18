@@ -38,12 +38,15 @@ static ret_t on_children_layout_event(void* ctx, event_t* e) {
 ret_t window_children_layout_open(void) {
   widget_t* win = window_open("children_layout");
 
-  widget_child_on(win, "1row", EVT_CLICK, on_children_layout_event, "default(r=1,c=5,xm=2,ym=3,s=4)");
-  widget_child_on(win, "1col", EVT_CLICK, on_children_layout_event, "default(r=5,c=1,xm=2,ym=3,s=4)");
+  widget_child_on(win, "1row", EVT_CLICK, on_children_layout_event,
+                  "default(r=1,c=5,xm=2,ym=3,s=4)");
+  widget_child_on(win, "1col", EVT_CLICK, on_children_layout_event,
+                  "default(r=5,c=1,xm=2,ym=3,s=4)");
   widget_child_on(win, "3x3", EVT_CLICK, on_children_layout_event, "default(r=3,c=3,m=3,s=4)");
-  widget_child_on(win, "2x3", EVT_CLICK, on_children_layout_event, "default(r=2,c=3,xm=2,ym=3,s=4)");
-  widget_child_on(win, "3x2", EVT_CLICK, on_children_layout_event, "default(r=3,c=2,xm=2,ym=3,s=4)");
+  widget_child_on(win, "2x3", EVT_CLICK, on_children_layout_event,
+                  "default(r=2,c=3,xm=2,ym=3,s=4)");
+  widget_child_on(win, "3x2", EVT_CLICK, on_children_layout_event,
+                  "default(r=3,c=2,xm=2,ym=3,s=4)");
 
   return RET_OK;
 }
-

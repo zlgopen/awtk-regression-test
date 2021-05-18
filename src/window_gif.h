@@ -1,7 +1,7 @@
 /**
- * File:   window_self_layout.c
+ * File:   window_gif.h
  * Author: AWTK Develop Team
- * Brief:  window_self_layout source
+ * Brief:  window_gif source
  *
  * Copyright (c) 2018 - 2021  Guangzhou ZHIYUAN Electronics Co.,Ltd.
  *
@@ -15,14 +15,19 @@
 /**
  * History:
  * ================================================================
- * 2021-05-17 Li XianJing <xianjimli@hotmail.com> created
+ * 2021-05-18 Li XianJing <xianjimli@hotmail.com> created
  *
  */
 
-#include "window_self_layout.h"
+#ifndef WINDOW_GIF_H
+#define WINDOW_GIF_H
 
-ret_t window_self_layout_open(void) {
-  window_open("self_layout");
+#include "awtk.h"
 
-  return RET_OK;
-}
+BEGIN_C_DECLS
+
+ret_t window_gif_open(void);
+
+END_C_DECLS
+
+#endif /*WINDOW_GIF_H*/

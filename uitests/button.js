@@ -21,12 +21,12 @@ exports.testActivateByKey= function (driver) {
         .elementById('button').click().sleep(200)
         .title().should.become("Button")
 
-        .elementById('normal_button').sendKeys(wd.SPECIAL_KEYS.Space)
+        .elementById('normal_button').sendKeys(wd.SPECIAL_KEYS.Space).sleep(100)
         .elementById('status').text().should.become("click")
         .elementById('status').setText("status")
         .elementById('status').text().should.become("status")
         
-        .elementById('normal_button').sendKeys(wd.SPECIAL_KEYS.Return)
+        .elementById('normal_button').sendKeys(wd.SPECIAL_KEYS.Return).sleep(100)
         .elementById('status').text().should.become("click")
         .elementById('status').setText("status")
         .elementById('status').text().should.become("status")

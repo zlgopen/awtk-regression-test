@@ -29,7 +29,7 @@ static ret_t on_image_click(void* ctx, event_t* e) {
 
   if (status != NULL) {
     char str[64];
-    tk_snprintf(str, sizeof(str)-1, "%s:%d", image->name, IMAGE_BASE(image)->selected);
+    tk_snprintf(str, sizeof(str) - 1, "%s:%d", image->name, IMAGE_BASE(image)->selected);
     widget_set_text_utf8(status, str);
   }
 
@@ -50,7 +50,7 @@ static ret_t on_unload_unused(void* ctx, event_t* e) {
 static ret_t on_other_test(void* ctx, event_t* e) {
   bitmap_t img;
   image_manager_preload(image_manager(), "earth");
-  image_manager_get_bitmap(image_manager(), "earth",&img);
+  image_manager_get_bitmap(image_manager(), "earth", &img);
   image_manager_unload_bitmap(image_manager(), &img);
 
   return RET_OK;

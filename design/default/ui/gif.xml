@@ -1,0 +1,11 @@
+<window text="Gif Image">
+  <label name="status" x="c" y="10" w="40%" h="22" text="status"/>
+
+  <gif name="bee" x="c" y="m" w="100" h="100" image="bee" clickable="true" focusable="true" focused="true"/>
+  
+  <button name="play" focusable="true" x="10" y="b:50" w="25%" h="30"  text="play" />
+  <button name="pause" focusable="true" x="c" y="b:50" w="25%" h="30"   text="pause" />
+  <button name="stop" focusable="true" x="r:10" y="b:50" w="25%" h="30" text="stop" />
+
+  <button focusable="true" x="c" y="b:10" w="128" h="30" text="close" on:click="back()"/>
+</window>
