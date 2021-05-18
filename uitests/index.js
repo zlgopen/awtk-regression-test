@@ -13,6 +13,7 @@ let popup = require('./popup')
 let timer = require('./timer')
 let button = require('./button')
 let image = require('./image')
+let font = require('./font')
 let aswitch= require('./switch')
 let dialogs = require('./dialogs')
 let closable = require('./closable')
@@ -53,6 +54,20 @@ describe("awtk simple", function () {
     allPassed = allPassed && this.currentTest.state === 'passed';
   });
 
+  //test font
+  it("font_test_unload", function () {
+    return font.testUnload(driver);
+  });
+  it("font_test_shrink", function () {
+    return font.testShrink(driver);
+  });
+  it("font_test_unload_all", function () {
+    return font.testUnloadAll(driver);
+  });
+  it("font_test_basic", function () {
+    return font.testBasic(driver);
+  });
+
   //test gif
   it("gif_test_clickable_space", function () {
     return gif.testClickableSpace(driver);
@@ -69,7 +84,6 @@ describe("awtk simple", function () {
   it("gif_test_stop", function () {
     return gif.testStop(driver);
   });
-
   //test image
   it("image_test_clickable_space", function () {
     return image.testClickableSpace(driver);

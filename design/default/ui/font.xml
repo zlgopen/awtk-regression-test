@@ -1,0 +1,12 @@
+<window text="Font" theme="font">
+  <label name="bold" style="bold" x="10" y="10" w="40" h="30" text="hello awtk" auto_adjust_size="true"/>
+  <label name="led" style="led" x="10" y="40" w="40" h="30" text="0123456789" auto_adjust_size="true"/>
+  <label name="italic" style="italic" x="10" y="70" w="40" h="30" text="0123456789" auto_adjust_size="true"/>
+  <label name="thin" style="thin" x="10" y="110" w="40" h="30" text="hello awtk" auto_adjust_size="true"/>
+
+  <button name="unload" x="10" y="bottom:50" w="80" h="30" text="Unload"/>
+  <button name="shrink" x="center" y="bottom:50" w="80" h="30" text="Shrink"/>
+  <button name="unload_all" x="r:10" y="bottom:50" w="80" h="30" text="Unload All"/>
+
+  <button name="close" x="c" y="bottom:10" w="80" h="30" text="Back" on:click="back()"/>
+</window>

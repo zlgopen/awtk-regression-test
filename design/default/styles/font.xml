@@ -1,0 +1,17 @@
+<label>
+  <style name="bold" font_size="20" font_name="bold">
+    <normal text_color="black" />
+  </style>
+  <style name="led" font_size="24" font_name="led">
+    <normal text_color="green" />
+  </style>
+  
+  <style name="italic" font_size="24" font_name="italic">
+    <normal text_color="black" />
+  </style>
+  
+  <style name="thin" font_size="32" font_name="thin">
+    <normal text_color="green" />
+  </style>
+
+</label>
