@@ -8,6 +8,7 @@ let serverConfigs = require('awtk-appium-js-helpers/appium-servers');
 let startApp = require("awtk-appium-js-helpers/start-app").startApp;
 
 let gif = require('./gif')
+let locale = require('./locale')
 let theme = require('./theme')
 let focus = require('./focus')
 let popup = require('./popup')
@@ -55,6 +56,13 @@ describe("awtk simple", function () {
 
   afterEach(function () {
     allPassed = allPassed && this.currentTest.state === 'passed';
+  });
+  //test locale
+  it("locale_test_chinese", function () {
+    return locale.testChinese(driver);
+  });
+  it("locale_test_english", function () {
+    return locale.testEnglish(driver);
   });
 
   //test theme

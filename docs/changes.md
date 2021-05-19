@@ -4,6 +4,7 @@
   * 增加screen saver测试。
   * 增加image animation测试。
   * 增加theme测试。
+  * 增加locale测试。
 
 2020/05/18
   * 增加image测试。
