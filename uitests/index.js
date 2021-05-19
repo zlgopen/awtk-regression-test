@@ -28,6 +28,7 @@ let auto_scale_children = require('./auto_scale_children')
 let children_layout= require('./children_layout')
 let self_layout= require('./self_layout')
 let screen_saver = require('./screen_saver')
+let image_animation = require('./image_animation')
 
 const appName = '../bin/demo'
 
@@ -54,6 +55,12 @@ describe("awtk simple", function () {
   afterEach(function () {
     allPassed = allPassed && this.currentTest.state === 'passed';
   });
+  
+  //test image_animation
+  it("image_animation_test_basic", function () {
+    return image_animation.testBasic(driver);
+  });
+
   //test screen_saver
   it("screen_saver_test_key", function () {
     return screen_saver.testKey(driver);
