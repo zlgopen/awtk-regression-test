@@ -8,6 +8,7 @@ let serverConfigs = require('awtk-appium-js-helpers/appium-servers');
 let startApp = require("awtk-appium-js-helpers/start-app").startApp;
 
 let gif = require('./gif')
+let theme = require('./theme')
 let focus = require('./focus')
 let popup = require('./popup')
 let timer = require('./timer')
@@ -54,6 +55,17 @@ describe("awtk simple", function () {
 
   afterEach(function () {
     allPassed = allPassed && this.currentTest.state === 'passed';
+  });
+
+  //test theme
+  it("theme_test_default_n_times", function () {
+    return theme.testDefaultNTimes(driver);
+  });
+  it("theme_test_default", function () {
+    return theme.testDefault(driver);
+  });
+  it("theme_test_dark", function () {
+    return theme.testDark(driver);
   });
   
   //test image_animation

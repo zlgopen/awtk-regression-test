@@ -1,21 +1,12 @@
 {
-  "name": "awtk-regression-test",
-  "version": "1.0.0",
-  "date": "2021-03-15",
-  "team": "AWTK Develop Team",
-  "author": "Li XianJing <xianjimli@hotmail.com>",
-  "desc": "awtk-regression-test",
-  "copyright": "Guangzhou ZHIYUAN Electronics Co.,Ltd.",
-  "type": "PROJECT_CUSTOM_WIDGET",
-  "appType": "APP_MOBILE",
-  "hardware": "RT1050",
+  "name": "awtk-demos",
   "entry": "main",
   "assets": {
     "activedTheme": "default",
     "outputDir": "res",
     "loadFrom": "any",
-    "const": "resource_data",
     "screenDPR": "x1",
+    "const": "all_data",
     "defaultLanguage": "zh",
     "defaultCountry": "CN",
     "themes": {
@@ -25,30 +16,40 @@
         "packaged": true,
         "fonts": {
           "default": {
-            "text": " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~，。？！确定取消"
-          },
-          "bold": {
             "text": " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~"
           },
-          "default.mini": {
+          "ap": {
             "text": " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~"
           },
           "default_full": {
             "text": " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~"
           },
-          "italic": {
+          "trado": {
+            "text": " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~"
+          }
+        },
+        "lcd": {
+          "width": "320",
+          "height": "480",
+          "colorDepth": "16bit",
+          "colorFormat": "BGR(A)"
+        }
+      },
+      "dark": {
+        "activedSystemBar": "system_bar",
+        "activedBottomSystemBar": "system_bar_b",
+        "packaged": true,
+        "fonts": {
+          "default": {
             "text": " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~"
           },
-          "led": {
+          "ap": {
             "text": " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~"
           },
-          "light": {
+          "default_full": {
             "text": " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~"
           },
-          "mono": {
-            "text": " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~"
-          },
-          "thin": {
+          "trado": {
             "text": " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~"
           }
         },
@@ -63,6 +64,7 @@
   },
   "creator": {
     "name": "AWTK Designer",
-    "version": "0.1.5"
-  }
+    "version": "1.0.0"
+  },
+  "awtkRoot": "."
 }

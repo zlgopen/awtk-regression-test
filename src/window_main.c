@@ -26,6 +26,7 @@
 #include "window_image.h"
 #include "window_font.h"
 #include "window_gif.h"
+#include "window_theme.h"
 #include "window_image_animation.h"
 #include "window_screen_saver.h"
 #include "window_check_button.h"
@@ -104,6 +105,11 @@ static ret_t on_open_font(void* ctx, event_t* e) {
 
 static ret_t on_open_gif(void* ctx, event_t* e) {
   window_gif_open();
+  return RET_OK;
+}
+
+static ret_t on_open_theme(void* ctx, event_t* e) {
+  window_theme_open();
   return RET_OK;
 }
 
@@ -202,6 +208,7 @@ ret_t window_main_open(void) {
   widget_child_on(win, "image", EVT_CLICK, on_open_image, win);
   widget_child_on(win, "font", EVT_CLICK, on_open_font, win);
   widget_child_on(win, "gif", EVT_CLICK, on_open_gif, win);
+  widget_child_on(win, "theme", EVT_CLICK, on_open_theme, win);
   widget_child_on(win, "image_animation", EVT_CLICK, on_open_image_animation, win);
   widget_child_on(win, "screen_saver", EVT_CLICK, on_open_screen_saver, win);
   widget_child_on(win, "children_layout", EVT_CLICK, on_open_children_layout, win);

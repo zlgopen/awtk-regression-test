@@ -1,0 +1,7 @@
+<window text="Theme" theme="label">
+  <label name="status" x="c" y="10" w="40" h="22" text="status" auto_adjust_size="true"/>
+
+  <button name="default" focusable="true" x="10" y="b:10" w="25%" h="30"  text="default" />
+  <button focusable="true" x="c" y="b:10" w="128" h="30" text="close" on:click="back()"/>
+  <button name="dark" focusable="true" x="r:10" y="b:10" w="25%" h="30" text="dark" />
+</window>

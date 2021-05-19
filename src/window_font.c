@@ -28,7 +28,7 @@ static ret_t on_unload_all(void* ctx, event_t* e) {
 
   font_manager_unload_all(font_manager());
   assert(font_manager_lookup(font_manager(), "light", 20) == NULL);
-  
+
   return RET_OK;
 }
 

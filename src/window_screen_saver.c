@@ -46,7 +46,7 @@ static ret_t on_screen_saver(void* ctx, event_t* e) {
     log_debug("screen saver exist.\n");
     return RET_OK;
   }
-  
+
   update_status(WIDGET(ctx), "screen_saver");
 
   win = window_open(screen_saver_win);
@@ -68,8 +68,8 @@ static ret_t on_enable_click(void* ctx, event_t* e) {
 
 static ret_t on_disable_click(void* ctx, event_t* e) {
   widget_t* wm = window_manager();
-  
-  window_manager_set_screen_saver_time(wm, 1000*1000);
+
+  window_manager_set_screen_saver_time(wm, 1000 * 1000);
   widget_off_by_ctx(wm, ctx);
 
   return RET_OK;
@@ -83,4 +83,3 @@ ret_t window_screen_saver_open(void) {
 
   return RET_OK;
 }
-
