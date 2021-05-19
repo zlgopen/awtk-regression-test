@@ -1,0 +1,8 @@
+<window text="Screen Saver">
+  <label name="status" x="c" y="m" w="40%" h="22" text="status"/>
+
+  <button name="enable" focusable="true" x="10" y="b:10" w="25%" h="30"  text="enable" />
+  <button focusable="true" x="c" y="b:10" w="128" h="30" text="close" on:click="back()"/>
+  <button name="disable" focusable="true" x="r:10" y="b:10" w="25%" h="30" text="disable" />
+
+</window>

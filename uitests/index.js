@@ -27,6 +27,7 @@ let auto_adjust_size = require('./auto_adjust_size')
 let auto_scale_children = require('./auto_scale_children')
 let children_layout= require('./children_layout')
 let self_layout= require('./self_layout')
+let screen_saver = require('./screen_saver')
 
 const appName = '../bin/demo'
 
@@ -52,6 +53,16 @@ describe("awtk simple", function () {
 
   afterEach(function () {
     allPassed = allPassed && this.currentTest.state === 'passed';
+  });
+  //test screen_saver
+  it("screen_saver_test_key", function () {
+    return screen_saver.testKey(driver);
+  });
+  it("screen_saver_test_pointer", function () {
+    return screen_saver.testPointer(driver);
+  });
+  it("screen_saver_test_basic", function () {
+    return screen_saver.testBasic(driver);
   });
 
   //test font
