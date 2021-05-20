@@ -82,6 +82,9 @@ describe("awtk simple", function () {
   });
 
   //test screen_saver
+  it("screen_saver_test_basic0", function () {
+    return screen_saver.testBasic0(driver);
+  });
   it("screen_saver_test_key", function () {
     return screen_saver.testKey(driver);
   });

@@ -75,11 +75,20 @@ static ret_t on_disable_click(void* ctx, event_t* e) {
   return RET_OK;
 }
 
+static ret_t on_0_click(void* ctx, event_t* e) {
+  widget_t* wm = window_manager();
+
+  window_manager_set_screen_saver_time(wm, 0);
+
+  return RET_OK;
+}
+
 ret_t window_screen_saver_open(void) {
   widget_t* win = window_open("screen_saver");
 
   widget_child_on(win, "enable", EVT_CLICK, on_enable_click, win);
   widget_child_on(win, "disable", EVT_CLICK, on_disable_click, win);
+  widget_child_on(win, "0", EVT_CLICK, on_0_click, win);
 
   return RET_OK;
 }

@@ -1,5 +1,8 @@
 # 最新动态
 
+2020/05/20
+  * 完善screen saver测试。
+
 2020/05/19
   * 增加screen saver测试。
   * 增加image animation测试。

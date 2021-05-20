@@ -16,6 +16,24 @@ exports.testBasic = function (driver) {
         .title().should.become("Regression Test")
 }
 
+exports.testBasic0 = function (driver) {
+    return driver
+        .back().sleep(200)
+        .title().should.become("Regression Test")
+        .elementById('screen_saver').click().sleep(200)
+        .title().should.become("Screen Saver")
+        .elementById('enable').click().sleep(1200)
+        .title().should.become("Gif Image")
+        .back().sleep(200)
+        .elementById('status').text().should.become("screen_saver")
+        .title().should.become("Screen Saver")
+        .elementById('0').click().sleep(1200)
+        .title().should.become("Screen Saver")
+        .elementById('disable').click().sleep(200)
+        .back().sleep(200)
+        .title().should.become("Regression Test")
+}
+
 exports.testPointer = function (driver) {
     var press = new wd.TouchAction(driver);
     press.press({x: 60, y: 60 });
