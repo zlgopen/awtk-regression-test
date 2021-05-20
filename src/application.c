@@ -19,6 +19,7 @@
  *
  */
 
+#include "tkc/async.h"
 #include "awtk.h"
 
 #ifndef AWTK_WEB
@@ -31,6 +32,8 @@
 ret_t application_init() {
   socket_init();
   automation_agent_start(8000);
+  async_call_init();
+
   window_main_open();
   return RET_OK;
 }
@@ -38,6 +41,7 @@ ret_t application_init() {
 ret_t application_exit() {
   log_debug("application_exit\n");
   automation_agent_stop();
+  async_call_deinit();
   socket_deinit();
   return RET_OK;
 }

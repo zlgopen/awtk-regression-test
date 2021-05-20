@@ -1,0 +1,9 @@
+<window text="Out of memory">
+  <label name="status1" x="c" y="m" w="40%" h="22" text="status"/>
+  <label name="status2" x="c" y="m:50" w="40%" h="22" text="status"/>
+
+  <button name="gui" focusable="true" x="10" y="b:50" w="25%" h="30"  text="gui" />
+  <button focusable="true" x="c" y="b:10" w="128" h="30" text="close" on:click="back()"/>
+  <button name="nonegui" focusable="true" x="r:10" y="b:50" w="25%" h="30" text="none gui" />
+
+</window>
