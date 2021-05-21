@@ -251,6 +251,12 @@ describe("awtk simple", function () {
     return aswitch.testClick(driver);
   });
   //test focus
+  it("focus_test_strongly", function () {
+    return focus.testStronglyFocus(driver);
+  });
+  it("focus_test_strongly_no", function () {
+    return focus.testStronglyFocusNo(driver);
+  });
   it("focus_test_move_left_right_up_down", function () {
     return focus.testLeftRightUpDown(driver);
   });

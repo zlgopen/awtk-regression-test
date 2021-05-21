@@ -40,5 +40,6 @@
     <check_button name="mute" style="mute" focusable="true"/>
   </row>
   
-  <button name="close" focusable="true" x="c" y="b:10" w="128" h="30" text="close" on:click="back()"/>
+  <button name="strongly" x="10" y="b:10" w="128" h="30" text="Strongly Focus" />
+  <button name="close" focusable="true" x="r:10" y="b:10" w="128" h="30" text="close" on:click="back()"/>
 </window>

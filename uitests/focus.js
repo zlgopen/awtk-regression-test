@@ -1,4 +1,46 @@
 let wd = require("wd");
+
+exports.testStronglyFocusNo = function (driver) {
+    return driver
+        .back().sleep(200)
+        .title().should.become("Regression Test")
+        .elementById('focus').click().sleep(200)
+        .title().should.become("Focus")
+        .elementById('first').click().sleep(200)
+        .elementById('status').text().should.become("dialog")
+
+        .elementById('status').click().sleep(200)
+        .elementById('dialog').getAttribute('focused').should.become(false)
+
+        .back().sleep(200)
+        .title().should.become("Regression Test")
+}
+
+exports.testStronglyFocus = function (driver) {
+    var pressButton = new wd.TouchAction(driver);
+    pressButton.press({x: 2, y: 50 });
+    var releaseButton = new wd.TouchAction(driver);
+    releaseButton.release({x: 2, y: 50 });
+
+    return driver
+        .back().sleep(200)
+        .title().should.become("Regression Test")
+        .elementById('focus').click().sleep(200)
+        .title().should.become("Focus")
+        .elementById('first').click().sleep(200)
+        .elementById('status').text().should.become("dialog")
+
+        .elementById('strongly').click().sleep(200)
+        .elementById('first').click().sleep(200)
+        .elementById('dialog').getAttribute('focused').should.become(true)
+        .performTouchAction(pressButton).sleep(200)
+        .performTouchAction(releaseButton).sleep(200)
+        .elementById('dialog').getAttribute('focused').should.become(true)
+
+        .back().sleep(200)
+        .title().should.become("Regression Test")
+}
+
 exports.testMoveFirst = function (driver) {
     return driver
         .back().sleep(200)

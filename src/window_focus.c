@@ -77,6 +77,13 @@ static ret_t on_each_widget(void* ctx, const void* data) {
   return RET_OK;
 }
 
+static ret_t on_strongly_focus(void* ctx, event_t* e) {
+  widget_t* win = WIDGET(ctx);
+  widget_set_prop_bool(win, WIDGET_PROP_STRONGLY_FOCUS, TRUE);
+
+  return RET_OK;
+}
+
 ret_t window_focus_open(void) {
   widget_t* win = window_open("focus");
 
@@ -85,6 +92,7 @@ ret_t window_focus_open(void) {
   widget_child_on(win, "dialog", EVT_CLICK, on_dialog, win);
   widget_child_on(win, "prev_next", EVT_CLICK, on_prev_next, win);
   widget_child_on(win, "left_right_up_down", EVT_CLICK, on_left_right_up_down, win);
+  widget_child_on(win, "strongly", EVT_CLICK, on_strongly_focus, win);
   widget_foreach(win, on_each_widget, win);
 
   return RET_OK;
