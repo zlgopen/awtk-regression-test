@@ -1,0 +1,14 @@
+<window text="Style" theme="style">
+  <view name="grid" style="grid" x="c" y="10" w="100%" h="50%">
+    <button style="feedback" name="b1" text="b1" />
+    <button style="feedback" name="b2" text="b2" />
+    <button style="feedback" name="b3" text="b3" />
+    <button style="feedback" name="b4" text="b4" />
+  </view>
+  
+  <label name="status" x="c" y="m:30" w="80%" h="30"  text="status" />
+  
+  <button style="focusable" name="focusable" x="10" y="b:10" w="25%" h="30"  text="focusable" />
+  <button style="close" name="close" text="close" on:click="back()"/>
+  <button style="feedback" name="feedback" x="r:10" y="b:10" w="25%" h="30" text="feedback" />
+</window>

@@ -26,6 +26,7 @@
 #include "window_image.h"
 #include "window_font.h"
 #include "window_gif.h"
+#include "window_style.h"
 #include "window_oom.h"
 #include "window_locale.h"
 #include "window_theme.h"
@@ -107,6 +108,11 @@ static ret_t on_open_font(void* ctx, event_t* e) {
 
 static ret_t on_open_gif(void* ctx, event_t* e) {
   window_gif_open();
+  return RET_OK;
+}
+
+static ret_t on_open_style(void* ctx, event_t* e) {
+  window_style_open();
   return RET_OK;
 }
 
@@ -220,6 +226,7 @@ ret_t window_main_open(void) {
   widget_child_on(win, "image", EVT_CLICK, on_open_image, win);
   widget_child_on(win, "font", EVT_CLICK, on_open_font, win);
   widget_child_on(win, "gif", EVT_CLICK, on_open_gif, win);
+  widget_child_on(win, "style", EVT_CLICK, on_open_style, win);
   widget_child_on(win, "oom", EVT_CLICK, on_open_oom, win);
   widget_child_on(win, "locale", EVT_CLICK, on_open_locale, win);
   widget_child_on(win, "theme", EVT_CLICK, on_open_theme, win);
