@@ -1,15 +1,26 @@
-<window text="Button">
+<window text="Edit">
   <view x="0" y="0" w="100%" h="85%" children_layout="default(c=2,h=30,m=2,s=2)" >
-    <edit name="default" />
-    <edit name="ascii" input_type="ascii"/>
-    <edit name="int" input_type="int" />
-    <edit name="uint" input_type="uint" />
-    <edit name="float" input_type="float" />
-    <edit name="ufloat" input_type="ufloat" />
+    <edit name="default" tips="default"/>
+    <edit name="ascii" input_type="ascii" tips="ascii"/>
+    <edit name="int" input_type="int" min="-10" max="200" tips="int"/>
+    <edit name="uint" input_type="uint" min="10" max="300" tips="uint"/>
+    <edit name="float" input_type="float" min="-11" max="201" tips="float"/>
+    <edit name="ufloat" input_type="ufloat" min="11" max="301" tips="ufloat"/>
+    <edit name="password" input_type="password" min="4" max="32" tips="password"/>
+    <edit name="date" input_type="date" tips="date"/>
+    <edit name="time" input_type="time" tips="time"/>
+    <edit name="time_full" input_type="time_full" tips="time_full"/>
+    <edit name="ipv4" input_type="ipv4" tips="ipv4"/>
+    <edit name="phone" input_type="phone" tips="phone"/>
+    <edit name="email" input_type="email" tips="email" min="5" max="32"/>
+    <edit name="hex" input_type="hex" tips="hex"/>
+    <edit name="auto_fix_int" input_type="int" min="-10" max="200" tips="auto_fix int" auto_fix="true"/>
+
   </view>
   
   <label name="changing" x="c" y="b:50" w="100%" h="30" text="none"/>
   <label name="changed" x="c" y="b:50" w="100%" h="30" text="none"/>
 
-  <button focusable="true" x="c" y="b:10" w="128" h="30" text="close" on:click="back()"/>
+  <button name="foo" focusable="true" x="r:10" y="b:10" w="25%" h="30" text="foo"/>
+  <button focusable="true" x="c" y="b:10" w="25%" h="30" text="close" on:click="back()"/>
 </window>

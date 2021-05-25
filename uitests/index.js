@@ -8,6 +8,7 @@ let serverConfigs = require('awtk-appium-js-helpers/appium-servers');
 let startApp = require("awtk-appium-js-helpers/start-app").startApp;
 
 let gif = require('./gif')
+let edit = require('./edit')
 let style = require('./style')
 let oom = require('./oom')
 let locale = require('./locale')
@@ -59,7 +60,46 @@ describe("awtk simple", function () {
   afterEach(function () {
     allPassed = allPassed && this.currentTest.state === 'passed';
   });
-  
+  //test edit
+  it("edit_test_auto_fix_int_max", function () {
+    return edit.testAutoFixIntMax(driver);
+  });
+  it("edit_test_auto_fix_int_min", function () {
+    return edit.testAutoFixIntMin(driver);
+  });
+  it("edit_test_time", function () {
+    return edit.testTime(driver);
+  });
+  it("edit_test_time_full", function () {
+    return edit.testTimeFull(driver);
+  });
+  it("edit_test_date", function () {
+    return edit.testDate(driver);
+  });
+  it("edit_test_email", function () {
+    return edit.testEmail(driver);
+  });
+  it("edit_test_password", function () {
+    return edit.testPassword(driver);
+  });
+  it("edit_test_ufloat", function () {
+    return edit.testUFloat(driver);
+  });
+  it("edit_test_float", function () {
+    return edit.testFloat(driver);
+  });
+  it("edit_test_uint", function () {
+    return edit.testUInt(driver);
+  });
+  it("edit_test_int", function () {
+    return edit.testInt(driver);
+  });
+  it("edit_test_ascii", function () {
+    return edit.testAscii(driver);
+  });
+  it("edit_test_default", function () {
+    return edit.testDefault(driver);
+  });
   //test style
   it("style_test_feedback1", function () {
     return style.testFeedback1(driver);
