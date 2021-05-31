@@ -60,7 +60,32 @@ describe("awtk simple", function () {
   afterEach(function () {
     allPassed = allPassed && this.currentTest.state === 'passed';
   });
+
   //test edit
+  it("edit_test_select_right", function () {
+    return edit.testSelectRight(driver);
+  });
+  it("edit_test_select_left", function () {
+    return edit.testSelectLeft(driver);
+  });
+  it("edit_test_undo_redo", function () {
+    return edit.testUndoRedo(driver);
+  });
+  it("edit_test_cut_paste", function () {
+    return edit.testCutPaste(driver);
+  });
+  it("edit_test_copy_paste", function () {
+    return edit.testCopyPaste(driver);
+  });
+  it("edit_test_select_all", function () {
+    return edit.testSelectAll(driver);
+  });
+  it("edit_test_left_right_key", function () {
+    return edit.testLeftRightKey(driver);
+  });
+  it("edit_test_home_end_key", function () {
+    return edit.testHomeEndKey(driver);
+  });
   it("edit_test_auto_fix_int_max", function () {
     return edit.testAutoFixIntMax(driver);
   });
