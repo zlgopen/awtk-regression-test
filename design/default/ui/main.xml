@@ -2,9 +2,11 @@
   <list_view x="0"  y="0" w="100%" h="-50" item_height="36">
     <scroll_view name="view" x="0"  y="0" w="-12" h="100%" children_layout="list_view(x_margin=5,spacing=10)">
 
+      <list_item style="odd_clickable" name="locale" text="Test Locale" /> 
+      <list_item style="even_clickable" name="mledit" text="Test ML Edit" /> 
+      <list_item style="odd_clickable" name="edit" text="Test Edit" /> 
       <list_item style="even_clickable" name="style" text="Test Style" /> 
-      <list_item style="even_clickable" name="oom" text="Test Out of memory" /> 
-      <list_item style="even_clickable" name="locale" text="Test Locale" /> 
+      <list_item style="odd_clickable" name="oom" text="Test Out of memory" /> 
       <list_item style="even_clickable" name="theme" text="Test Theme" /> 
       <list_item style="odd_clickable" name="image_animation" text="Test Image Animation" /> 
       <list_item style="even_clickable" name="screen_saver" text="Test Screen Saver" /> 
@@ -15,7 +17,6 @@
       <list_item style="odd_clickable" name="children_layout" text="Test Children Layout" /> 
       <list_item style="even_clickable" name="focus_list_view" text="Test List View Focus" /> 
       <list_item style="odd_clickable" name="auto_adjust_size_list_view" text="Test List View Auto Resize" /> 
-      <list_item style="even_clickable" name="edit" text="Test Edit" /> 
       <list_item style="odd_clickable" name="multi_dialogs" text="Test Multi Dialogs" /> 
       <list_item style="even_clickable" name="switch" text="Test Switch" /> 
       <list_item style="odd_clickable" name="focus" text="Test Focus" /> 

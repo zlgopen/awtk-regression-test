@@ -35,6 +35,7 @@
 #include "window_check_button.h"
 #include "window_closable.h"
 #include "window_edit.h"
+#include "window_mledit.h"
 #include "window_focus.h"
 #include "window_combo_box.h"
 #include "window_dialogs.h"
@@ -166,6 +167,11 @@ static ret_t on_open_edit(void* ctx, event_t* e) {
   return RET_OK;
 }
 
+static ret_t on_open_mledit(void* ctx, event_t* e) {
+  window_mledit_open();
+  return RET_OK;
+}
+
 static ret_t on_open_focus(void* ctx, event_t* e) {
   window_focus_open();
   return RET_OK;
@@ -237,6 +243,7 @@ ret_t window_main_open(void) {
   widget_child_on(win, "switch", EVT_CLICK, on_open_switch, win);
   widget_child_on(win, "closable", EVT_CLICK, on_open_closable, win);
   widget_child_on(win, "edit", EVT_CLICK, on_open_edit, win);
+  widget_child_on(win, "mledit", EVT_CLICK, on_open_mledit, win);
   widget_child_on(win, "focus", EVT_CLICK, on_open_focus, win);
   widget_child_on(win, "fullscreen", EVT_CLICK, on_open_fullscreen, win);
   widget_child_on(win, "navigator1", EVT_CLICK, on_open_navigator1, win);

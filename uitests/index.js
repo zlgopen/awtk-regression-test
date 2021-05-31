@@ -9,6 +9,7 @@ let startApp = require("awtk-appium-js-helpers/start-app").startApp;
 
 let gif = require('./gif')
 let edit = require('./edit')
+let mledit = require('./mledit')
 let style = require('./style')
 let oom = require('./oom')
 let locale = require('./locale')
@@ -60,7 +61,40 @@ describe("awtk simple", function () {
   afterEach(function () {
     allPassed = allPassed && this.currentTest.state === 'passed';
   });
-
+  //test mledit
+  it("mledit_test_select_down", function () {
+    return mledit.testSelectDown(driver);
+  });
+  it("mledit_test_select_up", function () {
+    return mledit.testSelectUp(driver);
+  });
+  it("mledit_test_default", function () {
+    return mledit.testDefault(driver);
+  });
+  it("mledit_test_select_right", function () {
+    return mledit.testSelectRight(driver);
+  });
+  it("mledit_test_select_left", function () {
+    return mledit.testSelectLeft(driver);
+  });
+  it("mledit_test_undo_redo", function () {
+    return mledit.testUndoRedo(driver);
+  });
+  it("mledit_test_cut_paste", function () {
+    return mledit.testCutPaste(driver);
+  });
+  it("mledit_test_copy_paste", function () {
+    return mledit.testCopyPaste(driver);
+  });
+  it("mledit_test_select_all", function () {
+    return mledit.testSelectAll(driver);
+  });
+  it("mledit_test_left_right_key", function () {
+    return mledit.testLeftRightKey(driver);
+  });
+  it("mledit_test_home_end_key", function () {
+    return mledit.testHomeEndKey(driver);
+  });
   //test edit
   it("edit_test_select_right", function () {
     return edit.testSelectRight(driver);

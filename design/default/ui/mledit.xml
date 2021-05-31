@@ -1,0 +1,14 @@
+<window text="MLEdit">
+   <mledit name="default" x="c" y="5" h="40%" w="90%" 
+    left_margin="33" top_margin="2" bottom_margin="2" right_margin="16" wrap_word="true" max_lines="100"> 
+   <line_number x="0" y="0" w="32" h="100%" value="0"/>
+   <scroll_bar_d x="right" y="0" w="14" h="100%" value="0"/>
+ </mledit>
+
+ <mledit name="simple" x="c" y="42%" h="40%" w="90%" text="" style:empty:tips_text_color="#ff9900" tips="0123456789qwertyuiopasdfghjklzxcvbnm0123456789qwertyuiopasdfghjklzxcvbnm0123456789qwertyuiopasdfghjklzxcvbnm0123456789qwertyuiopasdfghjklzxcvbnm0123456789qwertyuiopasdfghjklzxcvbnm" wrap_word="false" keyboard="kb_foo" cancelable="true"> 
+ </mledit>
+
+  <label name="changing" x="0" y="b:10" w="30%" h="30" text="none"/>
+  <label name="changed" x="r" y="b:10" w="30%" h="30" text="none"/>
+  <button focusable="true" x="c" y="b:10" w="25%" h="30" text="close" on:click="back()"/>
+</window>
