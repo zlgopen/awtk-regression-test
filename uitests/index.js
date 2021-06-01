@@ -29,6 +29,7 @@ let combo_box = require('./combo_box')
 let fullscreen = require('./fullscreen')
 let check_button = require('./check_button')
 let multi_dialogs = require('./multi_dialogs')
+let text_selector = require('./text_selector')
 let auto_adjust_size = require('./auto_adjust_size')
 let auto_scale_children = require('./auto_scale_children')
 let children_layout= require('./children_layout')
@@ -61,6 +62,45 @@ describe("awtk simple", function () {
   afterEach(function () {
     allPassed = allPassed && this.currentTest.state === 'passed';
   });
+  //testt text selector 
+  it("text_selector_test_up_key_loop", function () {
+    return text_selector.testUpKeyLoop(driver);
+  });
+  it("text_selector_test_down_key_loop", function () {
+    return text_selector.testDownKeyLoop(driver);
+  });
+  it("text_selector_test_click_down_loop", function () {
+    return text_selector.testClickDownLoop(driver);
+  });
+  it("text_selector_test_slide_up_loop", function () {
+    return text_selector.testSlideUpLoop(driver);
+  });
+  it("text_selector_test_slide_down_loop", function () {
+    return text_selector.testSlideDownLoop(driver);
+  });
+  it("text_selector_test_click_up_loop", function () {
+    return text_selector.testClickUpLoop(driver);
+  });
+  //testt text selector 
+  it("text_selector_test_slide_up", function () {
+    return text_selector.testSlideUp(driver);
+  });
+  it("text_selector_test_slide_down", function () {
+    return text_selector.testSlideDown(driver);
+  });
+  it("text_selector_test_click_up", function () {
+    return text_selector.testClickUp(driver);
+  });
+  it("text_selector_test_click_down", function () {
+    return text_selector.testClickDown(driver);
+  });
+  it("text_selector_test_up_key", function () {
+    return text_selector.testUpKey(driver);
+  });
+  it("text_selector_test_down_key", function () {
+    return text_selector.testDownKey(driver);
+  });
+
   //test mledit
   it("mledit_test_select_down", function () {
     return mledit.testSelectDown(driver);

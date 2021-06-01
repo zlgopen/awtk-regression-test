@@ -54,4 +54,3 @@ ret_t window_locale_open(void) {
 
   return RET_OK;
 }
-

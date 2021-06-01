@@ -1,0 +1,16 @@
+<window text="Text Selector">
+  <row  x="10" y="30" w="100%" h="150" children_layout="default(row=1,col=3)">
+    <text_selector name="d5" style="image" options="2000-2050" selected_index="9"/> 
+    <text_selector options="1-12-%02d" selected_index="8" loop_options="true"/>
+    <text_selector options="1-31-%02d" selected_index="9"/>
+  </row>
+  <row  x="10" y="m:10" w="100%" h="90" children_layout="default(row=1,col=3)">
+    <text_selector name="d3" style="dark" options="2000-2010" visible_nr="3" text="2018" selected_index="9" loop_options="true"/>
+    <text_selector options="0-60-%02d-5" visible_nr="3" text="05"/>
+    <text_selector options="red;green;blue;gold;orange" visible_nr="3" text="red"/>
+  </row>
+  
+  <label name="will_change" x="0" y="b:10" w="30%" h="30" text="none"/>
+  <label name="changed" x="r" y="b:10" w="30%" h="30" text="none"/>
+  <button focusable="true" x="c" y="b:10" w="25%" h="30" text="close" on:click="back()"/>
+</window>
