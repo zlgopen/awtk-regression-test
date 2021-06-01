@@ -9,6 +9,7 @@ let startApp = require("awtk-appium-js-helpers/start-app").startApp;
 
 let gif = require('./gif')
 let edit = require('./edit')
+let slider = require('./slider')
 let mledit = require('./mledit')
 let style = require('./style')
 let oom = require('./oom')
@@ -61,6 +62,44 @@ describe("awtk simple", function () {
 
   afterEach(function () {
     allPassed = allPassed && this.currentTest.state === 'passed';
+  });
+
+  //test slider
+  it("slider_test_v_draw_down", function () {
+    return slider.testVDragDown(driver);
+  });
+  it("slider_test_v_draw_up", function () {
+    return slider.testVDragUp(driver);
+  });
+  it("slider_test_v_click_up", function () {
+    return slider.testVClickUp(driver);
+  });
+  it("slider_test_v_click_down", function () {
+    return slider.testVClickDown(driver);
+  });
+  it("slider_test_v_up_key", function () {
+    return slider.testVUpKey(driver);
+  });
+  it("slider_test_v_down_key", function () {
+    return slider.testVDownKey(driver);
+  });
+  it("slider_test_drag_left", function () {
+    return slider.testDragLeft(driver);
+  });
+  it("slider_test_drag_right", function () {
+    return slider.testDragRight(driver);
+  });
+  it("slider_test_click_right", function () {
+    return slider.testClickRight(driver);
+  });
+  it("slider_test_click_left", function () {
+    return slider.testClickLeft(driver);
+  });
+  it("slider_test_left_key", function () {
+    return slider.testLeftKey(driver);
+  });
+  it("slider_test_right_key", function () {
+    return slider.testRightKey(driver);
   });
   //testt text selector 
   it("text_selector_test_up_key_loop", function () {

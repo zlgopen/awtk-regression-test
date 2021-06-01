@@ -1,0 +1,14 @@
+<window text="Slider">
+  <slider name="h1" x="c" y="10" w="90%" h="30" value="10" />
+  <slider name="h2" x="c" y="50" w="90%" h="30" value="120" min="100" max="200"/>
+  
+  <slider name="v1" x="c:-40" y="80" w="30" h="60%" vertical="true" min="0" max="1000" value="200"/>
+  <slider name="v2" x="c" y="80" w="30" h="60%" value="30" vertical="true"/>
+  <slider name="v3" x="c:40" y="80" w="30" h="60%" value="30" vertical="true"/>
+  
+  <label name="will_change" x="0" y="b:50" w="30%" h="30" text="none"/>
+  <label name="changing" x="c" y="b:50" w="30%" h="30" text="none"/>
+  <label name="changed" x="r" y="b:50" w="30%" h="30" text="none"/>
+
+  <button focusable="true" x="c" y="b:10" w="25%" h="30" text="close" on:click="back()"/>
+</window>
