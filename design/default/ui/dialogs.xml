@@ -1,4 +1,4 @@
-<window text="Dialogs" children_layout="default(c=2,r=8,m=5,s=5)">>
+<window text="Dialogs" children_layout="default(c=2,r=8,m=5,s=5)">
   <button name="toast" text="Toast"/>
   <button name="confirm" text="Confirm"/>
   <button name="info" text="Information"/>

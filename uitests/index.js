@@ -37,6 +37,8 @@ let children_layout= require('./children_layout')
 let self_layout= require('./self_layout')
 let screen_saver = require('./screen_saver')
 let image_animation = require('./image_animation')
+let digit_clock = require('./digit_clock')
+let time_clock = require('./time_clock')
 
 const appName = '../bin/demo'
 
@@ -62,6 +64,16 @@ describe("awtk simple", function () {
 
   afterEach(function () {
     allPassed = allPassed && this.currentTest.state === 'passed';
+  });
+  
+  //test time clock
+  it("time_clock_test_basic", function () {
+    return time_clock.testBasic(driver);
+  });
+
+  //test digit clock
+  it("digit_clock_test_basic", function () {
+    return digit_clock.testBasic(driver);
   });
 
   //test slider

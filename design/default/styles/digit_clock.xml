@@ -1,0 +1,5 @@
+<digit_clock>
+  <style name="default" font_size="32">
+    <normal text_color="black" />
+  </style>
+</digit_clock>

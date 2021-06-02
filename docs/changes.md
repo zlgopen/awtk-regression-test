@@ -1,5 +1,9 @@
 # 最新动态
 
+2020/06/02
+  * 增加time clock测试。
+  * 增加digit clock测试。
+
 2020/06/01
   * 增加text selector测试。
   * 增加slider测试。
