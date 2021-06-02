@@ -1,0 +1,41 @@
+<window text="ProgressCircle">
+  <view x="c" y="m" w="200" h="200" children_layout="default(r=2,c=2,s=5)">
+    <progress_circle name="default" max="60" show_text="true" line_cap="square" value="10"/> 
+
+    <progress_circle max="360" show_text="true" start_angle="90" line_cap="butt" 
+      animation="value(from=0, to=300, yoyo_times=1000, duration=3000, easing=sin_inout)" />
+
+    <progress_circle style="image" max="360" show_text="true" start_angle="-213" line_cap="round"  
+      animation="value(from=0, to=300, yoyo_times=1000, duration=3000, easing=sin_inout)" />
+
+    <progress_circle style="image" max="100" show_text="true" start_angle="90" start_angle="-225"  
+      counter_clock_wise="true" format="%d%%"
+      animation="value(from=10, to=100, yoyo_times=1000, duration=3000, easing=sin_inout)" />
+   </view>
+   
+  <button name="inc" focusable="true" x="10" y="b:10" w="25%" h="30" text="inc">
+  <property name="on:click">
+          <![CDATA[
+        a = widget_lookup(window, default, true)
+        b = widget_get(a, "value")
+        if(b < 100) {
+          widget_set(a, "value", b + 1)
+        } else {
+          widget_set(a, "value", 0)
+        }
+]]></property>
+  </button>
+  <button focusable="true" x="c" y="b:10" w="25%" h="30" text="close" on:click="back()"/>
+  <button name="dec" focusable="true" x="r:10" y="b:10" w="25%" h="30" text="dec" >
+  <property name="on:click">
+          <![CDATA[
+        a = widget_lookup(window, default, true)
+        b = widget_get(a, "value")
+        if(b > 0) {
+          widget_set(a, "value", b - 1)
+        } else {
+          widget_set(a, "value", 100)
+        }
+]]></property>
+  </button>
+</window>

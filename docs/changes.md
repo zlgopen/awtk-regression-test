@@ -4,6 +4,8 @@
   * 增加time clock测试。
   * 增加digit clock测试。
   * 增加rich text测试。
+  * 增加progress bar测试。
+  * 增加progress circle测试。
 
 2020/06/01
   * 增加text selector测试。

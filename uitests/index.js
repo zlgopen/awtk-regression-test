@@ -40,6 +40,8 @@ let image_animation = require('./image_animation')
 let digit_clock = require('./digit_clock')
 let time_clock = require('./time_clock')
 let rich_text = require('./rich_text')
+let progress_bar = require('./progress_bar')
+let progress_circle = require('./progress_circle')
 
 const appName = '../bin/demo'
 
@@ -66,6 +68,15 @@ describe("awtk simple", function () {
   afterEach(function () {
     allPassed = allPassed && this.currentTest.state === 'passed';
   });
+  //test progress bar
+  it("progress_bar_test_basic", function () {
+    return progress_bar.testBasic(driver);
+  });
+  //test progress circle
+  it("progress_circle_test_basic", function () {
+    return progress_circle.testBasic(driver);
+  });
+
   //test time clock
   it("rich_text_test_basic", function () {
     return rich_text.testBasic(driver);
