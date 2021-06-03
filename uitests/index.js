@@ -42,6 +42,7 @@ let time_clock = require('./time_clock')
 let rich_text = require('./rich_text')
 let progress_bar = require('./progress_bar')
 let progress_circle = require('./progress_circle')
+let context_menu = require('./context_menu')
 
 const appName = '../bin/demo'
 
@@ -67,6 +68,43 @@ describe("awtk simple", function () {
 
   afterEach(function () {
     allPassed = allPassed && this.currentTest.state === 'passed';
+  });
+  //test context menu
+  it("context_menu_test_right_top", function () {
+    return context_menu.testRightTop(driver);
+  });
+  it("context_menu_test_right_middle", function () {
+    return context_menu.testRightMiddle(driver);
+  });
+  it("context_menu_test_right_bottom", function () {
+    return context_menu.testRightBottom(driver);
+  });
+  it("context_menu_test_left_top", function () {
+    return context_menu.testLeftTop(driver);
+  });
+  it("context_menu_test_left_middle", function () {
+    return context_menu.testLeftMiddle(driver);
+  });
+  it("context_menu_test_left_bottom", function () {
+    return context_menu.testLeftBottom(driver);
+  });
+  it("context_menu_test_up_center", function () {
+    return context_menu.testUpCenter(driver);
+  });
+  it("context_menu_test_up_right", function () {
+    return context_menu.testUpRight(driver);
+  });
+  it("context_menu_test_up_left", function () {
+    return context_menu.testUpLeft(driver);
+  });
+  it("context_menu_test_down_center", function () {
+    return context_menu.testDownCenter(driver);
+  });
+  it("context_menu_test_down_right", function () {
+    return context_menu.testDownRight(driver);
+  });
+  it("context_menu_test_down_left", function () {
+    return context_menu.testDownLeft(driver);
   });
   //test progress bar
   it("progress_bar_test_basic", function () {

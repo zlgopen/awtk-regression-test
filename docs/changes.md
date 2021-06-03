@@ -1,5 +1,8 @@
 # 最新动态
 
+2020/06/03
+  * 增加context menu测试。
+
 2020/06/02
   * 增加time clock测试。
   * 增加digit clock测试。

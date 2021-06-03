@@ -1,0 +1,21 @@
+<window text="Context Menu" children_layout="default(c=3,r=5,m=5,s=5,keep_invisible=true)">
+  <button name="menu_down_left" text="DownLeft" on:click="open(menu_down_left)"/>
+  <button name="menu_down_center" text="DownCenter" on:click="open(menu_down_center)"/>
+  <button name="menu_down_right" text="DownRight" on:click="open(menu_down_right)"/>
+
+  <button name="menu_right_top" text="RightTop" on:click="open(menu_right_top)"/>
+  <button name="menu_point" text="Point" on:click="open(menu_point)"/>
+  <button name="menu_left_top" text="LeftTop" on:click="open(menu_left_top)"/>
+
+  <button name="menu_right_middle" text="RightMiddle" on:click="open(menu_right_middle)"/>
+  <button name="close" text="Close" on:click="close()"/>
+  <button name="menu_left_middle" text="LeftMiddle" on:click="open(menu_left_middle)"/>
+
+  <button name="menu_right_bottom" text="LeftBottom" on:click="open(menu_right_bottom)"/>
+  <button name="menu_point" text="Point" on:click="open(menu_point)"/>
+  <button name="menu_left_bottom" text="LeftBottom" on:click="open(menu_left_bottom)"/>
+  
+  <button name="menu_up_left" text="UpLeft" on:click="open(menu_up_left)"/>
+  <button name="menu_up_center" text="UpCenter" on:click="open(menu_up_center)"/>
+  <button name="menu_up_right" text="UpRight" on:click="open(menu_up_right)"/>
+</window>
