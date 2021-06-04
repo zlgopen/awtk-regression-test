@@ -1,5 +1,8 @@
 # 最新动态
 
+2020/06/04
+  * 增加list view mobile测试。
+
 2020/06/03
   * 增加context menu测试。
 

@@ -1,6 +1,10 @@
 <window closable="no" anim_hint="htranslate" text="Regression Test">
   <list_view x="0"  y="0" w="100%" h="-50" item_height="36">
     <scroll_view name="view" x="0"  y="0" w="-12" h="100%" children_layout="list_view(x_margin=5,spacing=10)">
+      <list_item style="odd_clickable" name="list_view_desktop" text="Test List View Desktop" 
+        on:click="open(list_view_desktop)"/> 
+      <list_item style="even_clickable" name="list_view_mobile" text="Test List View Mobile" 
+        on:click="open(list_view_mobile)"/> 
       <list_item style="odd_clickable" name="context_menu" text="Test Context Menu" 
         on:click="open(context_menu)"/> 
       <list_item style="even_clickable" name="progress_bar" text="Test ProgressBar" 

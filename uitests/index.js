@@ -43,6 +43,7 @@ let rich_text = require('./rich_text')
 let progress_bar = require('./progress_bar')
 let progress_circle = require('./progress_circle')
 let context_menu = require('./context_menu')
+let list_view_mobile = require('./list_view_mobile');
 
 const appName = '../bin/demo'
 
@@ -68,6 +69,16 @@ describe("awtk simple", function () {
 
   afterEach(function () {
     allPassed = allPassed && this.currentTest.state === 'passed';
+  });
+  //test list_view_mobile
+  it("list_view_mobile_test_basic", function () {
+    return list_view_mobile.testBasic(driver);
+  });
+  it("list_view_mobile_test_slide_up", function () {
+    return list_view_mobile.testSlideUp(driver);
+  });
+  it("list_view_mobile_test_slide_down", function () {
+    return list_view_mobile.testSlideDown(driver);
   });
   //test context menu
   it("context_menu_test_right_top", function () {

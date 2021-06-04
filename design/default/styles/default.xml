@@ -400,6 +400,10 @@
   <style name="default">
     <normal fg_color="#808080"/>
   </style>
+  
+  <style name="always_visible">
+    <normal fg_color="#808080" bg_color="#e0e0e0" round_radius="5"/>
+  </style>
 </scroll_bar_m>
 
 <scroll_bar_d>
