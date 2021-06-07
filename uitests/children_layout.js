@@ -22,13 +22,13 @@ exports.testBasic = function (driver) {
         .elementById('3x3').getAttribute('h').should.become(69)
         
         .elementById('2x3').getAttribute('x').should.become(2)
-        .elementById('2x3').getAttribute('y').should.become(97)
+        .elementById('2x3').getAttribute('y').should.become(98)
         .elementById('2x3').getAttribute('w').should.become(102)
         .elementById('2x3').getAttribute('h').should.become(30)
         
         .elementById('3x2').getAttribute('x').should.become(119)
         .elementById('3x2').getAttribute('y').should.become(78)
-        .elementById('3x2').getAttribute('w').should.become(81)
+        .elementById('3x2').getAttribute('w').should.become(82)
         .elementById('3x2').getAttribute('h').should.become(69)
         
         .elementById('l2').getAttribute('x').should.become(135)
@@ -63,7 +63,7 @@ exports.test1Row= function (driver) {
         .elementById('3x3').getAttribute('h').should.become(219)
         
         .elementById('2x3').getAttribute('x').should.become(194)
-        .elementById('2x3').getAttribute('y').should.become(97)
+        .elementById('2x3').getAttribute('y').should.become(98)
         .elementById('2x3').getAttribute('w').should.become(60)
         .elementById('2x3').getAttribute('h').should.become(30)
         
@@ -105,7 +105,7 @@ exports.test1Col = function (driver) {
         
         .elementById('3x2').getAttribute('x').should.become(34)
         .elementById('3x2').getAttribute('y').should.become(180)
-        .elementById('3x2').getAttribute('w').should.become(252)
+        .elementById('3x2').getAttribute('w').should.become(253)
         .elementById('3x2').getAttribute('h').should.become(40)
         
         .back().sleep(200)
@@ -141,7 +141,7 @@ exports.test3x3 = function (driver) {
         
         .elementById('3x2').getAttribute('x').should.become(119)
         .elementById('3x2').getAttribute('y').should.become(77)
-        .elementById('3x2').getAttribute('w').should.become(81)
+        .elementById('3x2').getAttribute('w').should.become(82)
         .elementById('3x2').getAttribute('h').should.become(70)
         
         .back().sleep(200)
@@ -171,13 +171,13 @@ exports.test2x3 = function (driver) {
         .elementById('3x3').getAttribute('h').should.become(107)
         
         .elementById('2x3').getAttribute('x').should.become(3)
-        .elementById('2x3').getAttribute('y').should.become(152)
+        .elementById('2x3').getAttribute('y').should.become(153)
         .elementById('2x3').getAttribute('w').should.become(102)
         .elementById('2x3').getAttribute('h').should.become(30)
         
         .elementById('3x2').getAttribute('x').should.become(119)
         .elementById('3x2').getAttribute('y').should.become(114)
-        .elementById('3x2').getAttribute('w').should.become(81)
+        .elementById('3x2').getAttribute('w').should.become(82)
         .elementById('3x2').getAttribute('h').should.become(107)
         
         .back().sleep(200)
@@ -213,7 +213,7 @@ exports.test3x2 = function (driver) {
         
         .elementById('3x2').getAttribute('x').should.become(18)
         .elementById('3x2').getAttribute('y').should.become(151)
-        .elementById('3x2').getAttribute('w').should.become(124)
+        .elementById('3x2').getAttribute('w').should.become(125)
         .elementById('3x2').getAttribute('h').should.become(70)
         
         .back().sleep(200)
