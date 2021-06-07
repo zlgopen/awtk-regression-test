@@ -1,5 +1,9 @@
 # 最新动态
 
+2020/06/07
+  * 增加list view desktop测试。
+  * 完善list view mobile测试。
+
 2020/06/04
   * 增加list view mobile测试。
 

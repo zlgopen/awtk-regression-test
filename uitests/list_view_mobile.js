@@ -57,3 +57,41 @@ exports.testBasic= function (driver) {
         .title().should.become("Regression Test")
 }
 
+exports.testKeyUpDown= function (driver) {
+    return driver.back().sleep(200)
+        .title().should.become("Regression Test")
+        .elementById('list_view_mobile').click().sleep(200)
+        .title().should.become("List View Mobile")
+        .elementById('view1').click().sleep(200)
+        .elementById('current_window').sendKeys(wd.SPECIAL_KEYS['Down arrow']).sleep(500)
+        .elementById('bar1').getAttribute("value").should.become(73)
+        .elementById('current_window').sendKeys(wd.SPECIAL_KEYS['Up arrow']).sleep(500)
+        .elementById('bar1').getAttribute("value").should.become(0)
+        .back().sleep(200)
+        .title().should.become("Regression Test")
+}
+
+exports.testKeyPageUpPageDown= function (driver) {
+    return driver.back().sleep(200)
+        .title().should.become("Regression Test")
+        .elementById('list_view_mobile').click().sleep(200)
+        .title().should.become("List View Mobile")
+        .elementById('view1').click().sleep(200)
+        .elementById('current_window').sendKeys(wd.SPECIAL_KEYS.Pagedown).sleep(600)
+        .elementById('bar1').getAttribute("value").should.become(221)
+        .elementById('current_window').sendKeys(wd.SPECIAL_KEYS.Pageup).sleep(600)
+        .elementById('bar1').getAttribute("value").should.become(0)
+        .back().sleep(200)
+        .title().should.become("Regression Test")
+}
+
+exports.testEnsureInView = function (driver) {
+    return driver.back().sleep(200)
+        .title().should.become("Regression Test")
+        .elementById('list_view_mobile').click().sleep(200)
+        .title().should.become("List View Mobile")
+        .elementById('slider1').click().sleep(200)
+        .elementById('bar1').getAttribute("value").should.become(867)
+        .back().sleep(200)
+        .title().should.become("Regression Test")
+}

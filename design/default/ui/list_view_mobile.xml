@@ -1,6 +1,6 @@
 <window text="List View Mobile">
   <list_view x="0"  y="5" w="100%" h="40%" item_height="60">
-    <scroll_view name="view" x="0"  y="0" w="100%" h="100%">
+    <scroll_view name="view1" x="0"  y="0" w="100%" h="100%">
       <list_item style="odd" children_layout="default(rows=1,cols=0)">
         <image draw_type="icon" w="30" image="earth"/>
         <label w="-30" text="1.Hello AWTK !">
@@ -83,7 +83,7 @@
         <edit text="zlg awtk"/>
       </list_item>
       <list_item style="odd" children_layout="default(rows=1,cols=1,m=15)">
-        <slider value="50"/>
+        <slider name="slider1" value="50"/>
       </list_item>
       <list_item style="even" children_layout="default(rows=1,cols=1,m=15)">
         <combo_box readonly="true" tr_text="ok" options="1:ok;2:cancel;"/>
@@ -92,7 +92,7 @@
     <scroll_bar_m name="bar1" x="right" y="0" w="6" h="100%" value="0" auto_hide="true"/>
   </list_view>
   <list_view x="0"  y="45%" w="100%" h="40%" item_height="60">
-    <scroll_view name="view" x="0"  y="0" w="100%" h="100%">
+    <scroll_view name="view2" x="0"  y="0" w="100%" h="100%">
       <list_item style="odd" children_layout="default(rows=1,cols=0)">
         <image draw_type="icon" w="30" image="earth"/>
         <label w="-30" text="1.Hello AWTK !">
@@ -175,7 +175,7 @@
         <edit text="zlg awtk"/>
       </list_item>
       <list_item style="odd" children_layout="default(rows=1,cols=1,m=15)">
-        <slider value="50"/>
+        <slider name="slider2" value="50"/>
       </list_item>
       <list_item style="even" children_layout="default(rows=1,cols=1,m=15)">
         <combo_box readonly="true" tr_text="ok" options="1:ok;2:cancel;"/>

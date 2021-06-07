@@ -44,6 +44,7 @@ let progress_bar = require('./progress_bar')
 let progress_circle = require('./progress_circle')
 let context_menu = require('./context_menu')
 let list_view_mobile = require('./list_view_mobile');
+let list_view_desktop = require('./list_view_desktop');
 
 const appName = '../bin/demo'
 
@@ -70,7 +71,45 @@ describe("awtk simple", function () {
   afterEach(function () {
     allPassed = allPassed && this.currentTest.state === 'passed';
   });
+  //test list_view_desktop
+  it("list_view_desktop_test_click_down_up", function () {
+    return list_view_desktop.testClickDownUp(driver);
+  });
+  it("list_view_desktop_test_click_up_button", function () {
+    return list_view_desktop.testClickUpButton(driver);
+  });
+  it("list_view_desktop_test_click_down_button", function () {
+    return list_view_desktop.testClickDownButton(driver);
+  });
+  it("list_view_desktop_test_slide_up", function () {
+    return list_view_desktop.testSlideUp(driver);
+  });
+  it("list_view_desktop_test_basic", function () {
+    return list_view_desktop.testBasic(driver);
+  });
+  it("list_view_desktop_test_slide_down", function () {
+    return list_view_desktop.testSlideDown(driver);
+  });
+  it("list_view_desktop_test_key_up_down", function () {
+    return list_view_desktop.testKeyUpDown(driver);
+  });
+  it("list_view_desktop_test_key_pageup_pagedown", function () {
+    return list_view_desktop.testKeyPageUpPageDown(driver);
+  });
+  it("list_view_desktop_test_ensure_in_view", function () {
+    return list_view_desktop.testEnsureInView(driver);
+  });
+
   //test list_view_mobile
+  it("list_view_mobile_test_ensure_in_view", function () {
+    return list_view_mobile.testEnsureInView(driver);
+  });
+  it("list_view_mobile_test_key_up_down", function () {
+    return list_view_mobile.testKeyUpDown(driver);
+  });
+  it("list_view_mobile_test_key_pageup_pagedown", function () {
+    return list_view_mobile.testKeyPageUpPageDown(driver);
+  });
   it("list_view_mobile_test_basic", function () {
     return list_view_mobile.testBasic(driver);
   });
@@ -80,6 +119,7 @@ describe("awtk simple", function () {
   it("list_view_mobile_test_slide_down", function () {
     return list_view_mobile.testSlideDown(driver);
   });
+
   //test context menu
   it("context_menu_test_right_top", function () {
     return context_menu.testRightTop(driver);
