@@ -8,7 +8,7 @@ exports.testLeftTop = function (driver) {
         .elementById('l1').getAttribute('x').should.become(10)
         .elementById('l1').getAttribute('y').should.become(0)
         .elementById('l1').getAttribute('w').should.become(32)
-        .elementById('l1').getAttribute('h').should.become(22)
+        .elementById('l1').getAttribute('h').should.become(23)
         
         .back().sleep(200)
         .title().should.become("Regression Test")

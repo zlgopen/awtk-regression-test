@@ -1,0 +1,19 @@
+<window text="Slide View H" >
+  <view x="0" y="0" w="100%" h="100%" children_layout="default(r=2,c=1)">
+    <view>
+      <slide_view name="slide_view1" x="0" y="0" w="100%" h="100%" style="dot">
+        <?include filename="slide_view.inc" ?>
+      </slide_view>
+      <slide_indicator_arc name="indicator1" x="0" y="b" w="100%" h="20" default_paint="stroke_dot"/>
+    </view>
+    <view>
+      <slide_view name="slide_view2" x="0" y="0" w="100%" h="100%" style="dot" loop="true">
+        <?include filename="slide_view.inc" ?>
+      </slide_view>
+      <slide_indicator_arc name="indicator2" x="0" y="b" w="100%" h="20" default_paint="stroke_rect"/>
+    </view>
+  </view>
+  
+  <label name="changed" x="0" y="b:2" w="50%" h="30" text="changed"/>
+  <label name="will_change" x="r" y="b:2" w="50%" h="30" text="will_change"/>
+</window>

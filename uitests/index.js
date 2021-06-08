@@ -45,6 +45,8 @@ let progress_circle = require('./progress_circle')
 let context_menu = require('./context_menu')
 let list_view_mobile = require('./list_view_mobile');
 let list_view_desktop = require('./list_view_desktop');
+let slide_view_h = require('./slide_view_h');
+let slide_view_v = require('./slide_view_v');
 
 const appName = '../bin/demo'
 
@@ -71,6 +73,69 @@ describe("awtk simple", function () {
   afterEach(function () {
     allPassed = allPassed && this.currentTest.state === 'passed';
   });
+  //test slide_view_v
+  it("slide_view_v_test_down_key", function () {
+    return slide_view_v.testDownKey(driver);
+  });
+  it("slide_view_v_test_up_key", function () {
+    return slide_view_v.testUpKey(driver);
+  });
+  it("slide_view_v_test_down_key_loop", function () {
+    return slide_view_v.testDownKeyLoop(driver);
+  });
+  it("slide_view_v_test_up_key_loop", function () {
+    return slide_view_v.testUpKeyLoop(driver);
+  });
+  it("slide_view_v_slide_down", function () {
+    return slide_view_v.testSlideDown(driver);
+  });
+  it("slide_view_v_slide_up", function () {
+    return slide_view_v.testSlideUp(driver);
+  });
+  it("slide_view_v_slide_down_loop", function () {
+    return slide_view_v.testSlideDownLoop(driver);
+  });
+  it("slide_view_v_slide_up_loop", function () {
+    return slide_view_v.testSlideUpLoop(driver);
+  });
+  it("slide_view_v_test_left_key", function () {
+    return slide_view_v.testLeftKey(driver);
+  });
+  it("slide_view_v_test_right_key", function () {
+    return slide_view_v.testRightKey(driver);
+  });
+  //test slide_view_h
+  it("slide_view_h_slide_right_loop", function () {
+    return slide_view_h.testSlideRightLoop(driver);
+  });
+  it("slide_view_h_slide_left_loop", function () {
+    return slide_view_h.testSlideLeftLoop(driver);
+  });
+  it("slide_view_h_test_right_key_loop", function () {
+    return slide_view_h.testRightKeyLoop(driver);
+  });
+  it("slide_view_h_test_left_key_loop", function () {
+    return slide_view_h.testLeftKeyLoop(driver);
+  });
+  it("slide_view_h_slide_right", function () {
+    return slide_view_h.testSlideRight(driver);
+  });
+  it("slide_view_h_slide_left", function () {
+    return slide_view_h.testSlideLeft(driver);
+  });
+  it("slide_view_h_test_right_key", function () {
+    return slide_view_h.testRightKey(driver);
+  });
+  it("slide_view_h_test_up", function () {
+    return slide_view_h.testUpKey(driver);
+  });
+  it("slide_view_h_test_down", function () {
+    return slide_view_h.testDownKey(driver);
+  });
+  it("slide_view_h_test_left_key", function () {
+    return slide_view_h.testLeftKey(driver);
+  });
+  return
   //test list_view_desktop
   it("list_view_desktop_test_click_down_up", function () {
     return list_view_desktop.testClickDownUp(driver);

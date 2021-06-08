@@ -40,6 +40,7 @@
 #include "window_mledit.h"
 #include "window_focus.h"
 #include "window_combo_box.h"
+#include "window_slide_view.h"
 #include "window_dialogs.h"
 #include "window_fullscreen.h"
 #include "window_navigator1.h"
@@ -81,6 +82,16 @@ static ret_t on_open_rotation(void* ctx, event_t* e) {
 
 static ret_t on_open_combo_box(void* ctx, event_t* e) {
   window_combo_box_open();
+  return RET_OK;
+}
+
+static ret_t on_open_slide_view_h(void* ctx, event_t* e) {
+  window_slide_view_open("slide_view_h");
+  return RET_OK;
+}
+
+static ret_t on_open_slide_view_v(void* ctx, event_t* e) {
+  window_slide_view_open("slide_view_v");
   return RET_OK;
 }
 
@@ -238,6 +249,8 @@ ret_t window_main_open(void) {
 
   widget_child_on(win, "rotation", EVT_CLICK, on_open_rotation, win);
   widget_child_on(win, "combo_box", EVT_CLICK, on_open_combo_box, win);
+  widget_child_on(win, "slide_view_h", EVT_CLICK, on_open_slide_view_h, win);
+  widget_child_on(win, "slide_view_v", EVT_CLICK, on_open_slide_view_v, win);
   widget_child_on(win, "check_button", EVT_CLICK, on_open_check_button, win);
   widget_child_on(win, "dialogs", EVT_CLICK, on_open_dialogs, win);
   widget_child_on(win, "button", EVT_CLICK, on_open_button, win);
