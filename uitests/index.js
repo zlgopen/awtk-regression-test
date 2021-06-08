@@ -135,7 +135,6 @@ describe("awtk simple", function () {
   it("slide_view_h_test_left_key", function () {
     return slide_view_h.testLeftKey(driver);
   });
-  return
   //test list_view_desktop
   it("list_view_desktop_test_click_down_up", function () {
     return list_view_desktop.testClickDownUp(driver);
