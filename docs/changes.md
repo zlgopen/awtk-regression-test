@@ -2,6 +2,7 @@
 
 2020/06/08
   * 增加slide view测试。
+  * 增加slide menu测试。
 
 2020/06/07
   * 增加list view desktop测试。

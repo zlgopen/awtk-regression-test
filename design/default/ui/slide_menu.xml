@@ -1,0 +1,21 @@
+<window text="Slide Menu">
+  <slide_menu name="slide_menu1" align_v="top" x="c" y="m:-40" w="100%" h="80" value="2">
+    <button text="0"/>
+    <button text="1"/>
+    <button text="2"/>
+    <button text="3"/>
+    <button text="4"/>
+  </slide_menu>
+  
+  <slide_menu name="slide_menu2" align_v="bottom" x="c" y="m:50" w="100%" h="80">
+    <button text="0"/>
+    <button text="1"/>
+    <button text="2"/>
+    <button text="3"/>
+    <button text="4"/>
+  </slide_menu>
+  
+  <label name="changed" x="0" y="b:10" w="30%" h="30" text="changed"/>
+  <button focusable="true" x="c" y="b:10" w="60" h="30" text="close" on:click="back()"/>
+  <label name="will_change" x="r" y="b:10" w="30%" h="30" text="will_change"/>
+</window>

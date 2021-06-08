@@ -47,6 +47,7 @@ let list_view_mobile = require('./list_view_mobile');
 let list_view_desktop = require('./list_view_desktop');
 let slide_view_h = require('./slide_view_h');
 let slide_view_v = require('./slide_view_v');
+let slide_menu = require('./slide_menu');
 
 const appName = '../bin/demo'
 
@@ -72,6 +73,20 @@ describe("awtk simple", function () {
 
   afterEach(function () {
     allPassed = allPassed && this.currentTest.state === 'passed';
+  });
+  
+  //test slide_menu
+  it("slide_menu_slide_right", function () {
+    return slide_menu.testSlideRight(driver);
+  });
+  it("slide_menu_slide_left", function () {
+    return slide_menu.testSlideLeft(driver);
+  });
+  it("slide_menu_test_left_key", function () {
+    return slide_menu.testLeftKey(driver);
+  });
+  it("slide_menu_test_right_key", function () {
+    return slide_menu.testRightKey(driver);
   });
   //test slide_view_v
   it("slide_view_v_test_down_key", function () {
