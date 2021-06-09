@@ -214,6 +214,9 @@ describe("awtk simple", function () {
   });
 
   //test context menu
+  it("context_menu_test_point", function () {
+    return context_menu.testPoint(driver);
+  });
   it("context_menu_test_right_top", function () {
     return context_menu.testRightTop(driver);
   });

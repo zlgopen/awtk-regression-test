@@ -181,3 +181,25 @@ exports.testRightBottom = function (driver) {
         .title().should.become("Regression Test")
 }
 
+exports.testPoint = function (driver) {
+    var press = new wd.TouchAction(driver);
+    press.press({x: 158, y: 158});
+    var release = new wd.TouchAction(driver);
+    release.release({x: 158, y: 158});
+
+    return driver
+        .back().sleep(200)
+        .title().should.become("Regression Test")
+        .elementById('context_menu').click().sleep(200)
+        .title().should.become("Context Menu")
+        
+        .performTouchAction(press).sleep(20)
+        .performTouchAction(release).sleep(800)
+        .title().should.become("menu_point")
+        .getWindowPosition().should.become({ x: 158, y:158})
+        .back().sleep(800)
+        .title().should.become("Context Menu")
+        .back().sleep(200)
+        .title().should.become("Regression Test")
+}
+
