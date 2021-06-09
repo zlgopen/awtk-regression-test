@@ -1,3 +1,10 @@
+    <view x="0" y="0" w="100%" h="100%" >
+      <slider name="slider1" x="center" y="10" w="80%" h="20" value="10"/>
+      <slider name="slider2" style="img" x="center" y="50" w="80%" h="30" value="20" />
+      <slider name="sliderv" style="img_v" x="center" y="80" w="30" h="60%" value="20" vertical="true"/>
+      <edit x="center" y="bottom:50" w="80%" h="20" value="zlg awtk"/>
+    </view>
+
     <view x="0" y="0" w="100%" h="100%" children_layout="default(w=60,h=60,m=5,s=10)">
       <button name="close" style="grid_item"> 
         <image draw_type="icon" x="center" y="top" w="100%" h="80%" image="message" />
@@ -110,12 +117,6 @@
         <button text="3"/>
         <button text="4"/>
       </slide_menu>
-    </view>
-    <view x="0" y="0" w="100%" h="100%" >
-      <slider name="slider1" x="center" y="10" w="80%" h="20" value="10"/>
-      <slider name="slider2" style="img" x="center" y="50" w="80%" h="30" value="20" />
-      <slider name="sliderv" style="img_v" x="center" y="80" w="30" h="60%" value="20" vertical="true"/>
-      <edit x="center" y="bottom:50" w="80%" h="20" value="zlg awtk"/>
     </view>
     <view x="0" y="0" w="100%" h="100%" >
       <list_view x="0"  y="0" w="100%" h="-50" item_height="60">

@@ -238,3 +238,52 @@ exports.testSlideRightLoop = function (driver) {
         .back().sleep(200)
         .title().should.become("Regression Test")
 }
+
+exports.testLeftRightKeyHSlider = function (driver) {
+    return driver
+        .back().sleep(200)
+        .title().should.become("Regression Test")
+        .elementById('slide_view_h').click().sleep(200)
+        .title().should.become("Slide View H")
+        .elementById('slide_view1').click().sleep(600)
+        .elementById('slide_view1').getAttribute("value").should.become(0)
+        .elementById('slider1').click().sleep(600)
+        .elementById('slider1').getAttribute("value").should.become(10)
+        .elementById('wm').sendKeys(wd.SPECIAL_KEYS['Left arrow']).sleep(600)
+        .elementById('slider1').getAttribute("value").should.become(9)
+        
+        .elementById('wm').sendKeys(wd.SPECIAL_KEYS['Right arrow']).sleep(600)
+        .elementById('slider1').getAttribute("value").should.become(10)
+
+        .back().sleep(200)
+        .title().should.become("Regression Test")
+}
+
+exports.testSlideRightHSlider = function (driver) {
+    var press = new wd.TouchAction(driver);
+    press.press({x: 60, y: 48});
+    
+    var move = new wd.TouchAction(driver);
+    move.moveTo({x: 80, y: 48 });
+    
+    var release = new wd.TouchAction(driver);
+    release.release({x: 80, y: 48 });
+
+    return driver
+        .back().sleep(200)
+        .title().should.become("Regression Test")
+        .elementById('slide_view_h').click().sleep(200)
+        .title().should.become("Slide View H")
+        .elementById('slide_view1').getAttribute("value").should.become(0)
+
+        .elementById('slider1').click().sleep(600)
+        .performTouchAction(press).sleep(20)
+        .performTouchAction(move).sleep(20)
+        .performTouchAction(release).sleep(600)
+        .elementById('slider1').getAttribute("value").should.become(18)
+
+        .elementById('slide_view1').getAttribute("value").should.become(0)
+
+        .back().sleep(200)
+        .title().should.become("Regression Test")
+}

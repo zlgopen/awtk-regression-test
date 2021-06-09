@@ -77,6 +77,18 @@ describe("awtk simple", function () {
   afterEach(function () {
     allPassed = allPassed && this.currentTest.state === 'passed';
   });
+  it("slide_view_test_slider_vslider", function () {
+    return slide_view_v.testSlideUpVSlider(driver);
+  });
+  it("slide_view_test_left_right_key_vslider", function () {
+    return slide_view_v.testUpDownKeyVSlider(driver);
+  });
+  it("slide_view_test_slider_hslider", function () {
+    return slide_view_h.testSlideRightHSlider(driver);
+  });
+  it("slide_view_test_left_right_key_hslider", function () {
+    return slide_view_h.testLeftRightKeyHSlider(driver);
+  });
   //test vpage_vtrans
   it("vpage_vtrans_test_basic", function () {
     return vpage_vtrans.testBasic(driver);

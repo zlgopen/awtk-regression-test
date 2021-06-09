@@ -2,6 +2,7 @@
 
 2020/06/10
   * 完善context menu测试。
+  * 完善slide view测试。
 
 2020/06/09
   * 增加vpage测试。

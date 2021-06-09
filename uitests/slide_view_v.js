@@ -239,3 +239,51 @@ exports.testRightKey = function (driver) {
         .title().should.become("Regression Test")
 }
 
+exports.testUpDownKeyVSlider = function (driver) {
+    return driver
+        .back().sleep(200)
+        .title().should.become("Regression Test")
+        .elementById('slide_view_v').click().sleep(200)
+        .title().should.become("Slide View V")
+        .elementById('slide_view1').click().sleep(600)
+        .elementById('slide_view1').getAttribute("value").should.become(0)
+        .elementById('sliderv').click().sleep(600)
+        .elementById('sliderv').getAttribute("value").should.become(20)
+        .elementById('wm').sendKeys(wd.SPECIAL_KEYS['Up arrow']).sleep(600)
+        .elementById('sliderv').getAttribute("value").should.become(21)
+        
+        .elementById('wm').sendKeys(wd.SPECIAL_KEYS['Down arrow']).sleep(600)
+        .elementById('sliderv').getAttribute("value").should.become(20)
+
+        .back().sleep(200)
+        .title().should.become("Regression Test")
+}
+
+exports.testSlideUpVSlider = function (driver) {
+    var press = new wd.TouchAction(driver);
+    press.press({x: 158, y: 209});
+    
+    var move = new wd.TouchAction(driver);
+    move.moveTo({x: 158, y: 180 });
+    
+    var release = new wd.TouchAction(driver);
+    release.release({x: 158, y: 180 });
+
+    return driver
+        .back().sleep(200)
+        .title().should.become("Regression Test")
+        .elementById('slide_view_v').click().sleep(200)
+        .title().should.become("Slide View V")
+        .elementById('slide_view1').getAttribute("value").should.become(0)
+
+        .elementById('sliderv').click().sleep(600)
+        .performTouchAction(press).sleep(20)
+        .performTouchAction(move).sleep(20)
+        .performTouchAction(release).sleep(600)
+        .elementById('sliderv').getAttribute("value").should.become(46)
+
+        .elementById('slide_view1').getAttribute("value").should.become(0)
+
+        .back().sleep(200)
+        .title().should.become("Regression Test")
+}
