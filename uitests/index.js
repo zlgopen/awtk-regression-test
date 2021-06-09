@@ -48,6 +48,9 @@ let list_view_desktop = require('./list_view_desktop');
 let slide_view_h = require('./slide_view_h');
 let slide_view_v = require('./slide_view_v');
 let slide_menu = require('./slide_menu');
+let vpage_htrans = require('./vpage_htrans');
+let vpage_vtrans = require('./vpage_vtrans');
+let vpage_none = require('./vpage_none');
 
 const appName = '../bin/demo'
 
@@ -74,7 +77,18 @@ describe("awtk simple", function () {
   afterEach(function () {
     allPassed = allPassed && this.currentTest.state === 'passed';
   });
-  
+  //test vpage_vtrans
+  it("vpage_vtrans_test_basic", function () {
+    return vpage_vtrans.testBasic(driver);
+  });
+  //test vpage_none
+  it("vpage_none_test_basic", function () {
+    return vpage_none.testBasic(driver);
+  });
+  //test vpage_htrans
+  it("vpage_htrans_test_basic", function () {
+    return vpage_htrans.testBasic(driver);
+  });
   //test slide_menu
   it("slide_menu_slide_right", function () {
     return slide_menu.testSlideRight(driver);

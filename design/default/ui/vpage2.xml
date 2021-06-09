@@ -1,0 +1,4 @@
+<view w="100%" h="100%">
+    <label x="c" y="m" w="200" h="30" text="page2" />
+    <button name="view2_button" x="c" y="b:10" w="128" h="30" text="close" on:click="back()"/>
+</view>

@@ -40,6 +40,7 @@
 #include "window_mledit.h"
 #include "window_focus.h"
 #include "window_combo_box.h"
+#include "window_vpage.h"
 #include "window_slide_view.h"
 #include "window_slide_menu.h"
 #include "window_dialogs.h"
@@ -93,6 +94,21 @@ static ret_t on_open_slide_view_h(void* ctx, event_t* e) {
 
 static ret_t on_open_slide_view_v(void* ctx, event_t* e) {
   window_slide_view_open("slide_view_v");
+  return RET_OK;
+}
+
+static ret_t on_open_vpage_htrans(void* ctx, event_t* e) {
+  window_vpage_open("vpage_htrans");
+  return RET_OK;
+}
+
+static ret_t on_open_vpage_vtrans(void* ctx, event_t* e) {
+  window_vpage_open("vpage_vtrans");
+  return RET_OK;
+}
+
+static ret_t on_open_vpage_none(void* ctx, event_t* e) {
+  window_vpage_open("vpage_none");
   return RET_OK;
 }
 
@@ -257,6 +273,9 @@ ret_t window_main_open(void) {
   widget_child_on(win, "combo_box", EVT_CLICK, on_open_combo_box, win);
   widget_child_on(win, "slide_view_h", EVT_CLICK, on_open_slide_view_h, win);
   widget_child_on(win, "slide_view_v", EVT_CLICK, on_open_slide_view_v, win);
+  widget_child_on(win, "vpage_htrans", EVT_CLICK, on_open_vpage_htrans, win);
+  widget_child_on(win, "vpage_vtrans", EVT_CLICK, on_open_vpage_vtrans, win);
+  widget_child_on(win, "vpage_none", EVT_CLICK, on_open_vpage_none, win);
   widget_child_on(win, "slide_menu", EVT_CLICK, on_open_slide_menu, win);
   widget_child_on(win, "check_button", EVT_CLICK, on_open_check_button, win);
   widget_child_on(win, "dialogs", EVT_CLICK, on_open_dialogs, win);
