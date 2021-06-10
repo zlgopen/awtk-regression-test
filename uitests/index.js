@@ -400,6 +400,9 @@ describe("awtk simple", function () {
     return mledit.testHomeEndKey(driver);
   });
   //test edit
+  it("edit_test_pattern1", function () {
+    return edit.testPattern1(driver);
+  });
   it("edit_test_select_right", function () {
     return edit.testSelectRight(driver);
   });

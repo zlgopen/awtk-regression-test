@@ -1,6 +1,7 @@
 # 最新动态
 
 2020/06/10
+  * 完善edit测试。
   * 完善context menu测试。
   * 完善slide view测试。
 

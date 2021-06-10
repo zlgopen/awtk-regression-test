@@ -525,3 +525,32 @@ exports.testSelectRight = function (driver) {
         .back().sleep(200)
         .title().should.become("Regression Test")
 }
+
+exports.testPattern1= function (driver) {
+    return driver
+        .back().sleep(200)
+        .title().should.become("Regression Test")
+        .elementById('edit').click().sleep(200)
+        .title().should.become("Edit")
+        .elementById('date1').click().sleep(600)
+        .title().should.become("kb_uint")
+
+        .elementById('wm').sendKeys(['<cmd_or_ctrl+a>']).sleep(200)
+        .elementById('wm').sendKeys(wd.SPECIAL_KEYS['Right arrow']).sleep(200)
+        .elementById('wm').sendKeys(wd.SPECIAL_KEYS['Back space']).sleep(200)
+        .elementById('edit.date1').text().should.become("2021/01/0")
+        .elementById('wm').sendKeys(wd.SPECIAL_KEYS['Left arrow']).sleep(200)
+        .elementById('wm').sendKeys(wd.SPECIAL_KEYS['Left arrow']).sleep(200)
+        .elementById('wm').sendKeys("12").sleep(200)
+        .elementById('edit.date1').text().should.become("2021/12/0")
+        .elementById('wm').sendKeys(wd.SPECIAL_KEYS['Left arrow']).sleep(200)
+        .elementById('wm').sendKeys(wd.SPECIAL_KEYS['Left arrow']).sleep(200)
+        .elementById('wm').sendKeys(wd.SPECIAL_KEYS['Left arrow']).sleep(200)
+        .elementById('wm').sendKeys(wd.SPECIAL_KEYS['Right arrow']).sleep(200)
+        .elementById('wm').sendKeys(wd.SPECIAL_KEYS['Right arrow']).sleep(200)
+        .elementById('wm').sendKeys("08").sleep(200)
+        .elementById('edit.date1').text().should.become("2021/08/0")
+        
+        .back().sleep(200)
+        .title().should.become("Regression Test")
+}
