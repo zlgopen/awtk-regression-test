@@ -92,7 +92,7 @@ exports.testSlideUp = function (driver) {
 
 exports.testSlideDown = function (driver) {
     var press = new wd.TouchAction(driver);
-    press.press({x: 100, y: 200});
+    press.press({x: 100, y: 220});
     
     var move = new wd.TouchAction(driver);
     move.moveTo({x: 100, y: 10 });
