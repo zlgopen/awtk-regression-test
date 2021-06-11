@@ -1,0 +1,7 @@
+<window text="Clip View">
+  <clip_view name="clip" x="c" y="m" w="200" h="200">
+    <image x="c" y="c" w="300" h="300" image="bg_landscape_1"/>
+  </clip_view>
+
+  <button focusable="true" x="c" y="b:10" w="128" h="30" text="close" on:click="back()"/>
+</window>

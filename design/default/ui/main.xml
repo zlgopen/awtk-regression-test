@@ -1,6 +1,9 @@
 <window closable="no" anim_hint="htranslate" text="Regression Test">
   <list_view x="0"  y="0" w="100%" h="-50" item_height="36">
     <scroll_view name="view" x="0"  y="0" w="-12" h="100%" children_layout="list_view(x_margin=5,spacing=10)">
+      <list_item style="odd_clickable" name="clip_view" text="Test Clip View" 
+        on:click="open(clip_view)"/> 
+
       <list_item style="even_clickable" name="vpage_htrans" text="Test VPage HTranslate" />
       <list_item style="old_clickable" name="vpage_vtrans" text="Test VPage VTranslate" />
       <list_item style="even_clickable" name="vpage_none" text="Test VPage None" />
