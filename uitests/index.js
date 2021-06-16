@@ -84,11 +84,9 @@ describe("awtk simple", function () {
   it("keys5_test_basic", function () {
     return keys5.testBasic(driver);
   });
-  return;
   it("keys3_test_basic", function () {
     return keys3.testBasic(driver);
   });
-  return;
   it("pages_clip_test_basic", function () {
     return pages_clip.testBasic(driver);
   });
