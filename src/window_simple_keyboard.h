@@ -1,7 +1,7 @@
 /**
- * File:   window_slide_view.h
+ * File:   window_simple_keyboard.h
  * Author: AWTK Develop Team
- * Brief:  window_slide_view source
+ * Brief:  window_simple_keyboard source
  *
  * Copyright (c) 2018 - 2021  Guangzhou ZHIYUAN Electronics Co.,Ltd.
  *
@@ -15,19 +15,19 @@
 /**
  * History:
  * ================================================================
- * 2021-06-08 Li XianJing <xianjimli@hotmail.com> created
+ * 2021-06-16 Li XianJing <xianjimli@hotmail.com> created
  *
  */
 
-#ifndef WINDOW_SLIDE_VIEW_H
-#define WINDOW_SLIDE_VIEW_H
+#ifndef WINDOW_SIMPLE_KEYBOARD_H
+#define WINDOW_SIMPLE_KEYBOARD_H
 
 #include "awtk.h"
 
 BEGIN_C_DECLS
 
-ret_t window_slide_view_open(const char* name);
+ret_t window_simple_keyboard_open(void);
 
 END_C_DECLS
 
-#endif /*WINDOW_SLIDE_VIEW_H*/
+#endif /*WINDOW_SIMPLE_KEYBOARD_H*/

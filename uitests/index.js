@@ -9,6 +9,8 @@ let startApp = require("awtk-appium-js-helpers/start-app").startApp;
 
 let gif = require('./gif')
 let edit = require('./edit')
+let keys3 = require('./keys3')
+let keys5 = require('./keys5')
 let slider = require('./slider')
 let mledit = require('./mledit')
 let style = require('./style')
@@ -79,6 +81,14 @@ describe("awtk simple", function () {
   afterEach(function () {
     allPassed = allPassed && this.currentTest.state === 'passed';
   });
+  it("keys5_test_basic", function () {
+    return keys5.testBasic(driver);
+  });
+  return;
+  it("keys3_test_basic", function () {
+    return keys3.testBasic(driver);
+  });
+  return;
   it("pages_clip_test_basic", function () {
     return pages_clip.testBasic(driver);
   });

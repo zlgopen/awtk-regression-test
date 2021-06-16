@@ -57,6 +57,7 @@
 #include "window_children_layout.h"
 #include "window_self_layout.h"
 #include "window_clip.h"
+#include "window_simple_keyboard.h"
 
 static ret_t on_open_auto_adjust_size(void* ctx, event_t* e) {
   window_auto_adjust_size_open("auto_adjust_size");
@@ -95,6 +96,21 @@ static ret_t on_open_clip(void* ctx, event_t* e) {
 
 static ret_t on_open_pages_clip(void* ctx, event_t* e) {
   window_clip_open("pages_clip");
+  return RET_OK;
+}
+
+
+static ret_t on_open_3keys(void* ctx, event_t* e) {
+  system_info_set_keyboard_type(system_info(), KEYBOARD_3KEYS);
+  window_simple_keyboard_open();
+
+  return RET_OK;
+}
+
+static ret_t on_open_5keys(void* ctx, event_t* e) {
+  system_info_set_keyboard_type(system_info(), KEYBOARD_5KEYS);
+  window_simple_keyboard_open();
+
   return RET_OK;
 }
 
@@ -318,6 +334,8 @@ ret_t window_main_open(void) {
   widget_child_on(win, "multi_dialogs", EVT_CLICK, on_open_multi_dialogs, win);
   widget_child_on(win, "focus_list_view", EVT_CLICK, on_open_focus_list_view, win);
   widget_child_on(win, "pages_clip", EVT_CLICK, on_open_pages_clip, win);
+  widget_child_on(win, "3keys", EVT_CLICK, on_open_3keys, win);
+  widget_child_on(win, "5keys", EVT_CLICK, on_open_5keys, win);
 
   return RET_OK;
 }

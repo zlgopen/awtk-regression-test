@@ -1,5 +1,4 @@
-<window anim_hint="htranslate" 
-  text="Demo 5keys">
+<window text="Simple Keyboard">
 
   <row x="0" y="40" w="100%" h="30" children_layout="default(r=1,c=3,xm=2,s=10)">
     <button name="inc" text="Inc" focusable="true" focus="true"/>
