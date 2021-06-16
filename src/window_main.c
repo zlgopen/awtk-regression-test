@@ -56,6 +56,7 @@
 #include "window_auto_adjust_size_list_view.h"
 #include "window_children_layout.h"
 #include "window_self_layout.h"
+#include "window_clip.h"
 
 static ret_t on_open_auto_adjust_size(void* ctx, event_t* e) {
   window_auto_adjust_size_open("auto_adjust_size");
@@ -84,6 +85,16 @@ static ret_t on_open_rotation(void* ctx, event_t* e) {
 
 static ret_t on_open_combo_box(void* ctx, event_t* e) {
   window_combo_box_open();
+  return RET_OK;
+}
+
+static ret_t on_open_clip(void* ctx, event_t* e) {
+  window_clip_open("clip_view");
+  return RET_OK;
+}
+
+static ret_t on_open_pages_clip(void* ctx, event_t* e) {
+  window_clip_open("pages_clip");
   return RET_OK;
 }
 
@@ -269,6 +280,7 @@ ret_t window_main_open(void) {
 
   widget_child_on(win, "auto_adjust_size_margin", EVT_CLICK, on_open_auto_adjust_size_margin, win);
 
+  widget_child_on(win, "clip_view", EVT_CLICK, on_open_clip, win);
   widget_child_on(win, "rotation", EVT_CLICK, on_open_rotation, win);
   widget_child_on(win, "combo_box", EVT_CLICK, on_open_combo_box, win);
   widget_child_on(win, "slide_view_h", EVT_CLICK, on_open_slide_view_h, win);
@@ -305,6 +317,7 @@ ret_t window_main_open(void) {
   widget_child_on(win, "auto_scale_children", EVT_CLICK, on_open_auto_scale_children, win);
   widget_child_on(win, "multi_dialogs", EVT_CLICK, on_open_multi_dialogs, win);
   widget_child_on(win, "focus_list_view", EVT_CLICK, on_open_focus_list_view, win);
+  widget_child_on(win, "pages_clip", EVT_CLICK, on_open_pages_clip, win);
 
   return RET_OK;
 }

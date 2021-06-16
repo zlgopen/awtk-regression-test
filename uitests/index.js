@@ -28,6 +28,7 @@ let rotation = require('./rotation')
 let navigator = require('./navigator')
 let combo_box = require('./combo_box')
 let clip_view = require('./clip_view')
+let pages_clip = require('./pages_clip')
 let fullscreen = require('./fullscreen')
 let check_button = require('./check_button')
 let multi_dialogs = require('./multi_dialogs')
@@ -77,6 +78,9 @@ describe("awtk simple", function () {
 
   afterEach(function () {
     allPassed = allPassed && this.currentTest.state === 'passed';
+  });
+  it("pages_clip_test_basic", function () {
+    return pages_clip.testBasic(driver);
   });
   it("clip_view_test_basic", function () {
     return clip_view.testBasic(driver);

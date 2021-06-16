@@ -1,0 +1,23 @@
+<window text="Pages Clip">
+  <tab_control x="20" y="20" w="-40" h="80%" >
+      <pages name="pages" x="0" y="0" w="100%" h="-60" style="at_top">
+      <vpage name="page1" w="100%" h="100%" ui_asset="vpage1" anim_hint="htranslate" />
+      <vpage name="page2" w="100%" h="100%" ui_asset="vpage2" anim_hint="htranslate" />
+      <vpage name="page3" w="100%" h="100%" ui_asset="vpage3" anim_hint="htranslate" />
+      <vpage name="page4" w="100%" h="100%" anim_hint="htranslate" >
+        <view w="100%" h="100%">
+          <label x="c" y="m" w="200" h="30" text="page4" />
+          <button name="probe" x="c" y="b:10" w="128" h="30" text="close" on:click="back()"/>
+        </view>
+      </vpage>
+    </pages>
+    <tab_button_group x="0" y="bottom" w="100%" h="60" >
+      <tab_button name="b1" icon="msg" active_icon="msg_active" text="Message"/>
+      <tab_button name="b2" icon="contact" active_icon="contact_active" text="Contact" />
+      <tab_button name="b3" icon="discovery" active_icon="discovery_active" text="Discovery" />
+      <tab_button name="b4" icon="me" active_icon="me_active" text="Me" value="true"/>
+    </tab_button_group>
+  </tab_control>
+  <label name="status" x="c" y="b:40" w="128" h="30" text="status"/>
+  <button focusable="true" x="c" y="b:10" w="128" h="30" text="close" on:click="back()"/>
+</window>
