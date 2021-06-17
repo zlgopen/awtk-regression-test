@@ -17,6 +17,7 @@
     <edit name="auto_fix_int" input_type="int" min="-10" max="200" tips="auto_fix int" auto_fix="true"/>
     <edit name="date1" input_type="date" tips="date" text="2021/01/01"/>
     <edit name="time1" input_type="time" tips="time" text="12:12"/>
+    <edit name="custom" input_type="text" tips="text" text="" keyboard="kb_test"/>
 
   </view>
   
