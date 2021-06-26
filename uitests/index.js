@@ -81,6 +81,87 @@ describe("awtk simple", function () {
   afterEach(function () {
     allPassed = allPassed && this.currentTest.state === 'passed';
   });
+
+  //test edit
+  it("edit_test_ascii_max", function () {
+    return edit.testAsciiMax(driver);
+  });
+  it("edit_test_email_max", function () {
+    return edit.testEmailMax(driver);
+  });
+  it("edit_test_phone_max", function () {
+    return edit.testPhoneMax(driver);
+  });
+  it("edit_test_password_max", function () {
+    return edit.testPasswordMax(driver);
+  });
+  it("edit_test_pattern1", function () {
+    return edit.testPattern1(driver);
+  });
+  it("edit_test_select_right", function () {
+    return edit.testSelectRight(driver);
+  });
+  it("edit_test_select_left", function () {
+    return edit.testSelectLeft(driver);
+  });
+  it("edit_test_undo_redo", function () {
+    return edit.testUndoRedo(driver);
+  });
+  it("edit_test_cut_paste", function () {
+    return edit.testCutPaste(driver);
+  });
+  it("edit_test_copy_paste", function () {
+    return edit.testCopyPaste(driver);
+  });
+  it("edit_test_select_all", function () {
+    return edit.testSelectAll(driver);
+  });
+  it("edit_test_left_right_key", function () {
+    return edit.testLeftRightKey(driver);
+  });
+  it("edit_test_home_end_key", function () {
+    return edit.testHomeEndKey(driver);
+  });
+  it("edit_test_auto_fix_int_max", function () {
+    return edit.testAutoFixIntMax(driver);
+  });
+  it("edit_test_auto_fix_int_min", function () {
+    return edit.testAutoFixIntMin(driver);
+  });
+  it("edit_test_time", function () {
+    return edit.testTime(driver);
+  });
+  it("edit_test_time_full", function () {
+    return edit.testTimeFull(driver);
+  });
+  it("edit_test_date", function () {
+    return edit.testDate(driver);
+  });
+  it("edit_test_email", function () {
+    return edit.testEmail(driver);
+  });
+  it("edit_test_password", function () {
+    return edit.testPassword(driver);
+  });
+  it("edit_test_ufloat", function () {
+    return edit.testUFloat(driver);
+  });
+  it("edit_test_float", function () {
+    return edit.testFloat(driver);
+  });
+  it("edit_test_uint", function () {
+    return edit.testUInt(driver);
+  });
+  it("edit_test_int", function () {
+    return edit.testInt(driver);
+  });
+  it("edit_test_ascii", function () {
+    return edit.testAscii(driver);
+  });
+  it("edit_test_default", function () {
+    return edit.testDefault(driver);
+  });
+
   it("keys5_test_basic", function () {
     return keys5.testBasic(driver);
   });
@@ -414,73 +495,6 @@ describe("awtk simple", function () {
   });
   it("mledit_test_home_end_key", function () {
     return mledit.testHomeEndKey(driver);
-  });
-  //test edit
-  it("edit_test_pattern1", function () {
-    return edit.testPattern1(driver);
-  });
-  it("edit_test_select_right", function () {
-    return edit.testSelectRight(driver);
-  });
-  it("edit_test_select_left", function () {
-    return edit.testSelectLeft(driver);
-  });
-  it("edit_test_undo_redo", function () {
-    return edit.testUndoRedo(driver);
-  });
-  it("edit_test_cut_paste", function () {
-    return edit.testCutPaste(driver);
-  });
-  it("edit_test_copy_paste", function () {
-    return edit.testCopyPaste(driver);
-  });
-  it("edit_test_select_all", function () {
-    return edit.testSelectAll(driver);
-  });
-  it("edit_test_left_right_key", function () {
-    return edit.testLeftRightKey(driver);
-  });
-  it("edit_test_home_end_key", function () {
-    return edit.testHomeEndKey(driver);
-  });
-  it("edit_test_auto_fix_int_max", function () {
-    return edit.testAutoFixIntMax(driver);
-  });
-  it("edit_test_auto_fix_int_min", function () {
-    return edit.testAutoFixIntMin(driver);
-  });
-  it("edit_test_time", function () {
-    return edit.testTime(driver);
-  });
-  it("edit_test_time_full", function () {
-    return edit.testTimeFull(driver);
-  });
-  it("edit_test_date", function () {
-    return edit.testDate(driver);
-  });
-  it("edit_test_email", function () {
-    return edit.testEmail(driver);
-  });
-  it("edit_test_password", function () {
-    return edit.testPassword(driver);
-  });
-  it("edit_test_ufloat", function () {
-    return edit.testUFloat(driver);
-  });
-  it("edit_test_float", function () {
-    return edit.testFloat(driver);
-  });
-  it("edit_test_uint", function () {
-    return edit.testUInt(driver);
-  });
-  it("edit_test_int", function () {
-    return edit.testInt(driver);
-  });
-  it("edit_test_ascii", function () {
-    return edit.testAscii(driver);
-  });
-  it("edit_test_default", function () {
-    return edit.testDefault(driver);
   });
   //test style
   it("style_test_feedback1", function () {
