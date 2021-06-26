@@ -1,12 +1,12 @@
 <window text="Edit">
   <view x="0" y="0" w="100%" h="85%" children_layout="default(c=2,h=28,m=2,s=2)" >
     <edit name="default" tips="default"/>
-    <edit name="ascii" input_type="ascii" tips="ascii" max="4"/>
+    <edit name="ascii" input_type="ascii" tips="ascii"/>
     <edit name="int" input_type="int" min="-10" max="200" tips="int"/>
     <edit name="uint" input_type="uint" min="10" max="300" tips="uint"/>
     <edit name="float" input_type="float" min="-11" max="201" tips="float"/>
     <edit name="ufloat" input_type="ufloat" min="11" max="301" tips="ufloat"/>
-    <edit name="password" input_type="password" min="4" max="12" tips="password"/>
+    <edit name="password" input_type="password" min="4" max="32" tips="password"/>
     <edit name="date" input_type="date" tips="date"/>
     <edit name="time" input_type="time" tips="time"/>
     <edit name="time_full" input_type="time_full" tips="time_full"/>
@@ -20,6 +20,8 @@
     <edit name="custom" input_type="text" tips="text" text="" max="8" keyboard="kb_test"/>
     <edit name="phone9" input_type="phone" tips="phone8" max="9"/>
     <edit name="email10" input_type="email" tips="email10" max="10"/>
+    <edit name="ascii4" input_type="ascii" tips="ascii" max="4"/>
+    <edit name="password12" input_type="password" min="4" max="12" tips="password"/>
 
   </view>
   
