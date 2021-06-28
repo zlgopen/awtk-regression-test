@@ -20,5 +20,5 @@ APP_CPPPATH = []
 helper = app.Helper(ARGUMENTS);
 helper.set_deps(DEPENDS_LIBS).add_cpppath(APP_CPPPATH).call(DefaultEnvironment)
 
-SConscript(['src/SConscript'])
+helper.SConscript(['src/SConscript'])
 
