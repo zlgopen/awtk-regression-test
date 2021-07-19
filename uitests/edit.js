@@ -554,3 +554,63 @@ exports.testPattern1= function (driver) {
         .back().sleep(200)
         .title().should.become("Regression Test")
 }
+
+exports.testPhoneMax = function (driver) {
+    return driver
+        .back().sleep(200)
+        .title().should.become("Regression Test")
+        .elementById('edit').click().sleep(200)
+        .title().should.become("Edit")
+        .elementById('phone9').click().sleep(600)
+        .title().should.become("kb_phone")
+        .elementById('wm').sendKeys(['1234567890']).sleep(200)
+        .elementById('edit.phone9').text().should.become("123456789")
+
+        .back().sleep(200)
+        .title().should.become("Regression Test")
+}
+
+exports.testEmailMax = function (driver) {
+    return driver
+        .back().sleep(200)
+        .title().should.become("Regression Test")
+        .elementById('edit').click().sleep(200)
+        .title().should.become("Edit")
+        .elementById('email10').click().sleep(600)
+        .title().should.become("kb_ascii")
+        .elementById('wm').sendKeys(['1234@567890aa']).sleep(200)
+        .elementById('edit.email10').text().should.become("1234@56789")
+
+        .back().sleep(200)
+        .title().should.become("Regression Test")
+}
+
+exports.testPasswordMax= function (driver) {
+    return driver
+        .back().sleep(200)
+        .title().should.become("Regression Test")
+        .elementById('edit').click().sleep(200)
+        .title().should.become("Edit")
+        .elementById('password12').click().sleep(600)
+        .title().should.become("kb_ascii")
+        .elementById('wm').sendKeys(['1234567890abc']).sleep(200)
+        .elementById('edit.password12').text().should.become("1234567890ab")
+
+        .back().sleep(200)
+        .title().should.become("Regression Test")
+}
+
+exports.testAsciiMax= function (driver) {
+    return driver
+        .back().sleep(200)
+        .title().should.become("Regression Test")
+        .elementById('edit').click().sleep(200)
+        .title().should.become("Edit")
+        .elementById('ascii4').click().sleep(600)
+        .title().should.become("kb_ascii")
+        .elementById('wm').sendKeys(['1234567890abc']).sleep(200)
+        .elementById('edit.ascii4').text().should.become("1234")
+
+        .back().sleep(200)
+        .title().should.become("Regression Test")
+}
