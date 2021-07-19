@@ -29,7 +29,7 @@ exports.testSpace = function (driver) {
         .elementById('status').text().should.become("s2")
         .elementById('old_value').text().should.become("s2:1")
         .elementById('value').text().should.become("s2:0")
-        .elementById('s2').click().sleep(200)
+        .elementById('s2').click().sleep(800)
         .elementById('status').text().should.become("s2")
         .elementById('old_value').text().should.become("s2:0")
         .elementById('value').text().should.become("s2:1")
