@@ -4,10 +4,11 @@
   <image image="flag_${country},flag_none" x="c" y="m:-80" w="80" h="80"/>
   <label name="en_zh" x="10" y="50" w="90%" h="30" tr_text="&lt;&quot;en&amp;zh&quot;&gt;"/>
 
-  <edit x="10" y="m:50" w="-20" h="30" tr_tips="name" />
+  <edit x="10" y="m:50" w="-20" h="30" tr_tips="name" text="awtk" name="edit"/>
   <mledit x="10" y="m:120" w="-20" h="80" tr_tips="desc" />
   
-  <label name="status" x="c" y="b:40" w="128" h="30" text="none"/>
+  <label name="status" x="0" y="b:40" w="50%" h="30" text="none"/>
+  <label name="status1" x="r" y="b:40" w="50%" h="30" text="none"/>
 
   <button name="chinese" x="10" y="m" w="25%" h="30" tr_text="chinese"/>
   <button name="english" x="r:10" y="m" w="25%" h="30" tr_text="english"/>

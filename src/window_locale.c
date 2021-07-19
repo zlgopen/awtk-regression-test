@@ -44,11 +44,22 @@ static ret_t on_locale_changed(void* ctx, event_t* e) {
   return RET_OK;
 }
 
+static ret_t on_value_changed(void* ctx, event_t* e) {
+  widget_t* win = WIDGET(ctx);
+  widget_t* widget = WIDGET(e->target);
+  widget_t* status = widget_lookup(win, "status1", TRUE);
+
+  widget_set_text_utf8(status, widget->name);
+
+  return RET_OK;
+}
+
 ret_t window_locale_open(void) {
   widget_t* win = window_open("locale");
 
   widget_child_on(win, "chinese", EVT_CLICK, on_chinese_click, win);
   widget_child_on(win, "english", EVT_CLICK, on_english_click, win);
+  widget_child_on(win, "edit", EVT_VALUE_CHANGED, on_value_changed, win);
   widget_on(win, EVT_LOCALE_CHANGED, on_locale_changed, win);
   locale_info_change(locale_info(), "en", "US");
 

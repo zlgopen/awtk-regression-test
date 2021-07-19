@@ -11,6 +11,7 @@ exports.testChinese = function (driver) {
         .elementById('status').text().should.become("zh_CN")
         .elementById('chinese').text().should.become("中文")
         .elementById('en_zh').text().should.become('<"英文&中文">')
+        .elementById('status1').text().should.become("none")
         .back().sleep(200)
         .title().should.become("Regression Test")
 }
@@ -25,6 +26,7 @@ exports.testEnglish = function (driver) {
         .elementById('status').text().should.become("en_US")
         .elementById('chinese').text().should.become("Chinese")
         .elementById('en_zh').text().should.become('<"en&zh">')
+        .elementById('status1').text().should.become("none")
         .back().sleep(200)
         .title().should.become("Regression Test")
 }
