@@ -280,7 +280,7 @@ exports.testSlideUpVSlider = function (driver) {
         .performTouchAction(press).sleep(20)
         .performTouchAction(move).sleep(20)
         .performTouchAction(release).sleep(600)
-        .elementById('sliderv').getAttribute("value").should.become(46)
+        .elementById('sliderv').getAttribute("value").should.become(48)
 
         .elementById('slide_view1').getAttribute("value").should.become(0)
 
