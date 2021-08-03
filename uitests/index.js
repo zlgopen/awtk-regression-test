@@ -55,6 +55,7 @@ let slide_menu = require('./slide_menu');
 let vpage_htrans = require('./vpage_htrans');
 let vpage_vtrans = require('./vpage_vtrans');
 let vpage_none = require('./vpage_none');
+let pages = require('./pages');
 
 const appName = '../bin/demo'
 
@@ -82,6 +83,10 @@ describe("awtk simple", function () {
     allPassed = allPassed && this.currentTest.state === 'passed';
   });
 
+  //test pages
+  it("pages", function () {
+    return pages.testBasic(driver);
+  });
   //test edit
   it("edit_test_ascii_max", function () {
     return edit.testAsciiMax(driver);

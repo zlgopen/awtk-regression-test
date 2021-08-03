@@ -1,0 +1,21 @@
+<window text="Pages">
+   <pages name="pages" x="0" y="0" w="100%" h="-60" >
+      <view w="100%" h="100%">
+        <label x="c" y="m" w="200" h="30" text="page1" />
+        <button name="remove1" x="c" y="b:10" w="128" h="30" text="remove" />
+      </view>
+      <view w="100%" h="100%">
+        <label x="c" y="m" w="200" h="30" text="page2" />
+        <button name="remove2" x="c" y="b:10" w="128" h="30" text="remove" />
+      </view>
+      <view w="100%" h="100%">
+        <label x="c" y="m" w="200" h="30" text="page3" />
+        <button name="remove3" x="c" y="b:10" w="128" h="30" text="remove" />
+      </view>
+      <view w="100%" h="100%">
+        <label x="c" y="m" w="200" h="30" text="page4" />
+        <button name="remove4" x="c" y="b:10" w="128" h="30" text="remove" />
+      </view>
+    </pages>
+     <label x="c" y="10" w="200" h="30" name="status" text="status"/>
+</window>

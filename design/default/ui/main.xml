@@ -1,6 +1,7 @@
 <window closable="no" anim_hint="htranslate" text="Regression Test">
   <list_view x="0"  y="0" w="100%" h="-50" item_height="36">
     <scroll_view name="view" x="0"  y="0" w="-12" h="100%" children_layout="list_view(x_margin=5,spacing=10)">
+      <list_item style="odd_clickable" name="pages" text="Test Page Remove" /> 
       <list_item style="even_clickable" name="mledit" text="Test ML Edit" /> 
       <list_item style="odd_clickable" name="edit" text="Test Edit" /> 
       <list_item style="even_clickable" name="3keys" text="Test 3keys keyboard" />
