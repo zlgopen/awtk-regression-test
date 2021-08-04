@@ -21,6 +21,7 @@
 
 #include "window_main.h"
 #include "window_pages.h"
+#include "window_color_picker.h"
 #include "window_timer.h"
 #include "window_switch.h"
 #include "window_button.h"
@@ -132,6 +133,11 @@ static ret_t on_open_vpage_htrans(void* ctx, event_t* e) {
 
 static ret_t on_open_pages(void* ctx, event_t* e) {
   window_pages_open();
+  return RET_OK;
+}
+
+static ret_t on_open_color_picker(void* ctx, event_t* e) {
+  window_color_picker_open();
   return RET_OK;
 }
 
@@ -294,6 +300,7 @@ ret_t window_main_open(void) {
   widget_t* win = window_open("system_bar");
 
   win = window_open("main");
+  widget_child_on(win, "color_picker", EVT_CLICK, on_open_color_picker, win);
   widget_child_on(win, "pages", EVT_CLICK, on_open_pages, win);
   widget_child_on(win, "auto_adjust_size", EVT_CLICK, on_open_auto_adjust_size, win);
 
