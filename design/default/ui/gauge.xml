@@ -1,0 +1,18 @@
+<window text="Gauge">
+  <gauge x="c" y="10" w="240" h="240" image="gauge_bg" >
+    <gauge_pointer name="p1" x="c" y="50" w="24" h="140" value="0" image="gauge_pointer" /> 
+  </gauge>
+   
+   <gauge x="c" y="bottom:60" w="240" h="240" image="gauge_bg" >
+    <gauge_pointer name="p2" x="c" y="50" w="12" h="140" value="0" /> 
+    <gauge_pointer name="p3" x="c" y="50" w="32" h="140" value="0" image="pointer" /> 
+  </gauge>
+
+
+  <view x="0" y="bottom:10" w="100%" h="40" children_layout="default(r=1,c=4,s=5,m=5)">
+    <button name="inc" text="+"/>
+    <button name="0" text="0"/>
+    <button name="dec" text="-"/>
+    <button name="close" text="Close" on:click="back()"/>
+  </view>
+</window>

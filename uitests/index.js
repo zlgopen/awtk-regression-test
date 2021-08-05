@@ -56,6 +56,7 @@ let vpage_htrans = require('./vpage_htrans');
 let vpage_vtrans = require('./vpage_vtrans');
 let vpage_none = require('./vpage_none');
 let pages = require('./pages');
+let gauge = require('./gauge');
 let color_picker = require('./color_picker');
 
 const appName = '../bin/demo'
@@ -82,6 +83,10 @@ describe("awtk simple", function () {
 
   afterEach(function () {
     allPassed = allPassed && this.currentTest.state === 'passed';
+  });
+  //test gauge
+  it("gauge", function () {
+    return gauge.testBasic(driver);
   });
   //test color_picker
   it("color_picker", function () {

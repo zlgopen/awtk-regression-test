@@ -34,7 +34,7 @@ static ret_t on_remove(void* ctx, event_t* e) {
 }
 
 
-ret_t window_pages_open() {
+ret_t window_pages_open(void) {
   widget_t* win = window_open("pages");
 
   widget_child_on(win, "remove1", EVT_CLICK, on_remove, win);
