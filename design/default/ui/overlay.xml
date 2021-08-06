@@ -1,6 +1,8 @@
 <overlay text="Overlay" x="c" y="m" w="90%" h="90%">
   <svg image="ball" x="c" y="m" w="200" h="200"/> 
-  <button name="close" x="10" y="b:10" w="40%" h="30" text="Close" on:click="back()"/> 
-  <button name="click_through" x="r:10" y="b:10" w="40%" h="30" text="Click Through" 
+  <button name="close" x="5" y="b:10" w="20%" h="30" text="Close" on:click="close()"/> 
+  <button name="click_through" x="c" y="b:10" w="40%" h="30" text="Click Through" 
     on:click="widget_set(window, click_through, true)"/> 
+  <button name="always_on_top" x="r:5" y="b:10" w="30%" h="30" text="On Top" 
+    on:click="widget_set(window, always_on_top, true)"/> 
 </overlay>

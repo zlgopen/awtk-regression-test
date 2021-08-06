@@ -88,6 +88,9 @@ describe("awtk simple", function () {
   });
   //test overlay
   it("overlay", function () {
+    return overlay.testAlwaysOnTop(driver);
+  });
+  it("overlay", function () {
     return overlay.testClickThrough(driver);
   });
   it("overlay", function () {
