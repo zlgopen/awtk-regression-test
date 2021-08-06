@@ -9,6 +9,7 @@ let startApp = require("awtk-appium-js-helpers/start-app").startApp;
 
 let gif = require('./gif')
 let svg = require('./svg')
+let overlay = require('./overlay')
 let edit = require('./edit')
 let keys3 = require('./keys3')
 let keys5 = require('./keys5')
@@ -84,6 +85,13 @@ describe("awtk simple", function () {
 
   afterEach(function () {
     allPassed = allPassed && this.currentTest.state === 'passed';
+  });
+  //test overlay
+  it("overlay", function () {
+    return overlay.testClickThrough(driver);
+  });
+  it("overlay", function () {
+    return overlay.testBasic(driver);
   });
   //test svg
   it("svg", function () {
