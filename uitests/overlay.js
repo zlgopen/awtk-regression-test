@@ -29,7 +29,6 @@ exports.testClickThrough= function (driver) {
         .elementById('click_through').click().sleep(500)
 
         .performTouchAction(tap).sleep(500)
-        .title().should.become("SVG")
 
         .back().sleep(200)
         .title().should.become("Overlay")
@@ -51,10 +50,9 @@ exports.testAlwaysOnTop = function (driver) {
         .elementById('always_on_top').click().sleep(500)
 
         .performTouchAction(tap).sleep(500)
-        .title().should.become("SVG")
+        .title().should.become("Overlay")
 
         .back().sleep(200)
-        .title().should.become("Overlay")
 
         .back().sleep(200)
         .title().should.become("Regression Test")

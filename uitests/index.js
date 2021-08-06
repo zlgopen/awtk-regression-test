@@ -58,6 +58,7 @@ let vpage_htrans = require('./vpage_htrans');
 let vpage_vtrans = require('./vpage_vtrans');
 let vpage_none = require('./vpage_none');
 let pages = require('./pages');
+let image_value = require('./image_value');
 let gauge = require('./gauge');
 let color_picker = require('./color_picker');
 
@@ -87,14 +88,21 @@ describe("awtk simple", function () {
     allPassed = allPassed && this.currentTest.state === 'passed';
   });
   //test overlay
-  it("overlay", function () {
-    return overlay.testAlwaysOnTop(driver);
-  });
-  it("overlay", function () {
+  it("overlay_click_through", function () {
     return overlay.testClickThrough(driver);
   });
-  it("overlay", function () {
+  it("overlay_always_on_top", function () {
+    return overlay.testAlwaysOnTop(driver);
+  });
+  it("overlay_basic", function () {
     return overlay.testBasic(driver);
+  });
+  //test image_value
+  it("image_value_click_add_delta", function () {
+    return image_value.testClickAddDelta(driver);
+  });
+  it("image_value_basic", function () {
+    return image_value.testBasic(driver);
   });
   //test svg
   it("svg", function () {
@@ -105,10 +113,10 @@ describe("awtk simple", function () {
     return gauge.testBasic(driver);
   });
   //test color_picker
-  it("color_picker", function () {
+  it("color_picker_click_sv", function () {
     return color_picker.testClickSV(driver);
   });
-  it("color_picker", function () {
+  it("color_picker_click_h", function () {
     return color_picker.testClickH(driver);
   });
   //test pages

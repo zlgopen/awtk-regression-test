@@ -21,6 +21,7 @@
 
 #include "window_main.h"
 #include "window_pages.h"
+#include "window_image_value.h"
 #include "window_gauge.h"
 #include "window_color_picker.h"
 #include "window_timer.h"
@@ -134,6 +135,11 @@ static ret_t on_open_vpage_htrans(void* ctx, event_t* e) {
 
 static ret_t on_open_pages(void* ctx, event_t* e) {
   window_pages_open();
+  return RET_OK;
+}
+
+static ret_t on_open_image_value(void* ctx, event_t* e) {
+  window_image_value_open();
   return RET_OK;
 }
 
@@ -308,6 +314,7 @@ ret_t window_main_open(void) {
   win = window_open("main");
   widget_child_on(win, "color_picker", EVT_CLICK, on_open_color_picker, win);
   widget_child_on(win, "pages", EVT_CLICK, on_open_pages, win);
+  widget_child_on(win, "image_value", EVT_CLICK, on_open_image_value, win);
   widget_child_on(win, "auto_adjust_size", EVT_CLICK, on_open_auto_adjust_size, win);
 
   widget_child_on(win, "auto_adjust_size_max_w", EVT_CLICK, on_open_auto_adjust_size_max_w, win);
