@@ -28,6 +28,7 @@
   <label name="changing" x="c" y="b:50" w="100%" h="30" text="none"/>
   <label name="changed" x="c" y="b:50" w="100%" h="30" text="none"/>
 
+  <button name="dialog" focusable="true" x="10" y="b:10" w="25%" h="30" text="dialog"/>
   <button name="foo" focusable="true" x="r:10" y="b:10" w="25%" h="30" text="foo"/>
   <button focusable="true" x="c" y="b:10" w="25%" h="30" text="close" on:click="back()"/>
 </window>

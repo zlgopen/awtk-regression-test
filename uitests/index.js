@@ -87,6 +87,10 @@ describe("awtk simple", function () {
   afterEach(function () {
     allPassed = allPassed && this.currentTest.state === 'passed';
   });
+  //test edit
+  it("edit_test_dialog", function () {
+    return edit.testDialog(driver);
+  });
   //test overlay
   it("overlay_click_through", function () {
     return overlay.testClickThrough(driver);

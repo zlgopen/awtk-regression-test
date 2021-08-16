@@ -33,11 +33,24 @@ static ret_t on_edit_change(void* ctx, event_t* e) {
   return RET_OK;
 }
 
+static ret_t on_timer(const timer_info_t* info) {
+  dialog_info("info", "phone call...");
+  return RET_REMOVE;
+}
+
+static ret_t on_dialog_clicked(void* ctx, event_t* e) {
+  widget_t* win = WIDGET(ctx);
+  widget_add_timer(win, on_timer, 1200);
+
+  return RET_OK;
+}
+
 ret_t window_edit_open(void) {
   widget_t* win = window_open("edit");
 
   widget_child_on(win, "default", EVT_VALUE_CHANGING, on_edit_change, "changing");
   widget_child_on(win, "default", EVT_VALUE_CHANGED, on_edit_change, "changed");
+  widget_child_on(win, "dialog", EVT_CLICK, on_dialog_clicked, win);
 
   return RET_OK;
 }

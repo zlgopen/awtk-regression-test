@@ -614,3 +614,22 @@ exports.testAsciiMax= function (driver) {
         .back().sleep(200)
         .title().should.become("Regression Test")
 }
+
+exports.testDialog = function (driver) {
+    return driver
+        .back().sleep(200)
+        .title().should.become("Regression Test")
+        .elementById('edit').click().sleep(200)
+        .title().should.become("Edit")
+
+        .elementById('edit.dialog').click().sleep(200)
+        .elementById('edit.default').click().sleep(2000)
+
+        .elementById('wm').sendKeys(['a','b','c']).sleep(200)
+        .elementById('edit.default').text().should.become("")
+
+        .back().sleep(600)
+        .back().sleep(600)
+        .back().sleep(600)
+        .title().should.become("Regression Test")
+}
