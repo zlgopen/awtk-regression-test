@@ -27,19 +27,19 @@ exports.testBasic = function (driver) {
         //modify edit
         .elementById('wm').sendKeys(wd.SPECIAL_KEYS.Return).sleep(800)
         
-        .elementById('wm').sendKeys(wd.SPECIAL_KEYS["Down arrow"]).sleep(200)
+        .elementById('wm').sendKeys(wd.SPECIAL_KEYS["Down arrow"]).sleep(800)
         .elementById('simple_keyboard.value').text().should.become("-2")
 
-        .elementById('wm').sendKeys(wd.SPECIAL_KEYS["Up arrow"]).sleep(200)
+        .elementById('wm').sendKeys(wd.SPECIAL_KEYS["Up arrow"]).sleep(800)
         .elementById('simple_keyboard.value').text().should.become("-1")
        
         //back to inc button
-        .elementById('wm').sendKeys(wd.SPECIAL_KEYS.Return).sleep(200)
+        .elementById('wm').sendKeys(wd.SPECIAL_KEYS.Return).sleep(800)
         .elementById('wm').sendKeys(wd.SPECIAL_KEYS["Up arrow"]).sleep(800)
-        .elementById('wm').sendKeys(wd.SPECIAL_KEYS.Return).sleep(200)
+        .elementById('wm').sendKeys(wd.SPECIAL_KEYS.Return).sleep(800)
 
         .elementById('simple_keyboard.value').text().should.become("0")
 
-        .back().sleep(200)
+        .back().sleep(800)
         .title().should.become("Regression Test")
 }

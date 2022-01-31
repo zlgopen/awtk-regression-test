@@ -24,10 +24,10 @@ exports.testBasic = function (driver) {
         .elementById('wm').sendKeys(wd.SPECIAL_KEYS["Down arrow"]).sleep(200)
         .elementById('wm').sendKeys(wd.SPECIAL_KEYS.Return).sleep(800)
         
-        .elementById('wm').sendKeys(wd.SPECIAL_KEYS["Down arrow"]).sleep(200)
+        .elementById('wm').sendKeys(wd.SPECIAL_KEYS["Down arrow"]).sleep(800)
         .elementById('simple_keyboard.value').text().should.become("-2")
 
-        .elementById('wm').sendKeys(wd.SPECIAL_KEYS["Up arrow"]).sleep(200)
+        .elementById('wm').sendKeys(wd.SPECIAL_KEYS["Up arrow"]).sleep(300)
         .elementById('simple_keyboard.value').text().should.become("-1")
        
         //back to dec button
@@ -35,8 +35,8 @@ exports.testBasic = function (driver) {
         .elementById('wm').sendKeys(wd.SPECIAL_KEYS["Up arrow"]).sleep(800)
         .elementById('wm').sendKeys(wd.SPECIAL_KEYS.Return).sleep(200)
 
-        .elementById('simple_keyboard.value').text().should.become("-2")
+        .back().sleep(800)
+        .back().sleep(800)
 
-        .back().sleep(200)
         .title().should.become("Regression Test")
 }
