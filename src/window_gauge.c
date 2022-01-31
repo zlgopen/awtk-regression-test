@@ -23,27 +23,27 @@
 
 static ret_t on_inc(void* ctx, event_t* e) {
   widget_t* win = WIDGET(ctx);
-  widget_add_value(widget_lookup(win, "p1", TRUE), 10);
-  widget_add_value(widget_lookup(win, "p2", TRUE), 10);
-  widget_add_value(widget_lookup(win, "p3", TRUE), 10);
+  widget_add_value_int(widget_lookup(win, "p1", TRUE), 10);
+  widget_add_value_int(widget_lookup(win, "p2", TRUE), 10);
+  widget_add_value_int(widget_lookup(win, "p3", TRUE), 10);
 
   return RET_OK;
 }
 
 static ret_t on_dec(void* ctx, event_t* e) {
   widget_t* win = WIDGET(ctx);
-  widget_add_value(widget_lookup(win, "p1", TRUE), -10);
-  widget_add_value(widget_lookup(win, "p2", TRUE), -10);
-  widget_add_value(widget_lookup(win, "p3", TRUE), -10);
+  widget_add_value_int(widget_lookup(win, "p1", TRUE), -10);
+  widget_add_value_int(widget_lookup(win, "p2", TRUE), -10);
+  widget_add_value_int(widget_lookup(win, "p3", TRUE), -10);
 
   return RET_OK;
 }
 
 static ret_t on_reset(void* ctx, event_t* e) {
   widget_t* win = WIDGET(ctx);
-  widget_set_value(widget_lookup(win, "p1", TRUE), 0);
-  widget_set_value(widget_lookup(win, "p2", TRUE), 0);
-  widget_set_value(widget_lookup(win, "p3", TRUE), 0);
+  widget_set_value_int(widget_lookup(win, "p1", TRUE), 0);
+  widget_set_value_int(widget_lookup(win, "p2", TRUE), 0);
+  widget_set_value_int(widget_lookup(win, "p3", TRUE), 0);
 
   return RET_OK;
 }

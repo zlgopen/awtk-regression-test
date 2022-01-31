@@ -28,7 +28,7 @@ static ret_t on_switch_changed(void* ctx, event_t* e) {
 
   if (value != NULL) {
     char str[64];
-    tk_snprintf(str, sizeof(str), "%s:%d", aswitch->name, widget_get_value(aswitch));
+    tk_snprintf(str, sizeof(str), "%s:%d", aswitch->name, widget_get_value_int(aswitch));
     widget_set_text_utf8(value, str);
   }
 
@@ -42,7 +42,7 @@ static ret_t on_switch_will_change(void* ctx, event_t* e) {
 
   if (value != NULL) {
     char str[64];
-    tk_snprintf(str, sizeof(str), "%s:%d", aswitch->name, widget_get_value(aswitch));
+    tk_snprintf(str, sizeof(str), "%s:%d", aswitch->name, widget_get_value_int(aswitch));
     widget_set_text_utf8(value, str);
   }
 

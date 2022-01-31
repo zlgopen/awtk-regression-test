@@ -24,7 +24,7 @@
 static ret_t on_inc(void* ctx, event_t* e) {
   widget_t* win = WIDGET(ctx);
   widget_t* image_value = widget_lookup(win, "test", TRUE);
-  widget_add_value(image_value, 10);
+  widget_add_value_int(image_value, 10);
 
   return RET_OK;
 }
@@ -32,7 +32,7 @@ static ret_t on_inc(void* ctx, event_t* e) {
 static ret_t on_dec(void* ctx, event_t* e) {
   widget_t* win = WIDGET(ctx);
   widget_t* image_value = widget_lookup(win, "test", TRUE);
-  widget_add_value(image_value, -10);
+  widget_add_value_int(image_value, -10);
 
   return RET_OK;
 }

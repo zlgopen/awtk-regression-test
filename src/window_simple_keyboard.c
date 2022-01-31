@@ -25,7 +25,7 @@
 static ret_t on_inc(void* ctx, event_t* e) {
   widget_t* value = widget_lookup(WIDGET(ctx), "value", TRUE);
 
-  widget_add_value(value, 1);
+  widget_add_value_int(value, 1);
 
   return RET_OK;
 }
@@ -33,14 +33,14 @@ static ret_t on_inc(void* ctx, event_t* e) {
 static ret_t on_dec(void* ctx, event_t* e) {
   widget_t* value = widget_lookup(WIDGET(ctx), "value", TRUE);
 
-  widget_add_value(value, -1);
+  widget_add_value_int(value, -1);
 
   return RET_OK;
 }
 
 static ret_t on_reset(void* ctx, event_t* e) {
   widget_t* value = widget_lookup(WIDGET(ctx), "value", TRUE);
-  widget_set_value(value, 0);
+  widget_set_value_int(value, 0);
 
   return RET_OK;
 }

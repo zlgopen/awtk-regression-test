@@ -23,14 +23,14 @@
 
 static ret_t on_timer(const timer_info_t* info) {
   widget_t* win = WIDGET(info->ctx);
-  widget_add_value(widget_lookup(win, "status", TRUE), 1);
+  widget_add_value_int(widget_lookup(win, "status", TRUE), 1);
 
   return RET_REPEAT;
 }
 
 static ret_t on_idle(const idle_info_t* info) {
   widget_t* win = WIDGET(info->ctx);
-  widget_add_value(widget_lookup(win, "status", TRUE), 1);
+  widget_add_value_int(widget_lookup(win, "status", TRUE), 1);
 
   return RET_REMOVE;
 }
