@@ -51,7 +51,7 @@ exports.testBasic= function (driver) {
         .title().should.become("Regression Test")
         .elementById('list_view_desktop').click().sleep(200)
         .title().should.become("List View Desktop")
-        .elementById('bar1').getAttribute("visible").should.become(false)
+        .elementById('bar1').getAttribute("visible").should.become(true)
         .elementById('bar2').getAttribute("visible").should.become(true)
         .back().sleep(200)
         .title().should.become("Regression Test")
