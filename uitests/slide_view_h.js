@@ -280,7 +280,7 @@ exports.testSlideRightHSlider = function (driver) {
         .performTouchAction(press).sleep(20)
         .performTouchAction(move).sleep(20)
         .performTouchAction(release).sleep(600)
-        .elementById('slider1').getAttribute("value").should.become(19)
+        .elementById('slider1').getAttribute("value").should.become(17)
 
         .elementById('slide_view1').getAttribute("value").should.become(0)
 
