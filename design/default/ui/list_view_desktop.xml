@@ -1,5 +1,5 @@
 <window text="List View Desktop">
-  <list_view x="0"  y="5" w="100%" h="40%" item_height="60" floating_scroll_bar="true" auto_hide_scroll_bar="true">
+  <list_view x="0"  y="5" w="100%" h="40%" item_height="60" >
     <scroll_view name="view1" x="0"  y="0" w="100%" h="100%">
       <list_item style="odd" children_layout="default(rows=1,cols=0)">
         <image draw_type="icon" w="30" image="earth"/>
